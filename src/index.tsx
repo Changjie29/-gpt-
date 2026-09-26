@@ -5,6 +5,7 @@ import App from './app';
 import './index.css';
 import './tailwind-theme.css';
 import './typography.css';
+import './liquid-glass.css';
 
 // 浏览器刷新时回到首页；站内跳转和直接打开对话链接仍按正常路由处理。
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;

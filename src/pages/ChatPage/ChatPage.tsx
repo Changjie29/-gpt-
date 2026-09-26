@@ -258,9 +258,9 @@ export default function ChatPage() {
   const typeOptions = lang === 'zh' ? MACHINE_TYPES_ZH : MACHINE_TYPES_EN;
 
   return (
-    <div className="flex h-[calc(100dvh-4rem)] flex-col bg-background">
+    <div className="flex h-[calc(100dvh-5.625rem)] flex-col chat-glass">
       {/* 顶部工具栏 */}
-      <div className="flex items-center justify-between border-b border-border/60 bg-card/50 px-4 py-3 md:px-6">
+      <div className="flex items-center justify-between glass-surface border-b border-border/60 px-4 py-3 md:px-6">
         <div className="flex items-center gap-2 min-w-0">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
             <Bot className="h-4 w-4" />
@@ -423,7 +423,7 @@ export default function ChatPage() {
       </div>
 
       {/* 输入区 */}
-      <div className="border-t border-border/60 bg-card/50 px-4 py-4 md:px-6">
+      <div className="glass-surface border-t border-border/60 px-4 py-4 md:px-6">
         <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
           <div className="flex items-end gap-2">
             <Textarea

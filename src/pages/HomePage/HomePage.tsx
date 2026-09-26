@@ -10,7 +10,7 @@ import SectionDivider from '@/components/SectionDivider';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="glass-home min-h-screen">
       <HeroSection />
       <SectionDivider variant="leaf" />
       <PainPointsSection />

@@ -52,11 +52,11 @@ export function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* 顶部导航栏 */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 md:px-6 lg:px-8">
+      <header className="site-header sticky top-0 z-50 w-full">
+        <div className="glass-header flex min-h-16 w-full items-center justify-between gap-2 px-3 md:px-5">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground shadow-sm transition-transform hover:scale-105">
+            <div className="glass-icon flex h-8 w-8 items-center justify-center text-primary transition-transform hover:scale-105">
               <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth="2">
                 <circle cx="7" cy="16" r="3" />
                 <circle cx="17" cy="16" r="3" />
@@ -135,6 +135,8 @@ export function Layout() {
               className="flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="菜单"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -143,7 +145,7 @@ export function Layout() {
 
         {/* 移动端导航抽屉 */}
         {mobileOpen && (
-          <div className="border-t border-border/60 bg-background md:hidden">
+          <div id="mobile-navigation" className="glass-surface mt-2 rounded-2xl md:hidden">
             <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
               {NAV_ITEMS.map((item) =>
                 item.hash ? (
