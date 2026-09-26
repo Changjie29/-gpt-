@@ -43,3 +43,24 @@ declare module '@sohumsuthar/liquid-glass' {
     bezel?: number; refraction?: number; dispersion?: number;
   }): { filter: string; svg: JSX.Element | null };
 }
+
+declare module '@sohumsuthar/liquid-glass/hooks/useLiquidGlassEffects' {
+  export interface LiquidGlassEffectsOptions {
+    /** 鼠标移动时向最近的玻璃写入 --mx/--my/--lg-light-angle，高光跟随光标 */
+    cursor?: boolean;
+    /** 站点级聚光（--cx/--cy） */
+    spotlight?: boolean;
+    /** 滚动显现 data-reveal */
+    reveal?: boolean;
+    /** 滚动速度宏卡片挤压 */
+    scroll?: boolean;
+    /** 路由变化时重新扫描 reveal（传 router path） */
+    routeKey?: string;
+  }
+
+  /** 挂载液态玻璃全局效果（应用根组件调用一次） */
+  export function useLiquidGlassEffects(opts?: LiquidGlassEffectsOptions): void;
+
+  /** 站点级光标聚光层 */
+  export function Spotlight(): JSX.Element;
+}

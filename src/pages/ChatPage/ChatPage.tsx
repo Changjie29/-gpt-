@@ -263,6 +263,7 @@ export default function ChatPage() {
       {/* 顶部工具栏 */}
       <LiquidGlass
         variant="regular"
+        interactive
         className="chat-bar-glass"
         contentClassName="flex items-center justify-between border-b border-border/60 px-4 py-3 md:px-6"
       >
@@ -430,6 +431,7 @@ export default function ChatPage() {
       {/* 输入区 */}
       <LiquidGlass
         variant="regular"
+        interactive
         className="chat-input-glass"
         contentClassName="border-t border-border/60 px-4 py-4 md:px-6"
       >

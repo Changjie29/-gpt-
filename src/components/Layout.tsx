@@ -58,6 +58,7 @@ export function Layout() {
       <header className="site-header sticky top-0 z-50 w-full">
         <LiquidGlass
           variant="regular"
+          interactive
           className="site-nav-glass"
           contentClassName="flex min-h-16 w-full items-center justify-between gap-2 px-3 md:px-5"
         >
