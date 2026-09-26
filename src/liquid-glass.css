@@ -140,3 +140,18 @@
   .glass-card::before { transition: none; }
   .glass-card:hover::before { transform: none; opacity: .5; }
 }
+
+/* ===== 液态玻璃库集成 =====
+ * .site-nav-glass：悬浮胶囊导航布局（材质由 @sohumsuthar/liquid-glass 提供）
+ */
+.site-nav-glass {
+  max-width: 1184px;
+  margin: 0 auto;
+  --lg-radius: 24px;
+}
+.chat-bar-glass {
+  --lg-radius: 18px;
+}
+.chat-input-glass {
+  --lg-radius: 20px;
+}

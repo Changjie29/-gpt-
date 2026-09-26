@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate, NavLink } from 'react-router-dom';
 import { Menu, X, MessageSquare, Sun, Moon, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LiquidGlass } from '@sohumsuthar/liquid-glass';
 import { cn } from '@/lib/utils';
 import { useLang, setLang } from '@/hooks/useLang';
 
@@ -33,6 +34,8 @@ export function Layout() {
   useEffect(() => {
     document.documentElement.classList.remove('theme-light', 'theme-dark');
     document.documentElement.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light');
+    // 液态玻璃库使用 html.dark 切换暗色材质
+    document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('srt-theme', theme);
   }, [theme]);
 
@@ -53,7 +56,11 @@ export function Layout() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* 顶部导航栏 */}
       <header className="site-header sticky top-0 z-50 w-full">
-        <div className="glass-header flex min-h-16 w-full items-center justify-between gap-2 px-3 md:px-5">
+        <LiquidGlass
+          variant="regular"
+          className="site-nav-glass"
+          contentClassName="flex min-h-16 w-full items-center justify-between gap-2 px-3 md:px-5"
+        >
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2">
             <div className="glass-icon flex h-8 w-8 items-center justify-center text-primary transition-transform hover:scale-105">
@@ -141,11 +148,11 @@ export function Layout() {
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
-        </div>
+        </LiquidGlass>
 
-        {/* 移动端导航抽屉 */}
+        {/* 移动端导航抽屉（非玻璃，避免玻璃嵌套失效） */}
         {mobileOpen && (
-          <div id="mobile-navigation" className="glass-surface mt-2 rounded-2xl md:hidden">
+          <div id="mobile-navigation" className="mt-2 rounded-2xl border border-border/60 bg-card/90 shadow-lg backdrop-blur-xl md:hidden">
             <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
               {NAV_ITEMS.map((item) =>
                 item.hash ? (

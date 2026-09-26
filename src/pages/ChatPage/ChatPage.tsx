@@ -16,6 +16,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { toast } from 'sonner';
+import { LiquidGlass } from '@sohumsuthar/liquid-glass';
 import content, { pick } from '@/data/content';
 import { useLang } from '@/hooks/useLang';
 
@@ -260,7 +261,11 @@ export default function ChatPage() {
   return (
     <div className="flex h-[calc(100dvh-5.625rem)] flex-col chat-glass">
       {/* 顶部工具栏 */}
-      <div className="flex items-center justify-between glass-surface border-b border-border/60 px-4 py-3 md:px-6">
+      <LiquidGlass
+        variant="regular"
+        className="chat-bar-glass"
+        contentClassName="flex items-center justify-between border-b border-border/60 px-4 py-3 md:px-6"
+      >
         <div className="flex items-center gap-2 min-w-0">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
             <Bot className="h-4 w-4" />
@@ -304,7 +309,7 @@ export default function ChatPage() {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
-      </div>
+      </LiquidGlass>
 
       {/* 消息列表 */}
       <div className="min-h-0 flex-1 overflow-y-auto" role="log" aria-label={t('诊断对话', 'Diagnosis conversation')} aria-live="polite">
@@ -423,7 +428,11 @@ export default function ChatPage() {
       </div>
 
       {/* 输入区 */}
-      <div className="glass-surface border-t border-border/60 px-4 py-4 md:px-6">
+      <LiquidGlass
+        variant="regular"
+        className="chat-input-glass"
+        contentClassName="border-t border-border/60 px-4 py-4 md:px-6"
+      >
         <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
           <div className="flex items-end gap-2">
             <Textarea
@@ -458,7 +467,7 @@ export default function ChatPage() {
             <span className={input.trim().length > 2000 ? 'text-destructive' : ''}>{input.trim().length} / 2000</span>
           </div>
         </form>
-      </div>
+      </LiquidGlass>
     </div>
   );
 }
