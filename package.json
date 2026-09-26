@@ -2,6 +2,10 @@
   "name": "srt27-sinong",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Changjie29/-gpt-.git"
+  },
   "engines": {
     "node": ">=22.13.0"
   },
@@ -12,7 +16,8 @@
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "knowledge:sync": "node scripts/sync-knowledge.mjs"
+    "knowledge:sync": "node scripts/sync-knowledge.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
