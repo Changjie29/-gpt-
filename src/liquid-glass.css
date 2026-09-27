@@ -76,6 +76,68 @@
 .hero-feature-icon { flex: none; color: var(--agri-leaf); }
 .hero-feature strong { color: var(--agri-forest); }
 .chat-glass { background: radial-gradient(ellipse at 10% 0%, rgba(138,203,170,.08), transparent 60%), var(--background); }
+
+/* A transparent face, rounded shoulder and lower contact shadow give the
+   material thickness without covering the content with a white fill. */
+.liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) {
+  --lg-brightness: 1;
+  --lg-blur: 8px;
+  border: 1px solid rgba(255,255,255,.68);
+  background: transparent;
+  box-shadow:
+    inset 1px 1px 1px rgba(255,255,255,.9),
+    inset -1px -2px 2px rgba(32,70,53,.15),
+    0 2px 3px rgba(30,65,46,.12),
+    0 12px 24px -12px rgba(30,65,46,.24),
+    0 28px 52px -28px rgba(30,65,46,.28);
+}
+.liquid-glass.hero-model {
+  --lg-blur: 3px;
+  padding: 14px;
+  box-shadow:
+    inset 2px 2px 2px rgba(255,255,255,.92),
+    inset -2px -3px 4px rgba(31,76,52,.15),
+    0 3px 4px rgba(31,76,52,.12),
+    0 22px 34px -18px rgba(31,76,52,.3),
+    0 42px 70px -32px rgba(31,76,52,.22);
+}
+html .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-tint {
+  background: linear-gradient(135deg, rgba(255,255,255,.24), rgba(255,255,255,.035) 42%, rgba(126,165,140,.08) 75%, rgba(255,255,255,.17));
+}
+.liquid-glass:is(.site-nav-glass, .chat-bar-glass, .chat-input-glass) { --lg-blur: 14px; }
+html .liquid-glass:is(.site-nav-glass, .chat-bar-glass, .chat-input-glass) > .liquid-glass-tint {
+  background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(247,250,247,.48));
+}
+html .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-shine {
+  box-shadow: inset 0 3px 5px rgba(255,255,255,.6), inset 0 -4px 7px rgba(255,255,255,.38);
+}
+html .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-shine::before {
+  padding: 2px;
+  background: conic-gradient(from var(--lg-light-angle, 315deg), rgba(255,255,255,.95), rgba(255,255,255,.1) 25%, rgba(46,89,66,.22) 45%, rgba(255,255,255,.8) 65%, rgba(255,255,255,.12) 80%, rgba(255,255,255,.95));
+}
+.liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-shine::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: max(0px, calc(var(--lg-radius, 22px) - 5px));
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 1px 2px rgba(41,77,58,.08), inset 0 1px 1px rgba(255,255,255,.28);
+  pointer-events: none;
+}
+.hero-cta-secondary {
+  background: linear-gradient(145deg, rgba(255,255,255,.6), rgba(255,255,255,.13));
+  box-shadow: inset 1px 2px 2px rgba(255,255,255,.85), inset -1px -2px 2px rgba(39,77,57,.12), 0 3px 4px rgba(39,77,57,.09), 0 12px 20px -12px rgba(39,77,57,.28);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+html.dark .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) {
+  border-color: rgba(222,245,230,.22);
+  box-shadow: inset 1px 1px 2px rgba(235,255,243,.28), inset -1px -2px 3px rgba(0,0,0,.32), 0 3px 5px rgba(0,0,0,.25), 0 20px 42px -18px rgba(0,0,0,.6);
+}
+html.dark .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-shine { opacity: .55; }
+html.dark .liquid-glass:is(.site-nav-glass, .chat-bar-glass, .chat-input-glass) > .liquid-glass-tint {
+  background: linear-gradient(135deg, rgba(24,43,33,.82), rgba(24,43,33,.65));
+}
 @media (hover: hover) { .glass-card:hover { transform: translateY(-2px); } }
 @media (max-width: 639px) {
   .site-header { padding: 8px; }
@@ -99,4 +161,5 @@
 }
 @media (prefers-reduced-transparency: reduce) {
   .glass-card, .glass-surface { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  html .liquid-glass:is(.site-nav-glass, .hero-model, .chat-bar-glass, .chat-input-glass) > .liquid-glass-tint { background: var(--card); }
 }

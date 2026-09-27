@@ -66,7 +66,7 @@ export default function HeroSection() {
           {/* 右侧 3D 模型 */}
           <div className="relative shrink-0 lg:min-w-0">
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-wheat/10 blur-2xl" />
-            <LiquidGlass variant="clear" lens lensOptions={{ bezel: 3, refraction: 0.2, dispersion: 0 }} className="hero-model">
+            <LiquidGlass variant="clear" interactive lens lensOptions={{ bezel: 9, refraction: 0.45, dispersion: 0.6 }} className="hero-model">
               <div className="hero-model-stage">
                 <TractorViewer />
               </div>
