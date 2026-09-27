@@ -31,7 +31,7 @@ export default function ArchitectureSection() {
         </div>
 
         {/* 架构图 - 纵向四层 */}
-        <div className="mx-auto max-w-3xl space-y-4">
+        <div className="architecture-flow mx-auto max-w-3xl space-y-4">
           {content.ARCHITECTURE_LAYERS.map((layer, i) => {
             const Icon = ICON_MAP[layer.icon] || Layers;
             const isWheat = i % 2 === 1;

@@ -54,6 +54,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
+      <a className="skip-link" href="#main-content">{lang === 'zh' ? '跳到主要内容' : 'Skip to content'}</a>
       {/* 顶部导航栏 */}
       <header className="site-header sticky top-0 z-50 w-full">
         <LiquidGlass
@@ -78,7 +79,7 @@ export function Layout() {
           </NavLink>
 
           {/* 桌面端导航 */}
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {NAV_ITEMS.map((item) =>
               item.hash ? (
                 <button
@@ -142,7 +143,7 @@ export function Layout() {
               {lang === 'zh' ? 'EN' : '中'}
             </button>
             <button
-              className="flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-md border border-border lg:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="菜单"
               aria-expanded={mobileOpen}
@@ -155,7 +156,7 @@ export function Layout() {
 
         {/* 移动端导航抽屉（非玻璃，避免玻璃嵌套失效） */}
         {mobileOpen && (
-          <div id="mobile-navigation" className="mt-2 rounded-2xl border border-border/60 bg-card/90 shadow-lg backdrop-blur-xl md:hidden">
+          <div id="mobile-navigation" className="mt-2 rounded-2xl border border-border/60 bg-card/90 shadow-lg backdrop-blur-xl lg:hidden">
             <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
               {NAV_ITEMS.map((item) =>
                 item.hash ? (
@@ -195,7 +196,7 @@ export function Layout() {
       </header>
 
       {/* 主内容区 */}
-      <main className="flex-1 w-full">
+      <main id="main-content" tabIndex={-1} className="flex-1 w-full">
         <Outlet />
       </main>
     </div>

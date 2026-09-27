@@ -7,6 +7,7 @@ import * as THREE from 'three';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 import TractorModel from './TractorModel';
+import { useLang } from '@/hooks/useLang';
 
 // 相机初始配置（常量避免重渲染触发重置）
 const CAMERA_CONFIG = { position: [6.5, 4, 6.5] as [number, number, number], fov: 40 };
@@ -19,7 +20,7 @@ const GL_CONFIG = { antialias: true, alpha: true } as const;
 const DPR_CONFIG: [number, number] = [1, 2];
 const LIGHT_COLORS = {
   dark: { background: '#1a2420', fog: '#1a2420', cell: '#2e3a34', section: '#4a5a50' },
-  light: { background: '#F5F1E8', fog: '#F5F1E8', cell: '#D4CFC4', section: '#B8B1A3' },
+  light: { background: '#eef3ef', fog: '#eef3ef', cell: '#d9e3dc', section: '#c3d2c7' },
 } as const;
 
 interface ModelFallbackProps {
@@ -28,11 +29,12 @@ interface ModelFallbackProps {
 }
 
 function ModelFallback({ error }: ModelFallbackProps) {
+  const lang = useLang();
   const message = error instanceof Error ? error.message : String(error);
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-2xl border border-border/50 bg-gradient-to-br from-muted/30 to-transparent text-muted-foreground">
       <MonitorPlay className="size-12 opacity-50" />
-      <div className="text-sm">3D 模型加载失败</div>
+      <div className="text-sm">{lang === 'zh' ? '3D 模型加载失败' : 'Unable to load the 3D model'}</div>
       <div className="max-w-[80%] truncate text-xs opacity-60">{message.slice(0, 60)}</div>
     </div>
   );
@@ -81,6 +83,7 @@ function ProgrammaticEnvironment() {
  * - WebGL 不可用时降级为占位提示
  */
 export default function TractorViewer() {
+  const lang = useLang();
   const [webglSupported, setWebglSupported] = useState(true);
   const [modelError, setModelError] = useState<string | null>(null);
   const [modelLoaded, setModelLoaded] = useState(false);
@@ -313,14 +316,14 @@ export default function TractorViewer() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="flex items-center gap-2 rounded-full bg-card/80 px-4 py-2 text-xs text-muted-foreground backdrop-blur-sm shadow-sm">
             <Loader2 className="size-4 animate-spin" />
-            模型加载中...
+            {lang === 'zh' ? '模型加载中…' : 'Loading model…'}
           </div>
         </div>
       )}
 
       {/* 操作提示 */}
       <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 text-xs text-muted-foreground/70">
-        拖动旋转 · 滚轮缩放
+        {lang === 'zh' ? '拖动旋转 · 滚轮缩放' : 'Drag to rotate · Scroll to zoom'}
       </div>
     </div>
   );

@@ -18,7 +18,6 @@ export default function SimulationSection() {
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
         <div className="section-heading mb-12">
-          <div className="section-eyebrow">{t('从数字模型到真实机械', 'From digital models to real machines')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('数字孪生 · 诊断验证闭环', 'Digital Twin · Verification Loop')}
           </h2>

@@ -70,7 +70,9 @@ export default function ClosingSection() {
               <ul className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 {content.FOOTER_REFERENCES.map((ref) => (
                   <li key={pick(ref.name, lang)}>
-                    <a
+                    {ref.href === '#' ? (
+                      <span className="text-xs text-muted-foreground">{pick(ref.name, lang)}</span>
+                    ) : <a
                       href={ref.href}
                       target="_blank"
                       rel="noreferrer"
@@ -78,7 +80,7 @@ export default function ClosingSection() {
                     >
                       <ExternalLink className="h-3 w-3 shrink-0" />
                       {pick(ref.name, lang)}
-                    </a>
+                    </a>}
                   </li>
                 ))}
               </ul>

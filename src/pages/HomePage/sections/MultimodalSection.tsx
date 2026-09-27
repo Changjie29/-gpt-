@@ -19,7 +19,6 @@ export default function MultimodalSection() {
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
         <div className="section-heading mb-12">
-          <div className="section-eyebrow">{t('感知与理解', 'Sensing & Understanding')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('四类感知信号 · 融合诊断', 'Four Sensing Modalities · Fused Diagnosis')}
           </h2>
