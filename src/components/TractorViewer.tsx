@@ -15,7 +15,7 @@ const CAMERA_CONFIG = { position: [6.5, 4, 6.5] as [number, number, number], fov
 const AUTO_ROTATE_SPEED = 0.8;
 
 // Canvas 配置常量：避免每次渲染创建新对象字面量导致 R3F 重建 WebGL context（滚动闪屏主因之一）
-const GL_CONFIG = { antialias: true, alpha: false } as const;
+const GL_CONFIG = { antialias: true, alpha: true } as const;
 const DPR_CONFIG: [number, number] = [1, 2];
 const LIGHT_COLORS = {
   dark: { background: '#1a2420', fog: '#1a2420', cell: '#2e3a34', section: '#4a5a50' },
@@ -252,7 +252,6 @@ export default function TractorViewer() {
           gl={GL_CONFIG}
           dpr={DPR_CONFIG}
         >
-          <color attach="background" args={[palette.background]} />
           <fog attach="fog" args={[palette.fog, 8, 20]} />
 
           {/* 程序化环境光照（零网络依赖，替代 drei Environment preset 的 HDR 贴图） */}

@@ -1,157 +1,68 @@
-/* V2 glass surfaces: opaque fallback first, blur only on supporting browsers. */
 :root {
-  --glass-fill: rgba(250, 255, 252, .78);
-  --glass-edge: rgba(255, 255, 255, .88);
-  --glass-shadow: 0 16px 48px -24px rgba(22, 65, 49, .26);
+  --glass-fill: rgba(255, 255, 255, .075);
+  --glass-edge: rgba(255, 255, 255, .34);
+  --glass-shadow: 0 12px 30px -18px rgba(22, 65, 49, .22);
 }
 :root.theme-dark {
-  --glass-fill: rgba(28, 47, 39, .82);
-  --glass-edge: rgba(215, 255, 236, .19);
-  --glass-shadow: 0 18px 48px -20px rgba(0, 0, 0, .55);
+  --glass-fill: rgba(227, 247, 235, .055);
+  --glass-edge: rgba(231, 255, 241, .2);
+  --glass-shadow: 0 14px 32px -18px rgba(0, 0, 0, .5);
 }
-.glass-surface, .glass-header, .glass-card {
+
+/* Use these lighter surfaces for ordinary panels; the hero, navbar and chat
+   controls use the shared SVG refraction material from liquid-glass-core.css. */
+.glass-card, .glass-surface {
   background: var(--glass-fill);
   border: 1px solid var(--glass-edge);
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, .26), inset 0 -1px 0 rgba(255, 255, 255, .08);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255, 255, 255, .16);
+  -webkit-backdrop-filter: blur(8px) saturate(135%);
+  backdrop-filter: blur(8px) saturate(135%);
 }
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass-surface, .glass-header, .glass-card {
-    background: linear-gradient(135deg, rgba(255,255,255,.12), transparent 65%), color-mix(in srgb, var(--glass-fill) 82%, transparent);
-    -webkit-backdrop-filter: blur(24px) saturate(145%);
-    backdrop-filter: blur(24px) saturate(145%);
-  }
-}
-.glass-header { border-radius: 24px; max-width: 1184px; margin: 0 auto; }
+.glass-header { max-width: 1184px; margin: 0 auto; }
 .site-header { padding: 12px 16px; background: transparent; }
+.site-nav-glass { max-width: 1184px; margin: 0 auto; --lg-radius: 24px; }
+.chat-bar-glass { --lg-radius: 18px; }
+.chat-input-glass { --lg-radius: 20px; }
+
 .glass-home {
-  background: radial-gradient(ellipse at 4% 8%, #b8dfca55, transparent 35%), radial-gradient(ellipse at 96% 20%, #c9dcf155, transparent 35%), var(--background);
+  background:
+    radial-gradient(ellipse at 4% 8%, rgba(151, 207, 174, .18), transparent 35%),
+    radial-gradient(ellipse at 96% 20%, rgba(155, 190, 220, .15), transparent 35%),
+    var(--background);
 }
 .glass-home h1, .glass-home h2, .glass-home h3 { font-family: var(--font-sans); letter-spacing: -.035em; }
 .glass-home section[id] { scroll-margin-top: 110px; }
-.glass-card { border-radius: 24px; transition: transform .25s ease, box-shadow .25s ease; }
 .glass-hero { position: relative; isolation: isolate; overflow: hidden; padding: 64px 0 60px; }
-.glass-hero::before, .glass-hero::after { content: ''; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(48px); }
-.glass-hero::before { width: 560px; height: 480px; background: #8acbaa38; right: -40px; top: 0; }
-.glass-hero::after { width: 380px; height: 300px; background: #a4cbed35; right: 280px; bottom: 0; }
+.glass-hero::before, .glass-hero::after { content: ''; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(52px); }
+.glass-hero::before { width: 560px; height: 480px; background: rgba(138, 203, 170, .16); right: -40px; top: 0; }
+.glass-hero::after { width: 380px; height: 300px; background: rgba(164, 203, 237, .14); right: 280px; bottom: 0; }
 .hero-title { font-size: clamp(2.65rem, 4.5vw, 4rem); line-height: 1.18; font-weight: 650; letter-spacing: -.055em; }
 .hero-title span { display: block; }
-.hero-model { border-radius: 32px; padding: 10px; position: relative; }
-.hero-model-stage { aspect-ratio: 1.18; border-radius: 24px; overflow: hidden; }
-.hero-model-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 10px 4px; font-size: 12px; color: var(--muted-foreground); }
+.hero-model { --lg-radius: 30px; --lg-blur: 2px; --lg-saturate: 145%; --lg-brightness: 1; --lg-contrast: 1.01; padding: 9px; background: rgba(255, 255, 255, .045); border: 1px solid rgba(255, 255, 255, .32); box-shadow: 0 22px 58px -34px rgba(27, 58, 45, .4), inset 0 1px 0 rgba(255, 255, 255, .48); }
+.hero-model-stage { aspect-ratio: 1.18; border-radius: 22px; overflow: hidden; }
+.hero-model-caption { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 10px 4px; font-size: 12px; color: var(--muted-foreground); }
 .hero-chip { border-radius: 999px; padding: 9px 14px; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; }
 .hero-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 48px; }
-.hero-feature { border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 14px; }
-.hero-feature-icon { background: color-mix(in srgb, var(--primary) 10%, transparent); color: var(--primary); padding: 12px; border-radius: 15px; }
-.glass-button { border-radius: 999px; min-height: 44px; box-shadow: inset 0 1px 0 #ffffff38, 0 8px 20px -12px #18482b70; }
-.glass-secondary { background: var(--glass-fill); border: 1px solid var(--glass-edge); }
-.chat-glass { background: radial-gradient(ellipse at 10% 0%, #8acbaa20, transparent 60%), var(--background); }
-@media (hover: hover) { .glass-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px #254e4140; } }
+.hero-feature { --lg-radius: 20px; --lg-blur: 6px; --lg-saturate: 140%; --lg-brightness: .98; --lg-contrast: 1.01; background: rgba(255, 255, 255, .055); border: 1px solid rgba(255, 255, 255, .34); box-shadow: 0 12px 30px -22px rgba(27, 58, 45, .32), inset 0 1px 0 rgba(255, 255, 255, .42); }
+.hero-feature-content { display: flex; align-items: center; gap: 14px; min-height: 80px; padding: 16px 20px; }
+.hero-feature-icon { flex: none; background: rgba(73, 125, 91, .09); color: var(--primary); padding: 12px; border-radius: 15px; }
+.glass-button { border-radius: 999px; min-height: 44px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .32), 0 8px 20px -12px rgba(24, 72, 43, .35); }
+.glass-secondary { background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.48); }
+.chat-glass { background: radial-gradient(ellipse at 10% 0%, rgba(138,203,170,.08), transparent 60%), var(--background); }
+@media (hover: hover) { .glass-card:hover { transform: translateY(-2px); } }
 @media (max-width: 639px) {
   .site-header { padding: 8px; }
-  .glass-header { border-radius: 20px; }
+  .site-nav-glass { --lg-radius: 20px; }
   .glass-hero { padding: 32px 0 36px; }
   .hero-features { grid-template-columns: 1fr; gap: 8px; margin-top: 28px; }
-  .hero-feature { padding: 14px 18px; }
+  .hero-feature-content { min-height: 68px; padding: 12px 16px; }
   .hero-model-stage { aspect-ratio: 1.2; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .glass-card, .glass-button { transition: none; }
+  .glass-card { transition: none; }
   .glass-card:hover { transform: none; }
 }
 @media (prefers-reduced-transparency: reduce) {
-  .glass-surface, .glass-header, .glass-card { background: var(--card); backdrop-filter: none; -webkit-backdrop-filter: none; }
-}
-
-/* ===== Apple Liquid Glass 增强层 =====
- * 液态折射高光：斜向光条 + 内边缘光，塑造玻璃“流动感”
- * 全部为纯视觉增强，不改变布局结构；优先保证可读性与降级可用
- */
-.glass-surface, .glass-header, .glass-card, .glass-button {
-  position: relative;
-  isolation: isolate;
-}
-.glass-surface::before, .glass-header::before, .glass-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background:
-    linear-gradient(115deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.12) 16%, transparent 40%),
-    linear-gradient(245deg, transparent 62%, rgba(255,255,255,.16) 86%, rgba(255,255,255,.05) 100%);
-  opacity: .5;
-  transition: transform .5s ease, opacity .5s ease;
-}
-@media (hover: hover) {
-  .glass-card:hover::before { transform: translateX(10px); opacity: .72; }
-}
-/* 内阴影层次：上缘受光、下缘背光 */
-.glass-surface, .glass-header, .glass-card {
-  box-shadow:
-    var(--glass-shadow),
-    inset 0 1px 0 rgba(255,255,255,.5),
-    inset 0 -1px 0 rgba(255,255,255,.1),
-    inset 0 0 0 .5px rgba(255,255,255,.16);
-}
-/* 悬浮胶囊导航：加深悬浮与受光 */
-.glass-header {
-  box-shadow:
-    0 12px 32px -12px rgba(20,60,45,.35),
-    inset 0 1px 0 rgba(255,255,255,.55),
-    inset 0 0 0 .5px rgba(255,255,255,.18);
-}
-/* 玻璃按钮：轻渐变填充增强透光感 */
-.glass-button {
-  background: linear-gradient(135deg, rgba(255,255,255,.38), rgba(255,255,255,.06) 55%), var(--glass-fill);
-}
-.glass-secondary {
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 0 0 .5px rgba(255,255,255,.14);
-}
-/* 玻璃图标底（用于 Logo / 功能图标） */
-.glass-icon {
-  border-radius: 15px;
-  background: linear-gradient(135deg, rgba(255,255,255,.42), rgba(255,255,255,.05) 60%), color-mix(in srgb, var(--glass-fill) 70%, transparent);
-  border: 1px solid var(--glass-edge);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.42), 0 6px 14px -8px rgba(20,60,45,.3);
-}
-/* 暗色主题：压低高光透明度，保留液态轮廓 */
-:root.theme-dark .glass-surface::before,
-:root.theme-dark .glass-header::before,
-:root.theme-dark .glass-card::before { opacity: .26; }
-:root.theme-dark .glass-surface,
-:root.theme-dark .glass-header,
-:root.theme-dark .glass-card {
-  box-shadow:
-    var(--glass-shadow),
-    inset 0 1px 0 rgba(255,255,255,.14),
-    inset 0 -1px 0 rgba(255,255,255,.05),
-    inset 0 0 0 .5px rgba(255,255,255,.09);
-}
-:root.theme-dark .glass-button {
-  background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.03) 55%), var(--glass-fill);
-}
-/* 降级：不支持 blur 时保持不透明底，仅保留高光 */
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .glass-surface, .glass-header, .glass-card { background: var(--glass-fill); }
-}
-/* 无障碍：减少动效时固定高光，不做位移 */
-@media (prefers-reduced-motion: reduce) {
-  .glass-card::before { transition: none; }
-  .glass-card:hover::before { transform: none; opacity: .5; }
-}
-
-/* ===== 液态玻璃库集成 =====
- * .site-nav-glass：悬浮胶囊导航布局（材质由 @sohumsuthar/liquid-glass 提供）
- */
-.site-nav-glass {
-  max-width: 1184px;
-  margin: 0 auto;
-  --lg-radius: 24px;
-}
-.chat-bar-glass {
-  --lg-radius: 18px;
-}
-.chat-input-glass {
-  --lg-radius: 20px;
+  .glass-card, .glass-surface { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
