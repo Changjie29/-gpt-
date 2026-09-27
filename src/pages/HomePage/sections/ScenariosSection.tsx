@@ -17,8 +17,8 @@ export default function ScenariosSection() {
     <section id="scenarios" className="w-full py-16 md:py-20 bg-accent/20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <div className="mb-3 text-sm font-medium text-wheat">{t('应用场景', 'Scenarios')}</div>
+        <div className="section-heading mb-12">
+          <div className="section-eyebrow">{t('服务农业生产一线', 'Made for agricultural work')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('覆盖主要农机品类与关键故障', 'Covering Major Machinery & Key Faults')}
           </h2>
@@ -28,7 +28,6 @@ export default function ScenariosSection() {
               'From tractors to combines and beyond, a consistent diagnosis experience across the fleet.',
             )}
           </p>
-          <div className="mx-auto mt-4 h-px w-12 bg-wheat" />
         </div>
 
         {/* 三卡片 */}

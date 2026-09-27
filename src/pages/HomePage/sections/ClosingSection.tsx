@@ -13,20 +13,20 @@ export default function ClosingSection() {
     <section className="w-full pt-16 pb-0 md:pt-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* CTA 区 */}
-        <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-gradient-to-br from-primary via-primary/95 to-primary/90 p-8 text-center md:p-12">
+        <div className="closing-panel relative overflow-hidden rounded-2xl border border-primary/20 p-8 text-left md:p-12">
           {/* 装饰网格 */}
           <div className="pointer-events-none absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-grid-paper" />
+            <div className="absolute inset-0 closing-grid" />
           </div>
 
           <div className="relative">
             <h2 className="font-serif text-2xl font-bold text-primary-foreground md:text-3xl">
               {pick(content.CLOSING_CTA.title, lang)}
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm text-primary-foreground/80 md:text-base">
+            <p className="mt-3 max-w-xl text-sm text-primary-foreground/80 md:text-base">
               {pick(content.CLOSING_CTA.desc, lang)}
             </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <Button
                 size="lg"
                 variant="secondary"

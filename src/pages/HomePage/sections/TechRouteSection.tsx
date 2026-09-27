@@ -19,12 +19,11 @@ export default function TechRouteSection() {
     <section id="techroute" className="w-full py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <div className="mb-3 text-sm font-medium text-wheat">{t('技术路线', 'Pipeline')}</div>
+        <div className="section-heading mb-12">
+          <div className="section-eyebrow">{t('一次诊断，清晰可循', 'A clear path to diagnosis')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('六步诊断管线 · 全流程自动化', 'Six-Step Pipeline · Fully Automated')}
           </h2>
-          <div className="mx-auto mt-4 h-px w-12 bg-wheat" />
         </div>
 
         {/* 横向时间轴 */}

@@ -17,8 +17,8 @@ export default function SimulationSection() {
     <section className="w-full py-16 md:py-20 bg-accent/20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <div className="mb-3 text-sm font-medium text-wheat">{t('结构仿真验证', 'Simulation Verification')}</div>
+        <div className="section-heading mb-12">
+          <div className="section-eyebrow">{t('从数字模型到真实机械', 'From digital models to real machines')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('数字孪生 · 诊断验证闭环', 'Digital Twin · Verification Loop')}
           </h2>
@@ -28,7 +28,6 @@ export default function SimulationSection() {
               'Beyond labels: structural simulation verifies physical plausibility, making diagnosis explainable and traceable.',
             )}
           </p>
-          <div className="mx-auto mt-4 h-px w-12 bg-wheat" />
         </div>
 
         {/* 三卡片 */}

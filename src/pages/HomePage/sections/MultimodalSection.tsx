@@ -18,8 +18,8 @@ export default function MultimodalSection() {
     <section id="multimodal" className="w-full py-16 md:py-20 bg-accent/30">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <div className="mb-3 text-sm font-medium text-wheat">{t('多模态方案', 'Multimodal Approach')}</div>
+        <div className="section-heading mb-12">
+          <div className="section-eyebrow">{t('感知与理解', 'Sensing & Understanding')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('四类感知信号 · 融合诊断', 'Four Sensing Modalities · Fused Diagnosis')}
           </h2>
@@ -29,7 +29,6 @@ export default function MultimodalSection() {
               'Multimodal fusion breaks single-sensor limits, boosting accuracy and robustness under complex conditions.',
             )}
           </p>
-          <div className="mx-auto mt-4 h-px w-12 bg-wheat" />
         </div>
 
         {/* 四卡片 */}

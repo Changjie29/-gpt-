@@ -17,8 +17,8 @@ export default function ArchitectureSection() {
     <section id="architecture" className="w-full py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
-        <div className="mb-12 text-center">
-          <div className="mb-3 text-sm font-medium text-wheat">{t('智能体架构', 'Agent Architecture')}</div>
+        <div className="section-heading mb-12">
+          <div className="section-eyebrow">{t('司农智机如何工作', 'How Sinong Zhiji Works')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('四层技术链路 · 端到端诊断闭环', 'Four-Layer Pipeline · End-to-End Loop')}
           </h2>
@@ -28,7 +28,6 @@ export default function ArchitectureSection() {
               'From sensing to repair decisions, four layers ensure accurate, explainable and verifiable diagnosis.',
             )}
           </p>
-          <div className="mx-auto mt-4 h-px w-12 bg-wheat" />
         </div>
 
         {/* 架构图 - 纵向四层 */}
