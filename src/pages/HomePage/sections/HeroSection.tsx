@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles, Database, ShieldCheck, Box, Wheat, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { LiquidGlass } from '@sohumsuthar/liquid-glass';
 import TractorViewer from '@/components/TractorViewer';
 import content, { pick } from '@/data/content';
 import { useLang } from '@/hooks/useLang';
@@ -66,7 +65,7 @@ export default function HeroSection() {
           {/* 右侧 3D 模型 */}
           <div className="relative shrink-0 lg:min-w-0">
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-wheat/10 blur-2xl" />
-            <LiquidGlass variant="clear" interactive lens lensOptions={{ bezel: 9, refraction: 0.45, dispersion: 0.6 }} className="hero-model">
+            <div className="hero-model-visual">
               <div className="hero-model-stage">
                 <TractorViewer />
               </div>
@@ -74,7 +73,7 @@ export default function HeroSection() {
                 <span>{lang === 'zh' ? '交互式 3D 拖拉机模型' : 'Interactive 3D tractor model'}</span>
                 <span className="hidden sm:inline">{lang === 'zh' ? '拖动旋转 · 滚轮缩放' : 'Drag to rotate · Scroll to zoom'}</span>
               </div>
-            </LiquidGlass>
+            </div>
           </div>
         </div>
         <div className="hero-features" aria-label={lang === 'zh' ? '系统能力' : 'Platform capabilities'}>

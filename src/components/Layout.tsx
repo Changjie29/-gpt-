@@ -57,10 +57,10 @@ export function Layout() {
       {/* 顶部导航栏 */}
       <header className="site-header sticky top-0 z-50 w-full">
         <LiquidGlass
-          variant="clear"
+          variant="regular"
           interactive
           lens
-          lensOptions={{ bezel: 12, dispersion: 3 }}
+          lensOptions={{ bezel: 7, refraction: 0.32, dispersion: 0.8 }}
           className="site-nav-glass"
           contentClassName="flex min-h-16 w-full items-center justify-between gap-2 px-3 md:px-5"
         >
