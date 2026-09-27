@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import { LiquidGlassFilter } from '@sohumsuthar/liquid-glass';
 import { useLiquidGlassEffects, Spotlight } from '@sohumsuthar/liquid-glass/hooks/useLiquidGlassEffects';
@@ -11,8 +11,9 @@ const ChatPage = lazy(() => import('@/pages/ChatPage/ChatPage'));
 import NotFoundPage from '@/pages/NotFoundPage/NotFoundPage';
 
 export default function App() {
+  const location = useLocation();
   // 液态玻璃全局效果：光标高光跟随（--mx/--my/--lg-light-angle）、站点聚光、滚动显现
-  useLiquidGlassEffects();
+  useLiquidGlassEffects({ routeKey: `${location.pathname}${location.hash}` });
   return (
     <>
     <LiquidGlassFilter displacementMap={displacementMap} />

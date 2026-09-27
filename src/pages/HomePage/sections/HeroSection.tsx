@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Database, ShieldCheck, Box } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import TractorViewer from '@/components/TractorViewer';
 import content, { pick } from '@/data/content';
@@ -18,30 +18,20 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-grid-paper pt-16 pb-12 md:pt-24 md:pb-20">
-      {/* 装饰渐变 */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background" />
-
+    <section className="glass-hero w-full bg-grid-paper">
       <div className="relative mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="grid items-center gap-9 lg:grid-cols-[1.05fr_.95fr] lg:gap-12">
           {/* 左侧文案 */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-wheat/30 bg-wheat/10 px-3 py-1 text-xs font-medium text-wheat-foreground">
+            <div className="hero-chip glass-card font-medium text-wheat-foreground">
               <Sparkles className="h-3.5 w-3.5" />
               {pick(h.eyebrow, lang)}
             </div>
 
-            <h1
-              className={
-                lang === 'zh'
-                  ? 'font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl'
-                  : 'font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl'
-              }
-            >
-              {pick(h.title1, lang)}{' '}
+            <h1 className="hero-title text-foreground">
+              <span>{pick(h.title1, lang)}</span>
               <span className="text-primary">{pick(h.titleHighlight, lang)}</span>
-              <br className="hidden sm:block" />
-              {pick(h.title2, lang)}
+              <span>{pick(h.title2, lang)}</span>
             </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -49,7 +39,7 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button size="lg" onClick={() => navigate('/chat')} className="gap-2">
+              <Button size="lg" onClick={() => navigate('/chat')} className="glass-button gap-2">
                 {pick(h.ctaPrimary, lang)}
                 <ArrowRight className="h-4 w-4" />
               </Button>
@@ -57,33 +47,39 @@ export default function HeroSection() {
                 size="lg"
                 variant="secondary"
                 onClick={() => scrollToSection('multimodal')}
-                className="gap-2"
+                className="glass-button glass-secondary gap-2"
               >
                 {pick(h.ctaSecondary, lang)}
               </Button>
             </div>
 
-            {/* 技术指标 */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/50">
-              {h.stats.map((stat) => (
-                <div key={pick(stat.label, lang)}>
-                  <div className="font-serif text-2xl font-bold text-primary md:text-3xl">{stat.value}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{pick(stat.label, lang)}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* 右侧 3D 模型 */}
           <div className="relative shrink-0 lg:min-w-0">
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-wheat/10 blur-2xl" />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/60 bg-card/60 shadow-sm backdrop-blur-sm">
+            <div className="hero-model glass-card">
+              <div className="hero-model-stage">
               <TractorViewer />
-            </div>
-            <div className="mt-3 text-center text-xs text-muted-foreground/70">
-              {lang === 'zh' ? '拖动旋转查看 · 滚轮缩放' : 'Drag to rotate · Scroll to zoom'}
+              </div>
+              <div className="hero-model-caption">
+                <span>{lang === 'zh' ? '交互式 3D 拖拉机模型' : 'Interactive 3D tractor model'}</span>
+                <span className="hidden sm:inline">{lang === 'zh' ? '拖动旋转 · 滚轮缩放' : 'Drag to rotate · Scroll to zoom'}</span>
+              </div>
             </div>
           </div>
+        </div>
+        <div className="hero-features" aria-label={lang === 'zh' ? '系统能力' : 'Platform capabilities'}>
+          {[
+            { icon: Database, title: lang === 'zh' ? '本地知识检索' : 'Local knowledge retrieval', detail: lang === 'zh' ? '维修资料辅助诊断' : 'Repair information grounded' },
+            { icon: ShieldCheck, title: lang === 'zh' ? '安全维修建议' : 'Safety-first advice', detail: lang === 'zh' ? '结构化排查与安全提醒' : 'Structured troubleshooting' },
+            { icon: Box, title: lang === 'zh' ? '交互式 3D 展示' : 'Interactive 3D view', detail: lang === 'zh' ? '拖拉机模型可旋转缩放' : 'Explore the tractor model' },
+          ].map(({ icon: Icon, title, detail }) => (
+            <div key={title} className="hero-feature glass-card">
+              <span className="hero-feature-icon"><Icon className="size-5" /></span>
+              <span><strong className="block text-sm font-semibold text-foreground">{title}</strong><small className="mt-1 block text-xs text-muted-foreground">{detail}</small></span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
