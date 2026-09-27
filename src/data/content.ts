@@ -9,12 +9,12 @@ const content = {
       zh: '本地知识库 · LLM 推理 · 可解释诊断',
       en: 'Local KB · LLM Reasoning · Explainable Diagnostics',
     },
-    title1: { zh: '让农机', en: 'Intelligence for' },
-    titleHighlight: { zh: '诊断更简单', en: 'Agricultural' },
-    title2: { zh: '让作业更安心', en: 'Machinery' },
+    title1: { zh: '农业机械', en: 'Agricultural' },
+    titleHighlight: { zh: '智能故障诊断', en: 'Machinery Diagnosis' },
+    title2: { zh: '与维修决策平台', en: 'and Repair Platform' },
     desc: {
-      zh: '司农智机，来自南京农业大学的农机智能诊断助手。把本地维修资料与大语言模型结合起来，帮助你理清故障原因、排查步骤和安全建议。',
-      en: 'Sinong Zhiji is an agricultural machinery diagnosis assistant from Nanjing Agricultural University. It brings repair knowledge and language models together to make faults easier to understand and resolve.',
+      zh: '耕知·耘诊由南京农业大学团队研发，融合本地维修知识与大语言模型，为农业机械提供结构化故障分析、排查流程与安全维修建议。',
+      en: 'Gengzhi · Yunzhen is developed by a Nanjing Agricultural University team. It combines local repair knowledge and language models to provide structured fault analysis, troubleshooting and safety guidance for agricultural machinery.',
     },
     ctaPrimary: { zh: '开始诊断', en: 'Start Diagnosis' },
     ctaSecondary: { zh: '了解系统能力', en: 'See Capabilities' },
@@ -237,7 +237,7 @@ const content = {
     buttonText: { zh: '开始诊断', en: 'Start Diagnosis' },
   },
   FOOTER_REFERENCES: [
-    { name: { zh: '南京农业大学「司农智机」团队', en: 'NAU Sinong Zhiji Team' }, href: '#' },
+    { name: { zh: '南京农业大学农机智能诊断团队', en: 'NAU Agricultural Machinery Diagnosis Team' }, href: '#' },
     { name: { zh: '太仓市「农小修」农机服务平台', en: 'Taicang NongXiaoxiu Platform' }, href: '#' },
     { name: { zh: '本地知识库 Markdown', en: 'Local Knowledge Base' }, href: '#' },
     { name: { zh: 'Gemini API', en: 'Gemini API' }, href: '#' },
@@ -251,7 +251,7 @@ const content = {
     { zh: '联合收割机脱粒滚筒堵塞如何处理？', en: 'How to clear a combine drum blockage?' },
   ],
   CHAT_WELCOME: {
-    title: { zh: '司农智机 · 农机故障诊断智能体', en: 'Sinong Zhiji · Fault Diagnosis Agent' },
+    title: { zh: '耕知·耘诊 · 农业机械智能诊断平台', en: 'Gengzhi · Yunzhen · Agricultural Machinery Diagnosis' },
     desc: {
       zh: '您好！我是面向农机装备的故障诊断智能体。请描述故障现象（可附农机类型/品牌/型号），我会基于本地知识库给出结构化诊断与维修建议。',
       en: 'Hello! Describe the symptom (optionally with type/brand/model); I will use the local knowledge base to give structured diagnosis and repair advice.',

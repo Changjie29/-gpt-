@@ -55,7 +55,7 @@ export default function ClosingSection() {
                     <path d="M12 6v10" />
                   </svg>
                 </div>
-                <span className="font-serif text-lg font-bold text-foreground">司农智机</span>
+                <span className="font-serif text-lg font-bold text-foreground">耕知·耘诊</span>
               </div>
               <p className="mt-3 max-w-sm text-sm text-muted-foreground">
                 {t(
@@ -86,7 +86,7 @@ export default function ClosingSection() {
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-border/50 pt-6 text-xs text-muted-foreground/70 md:flex-row">
-            <div>{t('© 2026 司农智机 · 农机故障诊断智能体', '© 2026 Sinong Zhiji · Agri Fault Diagnosis Agent')}</div>
+            <div>{t('© 2026 耕知·耘诊 · 农业机械智能诊断平台', '© 2026 Gengzhi · Yunzhen · Agricultural Machinery Diagnosis')}</div>
             <div>{t('所有数据仅供演示参考 · 实际诊断请结合专业技术人员判断', 'Data for demo only · consult qualified technicians for real diagnosis')}</div>
           </div>
         </div>

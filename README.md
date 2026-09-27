@@ -1,4 +1,4 @@
-# 司农智机 · SRT27
+# 耕知·耘诊 · 农业机械智能诊断平台
 
 面向农业机械装备的智能故障诊断 Agent。基于本地 Markdown 知识库 + 大语言模型，为拖拉机、联合收割机等农机提供结构化的故障原因分析、排查步骤与安全维修建议。
 
@@ -36,8 +36,8 @@ GEMINI_API_KEY=your_gemini_api_key
 # DeepSeek（无代理环境优先使用；sk- 开头）
 DEEPSEEK_API_KEY=your_deepseek_api_key
 
-# 服务端口（默认 8787）
-PORT=8787
+# v2 服务端口（默认 8788，与 v1 分开）
+PORT=8788
 
 # 可选：代理（写在这里也能被识别；服务启动时先加载本文件再读代理变量）
 # HTTPS_PROXY=http://127.0.0.1:7890
@@ -53,9 +53,9 @@ PORT=8787
 npm run dev
 ```
 
-- 前端：http://localhost:8080
-- 后端：http://localhost:8787
-- 健康检查：http://localhost:8787/api/health
+- 前端（v2）：http://localhost:8081
+- 后端（v2）：http://localhost:8788
+- 健康检查：http://localhost:8788/api/health
 
 ### 4. 类型检查 / Lint / 构建
 
@@ -188,7 +188,7 @@ SRT27/
 │
 ├── index.html                        # Vite HTML 入口
 ├── package.json                     # 依赖与 scripts（dev/typecheck/lint/build）
-├── vite.config.ts                   # Vite 配置（代理 /api → 8787）
+├── vite.config.ts                   # Vite 配置（v2 前端 8081，代理 /api → 8788）
 ├── tsconfig.app.json                # 前端 TS 配置
 ├── tsconfig.server.json             # 后端 TS 配置
 ├── tsconfig.node.json               # Vite/Node 侧 TS 配置
@@ -281,7 +281,7 @@ SRT27/
 
 ---
 
-© 2026 司农智机 SRT27 · 南京农业大学
+© 2026 耕知·耘诊 · 南京农业大学
 
 ## 2026-09-26 对话体验优化
 

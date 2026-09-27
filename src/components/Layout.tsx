@@ -74,7 +74,7 @@ export function Layout() {
                 <path d="M12 6v10" />
               </svg>
             </div>
-            <span className="font-serif text-lg font-bold text-foreground">司农智机</span>
+            <span className="font-serif text-lg font-bold text-foreground">耕知·耘诊</span>
           </NavLink>
 
           {/* 桌面端导航 */}

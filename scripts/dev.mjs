@@ -15,15 +15,29 @@ const client = spawn('vite', [], {
 const server = spawn('tsx', ['watch', 'server/dev.ts'], {
   cwd: rootDir,
   stdio: 'inherit',
-  env: { ...process.env, FORCE_COLOR: 'true' },
+  env: { ...process.env, FORCE_COLOR: 'true', PORT: '8788' },
 });
 
-const cleanup = () => {
+let shuttingDown = false;
+const cleanup = (exitCode = 0) => {
+  if (shuttingDown) return;
+  shuttingDown = true;
   client.kill();
   server.kill();
-  process.exit(0);
+  process.exitCode = exitCode;
 };
 
-process.on('SIGINT', cleanup);
-process.on('SIGTERM', cleanup);
-process.on('exit', cleanup);
+for (const child of [client, server]) {
+  child.once('error', (error) => {
+    console.error('[dev] Failed to start service:', error.message);
+    cleanup(1);
+  });
+  child.once('exit', (code) => cleanup(code || 1));
+}
+
+process.once('SIGINT', () => cleanup(0));
+process.once('SIGTERM', () => cleanup(0));
+process.once('exit', () => {
+  client.kill();
+  server.kill();
+});

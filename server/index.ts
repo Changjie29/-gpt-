@@ -43,7 +43,7 @@ loadKnowledgeBase();
 const llm = getLlmRouter();
 
 const app = express();
-const PORT = Number(process.env.PORT) || 8787;
+const PORT = Number(process.env.PORT) || 8788;
 
 // ---- 基础安全 ----
 app.set('trust proxy', 1);
@@ -58,8 +58,8 @@ app.use((_req, res, next) => {
 });
 
 const ALLOWED_ORIGINS = new Set([
-  'http://localhost:8080',
-  'http://127.0.0.1:8080',
+  'http://localhost:8081',
+  'http://127.0.0.1:8081',
   ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : []),
 ]);
 app.use(

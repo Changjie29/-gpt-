@@ -272,7 +272,7 @@ export default function ChatPage() {
             <Bot className="h-4 w-4" />
           </div>
           <div className="min-w-0">
-            <div className="truncate text-sm font-semibold text-foreground">司农智机 · {t('故障诊断', 'Diagnosis')}</div>
+            <div className="truncate text-sm font-semibold text-foreground">耕知·耘诊 · {t('故障诊断', 'Diagnosis')}</div>
             <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <span className="truncate">{t('本地知识库 + LLM', 'Local KB + LLM')}</span>
               {currentProvider && (

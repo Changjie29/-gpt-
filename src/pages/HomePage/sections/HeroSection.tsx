@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className="space-y-6">
             <div className="hero-affiliation">
               <span className="hero-affiliation-mark"><Wheat className="size-4" /></span>
-              <span>{lang === 'zh' ? '南京农业大学 · 司农智机' : 'Nanjing Agricultural University · Sinong Zhiji'}</span>
+              <span>{lang === 'zh' ? '南京农业大学 · 耕知·耘诊' : 'Nanjing Agricultural University · Gengzhi · Yunzhen'}</span>
               <span className="hero-affiliation-rule" />
               <span className="hero-kicker"><Sparkles className="size-3.5" />{pick(h.eyebrow, lang)}</span>
             </div>

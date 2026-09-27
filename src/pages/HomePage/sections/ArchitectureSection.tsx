@@ -18,7 +18,7 @@ export default function ArchitectureSection() {
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         {/* 标题 */}
         <div className="section-heading mb-12">
-          <div className="section-eyebrow">{t('司农智机如何工作', 'How Sinong Zhiji Works')}</div>
+          <div className="section-eyebrow">{t('耕知·耘诊如何工作', 'How Gengzhi · Yunzhen Works')}</div>
           <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
             {t('四层技术链路 · 端到端诊断闭环', 'Four-Layer Pipeline · End-to-End Loop')}
           </h2>
