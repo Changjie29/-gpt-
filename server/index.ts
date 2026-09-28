@@ -18,11 +18,13 @@ import path from 'node:path';
 
 // 1) 必须先加载 server/.env，再读取任何代理/Key 环境变量。
 //    这样即使 HTTPS_PROXY 等代理配置写在 .env 里，也能被后续 detectProxy() 正确识别。
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 dotenv.config({ path: path.resolve(process.cwd(), 'server/.env') });
 
 // 2) Node fetch 默认不走系统代理；若配置了代理，全局启用（undici）。
 //    此时 process.env.HTTPS_PROXY 等已包含 .env 中的值。
 import { setGlobalDispatcher, ProxyAgent } from 'undici';
+import { pathToFileURL } from 'node:url';
 const proxyUrl =
   process.env.HTTPS_PROXY ||
   process.env.https_proxy ||
@@ -36,6 +38,7 @@ if (proxyUrl) {
 // ---- 知识库 & LLM ----
 import { loadKnowledgeBase, stats as kbStats } from './knowledge/retriever';
 import { buildSystemPrompt } from './knowledge/systemPrompt';
+import { generateLocalKnowledgeReply } from './knowledge/fallbackDiagnosis';
 import { getLlmRouter } from './llm/router';
 import { ProviderError, type ChatMessage } from './llm/types';
 
@@ -43,7 +46,7 @@ loadKnowledgeBase();
 const llm = getLlmRouter();
 
 const app = express();
-const PORT = Number(process.env.PORT) || 8788;
+const PORT = Number(process.env.PORT) || 3000;
 
 // ---- 基础安全 ----
 app.set('trust proxy', 1);
@@ -51,25 +54,12 @@ app.disable('x-powered-by');
 
 app.use((_req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'DENY');
   res.setHeader('Referrer-Policy', 'no-referrer');
   res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
   next();
 });
 
-const ALLOWED_ORIGINS = new Set([
-  'http://localhost:8081',
-  'http://127.0.0.1:8081',
-  ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : []),
-]);
-app.use(
-  cors({
-    origin(origin, cb) {
-      if (!origin || ALLOWED_ORIGINS.has(origin)) return cb(null, true);
-      cb(new Error('CORS blocked'));
-    },
-  }),
-);
+app.use(cors());
 
 app.use(express.json({ limit: '256kb' }));
 
@@ -159,6 +149,19 @@ app.post('/api/chat', async (req: Request, res: Response) => {
   const fullMessages: ChatMessage[] = [systemMsg, ...history];
 
   try {
+    if (!llm.hasAnyConfigured()) {
+      // 未配置外部 API key 时，基于本地农机知识库检索结果直接给出结构化排查建议
+      const localReply = generateLocalKnowledgeReply(query, retrieved, { machineType, brand, model });
+      res.json({
+        choices: [{ message: { role: 'assistant', content: localReply } }],
+        model: 'kb-rag-engine (本地知识引擎)',
+        provider: 'knowledge-base',
+        fellBack: true,
+        knowledgeChunks: retrieved.length,
+      });
+      return;
+    }
+
     const outcome = await llm.chat(fullMessages);
     // 返回 OpenAI 兼容结构 + 附加 provider/model/knowledge 元信息
     res.json({
@@ -171,9 +174,18 @@ app.post('/api/chat', async (req: Request, res: Response) => {
   } catch (err) {
     if (err instanceof ProviderError) {
       console.warn(`[chat] provider error: ${err.provider}/${err.kind}`, err.detail);
-    } else {
-      console.error('[chat] unexpected error:', err);
+      // 服务提供商错误时，自动兜底为本地知识库排查
+      const localReply = generateLocalKnowledgeReply(query, retrieved, { machineType, brand, model });
+      res.json({
+        choices: [{ message: { role: 'assistant', content: localReply } }],
+        model: 'kb-rag-fallback (本地备用引擎)',
+        provider: 'knowledge-base',
+        fellBack: true,
+        knowledgeChunks: retrieved.length,
+      });
+      return;
     }
+    console.error('[chat] unexpected error:', err);
     res.status(502).json({ error: USER_FRIENDLY_ERROR, code: 'llm_unavailable' });
   }
 });
@@ -192,9 +204,15 @@ app.use((err: Error, _req: Request, res: Response, _next: express.NextFunction) 
   res.status(500).json({ error: '服务器内部错误' });
 });
 
-if (process.env.NODE_ENV !== 'test') {
-  const server = app.listen(PORT, () => {
-    console.log(`[server] running on http://localhost:${PORT}`);
+const isDirectRun =
+  process.argv[1] &&
+  (pathToFileURL(process.argv[1]).href === import.meta.url ||
+    process.argv[1].endsWith('server/index.ts') ||
+    process.argv[1].endsWith('server/dev.ts'));
+
+if (isDirectRun && process.env.NODE_ENV !== 'test') {
+  const server = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[server] running on http://0.0.0.0:${PORT}`);
   });
   const shutdown = (signal: string) => {
     console.log(`[server] received ${signal}, shutting down...`);

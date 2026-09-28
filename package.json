@@ -4,10 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/dev.mjs",
-    "dev:client": "vite",
-    "dev:server": "tsx watch server/dev.ts",
-    "build": "sh scripts/build.sh",
+    "dev": "tsx server.ts",
+    "start": "node server.ts",
+    "build": "npm run build:client",
     "build:client": "tsc -b tsconfig.app.json && vite build",
     "build:server": "tsc -p tsconfig.server.json",
     "preview": "vite preview",

@@ -56,22 +56,33 @@ export class LlmRouter {
     );
   }
 
+  hasAnyConfigured(): boolean {
+    return this.gemini.isConfigured() || this.deepseek.isConfigured();
+  }
+
   /**
    * 决定本次请求的主选 provider。
-   * 规则：有代理 → Gemini 优先；无代理 → DeepSeek 优先。
-   * 主选未配置时自动用另一个。
+   * 规则：配置 Gemini 则优先使用 Gemini（AI Studio 云环境直连 Google）；未配置时自动降级。
    */
   private pickPrimary(): { primary: Provider; secondary: Provider } {
     const proxy = detectProxy();
     let first: Provider;
     let second: Provider;
-    if (proxy.present) {
+
+    if (this.gemini.isConfigured() && !this.deepseek.isConfigured()) {
+      first = this.gemini;
+      second = this.deepseek;
+    } else if (this.deepseek.isConfigured() && !this.gemini.isConfigured()) {
+      first = this.deepseek;
+      second = this.gemini;
+    } else if (proxy.present || process.env.GEMINI_API_KEY) {
       first = this.gemini;
       second = this.deepseek;
     } else {
       first = this.deepseek;
       second = this.gemini;
     }
+
     // 主选未配置则交换
     if (!first.isConfigured() && second.isConfigured()) {
       log(`primary ${first.name} not configured, using ${second.name}`);
