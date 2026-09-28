@@ -83,7 +83,7 @@ pnpm build            # 同步知识索引并构建网站
 3. 执行 `pnpm knowledge:sync`，检查知识页和故障检索结果。
 4. 将原文与更新后的 `lib/knowledge.json` 一起提交。
 
-详细规范见 [知识库维护说明](server/knowledge/00_说明/README.md)。当前版本没有 PDF、Word 或扫描件自动解析能力。
+详细规范见 [知识库维护说明](server/knowledge/00_说明/README.md)。当前版本没有 PDF、Word、Excel、TXT 或扫描件自动解析能力。未来接入这些格式时，在 `server/knowledge/loader.ts` 中新增对应解析器，保持 RAG 接口不变。
 
 ## 后续同步约定
 
