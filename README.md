@@ -1,9 +1,9 @@
-# 司农智机 · SRT27
+# 耕知·耘诊 · SRT27
 
 农机故障排查工作台，包含三维农机漫游、知识库检索和诊断对话。
 
 - 源码维护仓库：[Changjie29/-gpt-](https://github.com/Changjie29/-gpt-)，维护分支 `main`。
-- 网站：[司农智机 · SRT27](https://srt27-sinong.z3464715478.chatgpt.site)，访问范围由网站的分享设置决定。
+- 网站：[耕知·耘诊 · SRT27](https://srt27-sinong.z3464715478.chatgpt.site)，访问范围由网站的分享设置决定。
 - 架构说明：[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 - 更新与同步：[docs/MAINTAINING.md](docs/MAINTAINING.md)。
 
