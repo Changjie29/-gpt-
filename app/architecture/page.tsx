@@ -1,2 +1,2 @@
-import { Architecture } from '@/components/sinong/product';
-export default function Page() { return <Architecture />; }
+import { redirect } from 'next/navigation';
+export default function Page() { redirect('/roam'); }
