@@ -3,7 +3,12 @@ import { diagnose, type Message } from '@/lib/diagnosis';
 const buckets=new Map<string,{n:number;end:number}>();
 export async function POST(req:Request){
  const origin=req.headers.get('origin');
- if(origin&&origin!==new URL(req.url).origin)return Response.json({error:'请求来源不受支持。'},{status:403});
+ // Next's internal request URL can use localhost behind a reverse proxy.
+ // The deployment proxy must overwrite Host and X-Forwarded-Proto.
+ const requestUrl=new URL(req.url);
+ const protocol=req.headers.get('x-forwarded-proto')?.split(',')[0].trim()||requestUrl.protocol.slice(0,-1);
+ const requestOrigin=`${protocol}://${req.headers.get('host')||requestUrl.host}`;
+ if(origin&&origin!==requestOrigin)return Response.json({error:'请求来源不受支持。'},{status:403});
  const ip=req.headers.get('cf-connecting-ip')||'local';const now=Date.now();
  for(const [key,value] of buckets)if(value.end<now)buckets.delete(key);
  const b=buckets.get(ip)||{n:0,end:now+60000};b.n++;buckets.set(ip,b);
