@@ -38,6 +38,17 @@
 @media(max-width:620px){.chat-heading{align-items:flex-start}.chat-heading-actions{flex-direction:column;align-items:stretch}.chat-heading-actions .secondary-button{white-space:nowrap}}
 
 /* Agricultural equipment workspace: cool neutrals, graphite, harvest-gold details. */
+.knowledge-source-filter{display:flex;align-items:center;gap:12px;margin-top:14px;color:var(--text-secondary);font-size:14px}
+.knowledge-source-filter select{min-width:0;max-width:100%;padding:8px 12px;border:1px solid var(--input);border-radius:7px;background:var(--card);color:var(--foreground);font:inherit}
+.source-context{margin:12px 0 24px;font-size:14px;color:var(--text-secondary)}
+.source-context summary{cursor:pointer;padding:12px 0;color:var(--foreground)}
+.reference-table{max-width:100%;overflow-x:auto;margin:16px 0;border:1px solid var(--border);border-radius:8px}
+.reference-table table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.8}
+.reference-table th,.reference-table td{padding:12px;min-width:120px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.reference-table th{background:var(--soft);font-weight:600}
+.reference-table p{margin:0}
+.source-context p{margin:10px 0;overflow-wrap:anywhere}
+@media(max-width:767px){.knowledge-source-filter{align-items:flex-start;flex-direction:column;gap:6px}.knowledge-source-filter select{width:100%}}
 :root {
   --background:#f5f6f8; --foreground:#292e35;
   --card:#ffffff; --card-foreground:#292e35;

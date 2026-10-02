@@ -3,252 +3,996 @@
     "id": "0",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "概述",
-    "text": "# 农机故障诊断知识库（示例 · 拖拉机常见故障）\n# 说明：本文件为系统提示词的一部分。可直接编辑/追加真实维修手册内容，\n#       保存后重启后端即生效。每条知识应包含：现象、可能原因、排查/处理、注意事项。"
+    "text": "# 农机故障诊断知识库（示例 · 拖拉机常见故障）\n# 说明：本文件为系统提示词的一部分。可直接编辑/追加真实维修手册内容，\n#       保存后重启后端即生效。每条知识应包含：现象、可能原因、排查/处理、注意事项。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Overview",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "1",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "一、发动机水温过高（开锅）",
-    "text": "- 现象：水温表指针进入红区、散热器开锅、怠速不稳、动力下降。\n- 可能原因：\n  1. 冷却液不足或渗漏（水箱、水管、水泵密封）。\n  2. 节温器打不开或开启温度过高。\n  3. 散热器外表堵塞（麦秸、尘土）或内部水垢严重。\n  4. 风扇皮带打滑/断裂，或风扇离合器失效。\n  5. 水泵损坏（叶轮松脱、水封漏水）。\n  6. 喷油提前角过晚、混合气过浓导致燃烧过热。\n  7. 长时间高负荷作业、超负荷牵引。\n- 处理步骤：\n  1. 立即降低负荷、靠边停机，**切勿立即拧开水箱盖**（高温高压蒸汽会喷出伤人）。\n  2. 怠速降温 5–10 分钟后再检查。\n  3. 检查冷却液液位与渗漏点；不足时补充同型号防冻液。\n  4. 清理散热器外表；检查皮带张紧度（按压下沉 10–15mm 为正常）。\n  5. 仍偏高则检查节温器（82℃ 左右应开启）与水泵。\n- 注意：水温过高后禁止立即加冷水骤冷缸体，以防开裂。"
+    "text": "- 现象：水温表指针进入红区、散热器开锅、怠速不稳、动力下降。\n- 可能原因：\n  1. 冷却液不足或渗漏（水箱、水管、水泵密封）。\n  2. 节温器打不开或开启温度过高。\n  3. 散热器外表堵塞（麦秸、尘土）或内部水垢严重。\n  4. 风扇皮带打滑/断裂，或风扇离合器失效。\n  5. 水泵损坏（叶轮松脱、水封漏水）。\n  6. 喷油提前角过晚、混合气过浓导致燃烧过热。\n  7. 长时间高负荷作业、超负荷牵引。\n- 处理步骤：\n  1. 立即降低负荷、靠边停机，**切勿立即拧开水箱盖**（高温高压蒸汽会喷出伤人）。\n  2. 怠速降温 5–10 分钟后再检查。\n  3. 检查冷却液液位与渗漏点；不足时补充同型号防冻液。\n  4. 清理散热器外表；检查皮带张紧度（按压下沉 10–15mm 为正常）。\n  5. 仍偏高则检查节温器（82℃ 左右应开启）与水泵。\n- 注意：水温过高后禁止立即加冷水骤冷缸体，以防开裂。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "2",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "二、发动机启动困难 / 不能启动",
-    "text": "- 现象：启动马达转但不着火，或根本不转。\n- 可能原因：\n  1. 蓄电池亏电、接线柱松动氧化。\n  2. 燃油系统进空气、柴油滤芯堵塞、油箱开关未开。\n  3. 预热塞（冷启动系统）损坏，低温环境尤为明显。\n  4. 喷油器雾化不良、喷油压力不足。\n  5. 气缸压缩压力不足（活塞环磨损、气门漏气）。\n- 处理步骤：\n  1. 先看蓄电池电量与接线；听启动马达声音判断。\n  2. 排燃油系统空气（拧松喷油泵放气螺塞，泵油至无气泡）。\n  3. 冬季先预热 2–3 次再启动。\n  4. 仍难启动则送检喷油器与气缸压力。"
+    "text": "- 现象：启动马达转但不着火，或根本不转。\n- 可能原因：\n  1. 蓄电池亏电、接线柱松动氧化。\n  2. 燃油系统进空气、柴油滤芯堵塞、油箱开关未开。\n  3. 预热塞（冷启动系统）损坏，低温环境尤为明显。\n  4. 喷油器雾化不良、喷油压力不足。\n  5. 气缸压缩压力不足（活塞环磨损、气门漏气）。\n- 处理步骤：\n  1. 先看蓄电池电量与接线；听启动马达声音判断。\n  2. 排燃油系统空气（拧松喷油泵放气螺塞，泵油至无气泡）。\n  3. 冬季先预热 2–3 次再启动。\n  4. 仍难启动则送检喷油器与气缸压力。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Hard starting / no start",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "3",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "三、动力不足 / 冒黑烟",
-    "text": "- 现象：加速无力、排气管冒黑烟、油耗上升。\n- 可能原因：\n  1. 空滤芯堵塞，进气不足。\n  2. 喷油泵/喷油器故障，雾化不良或供油过多。\n  3. 喷油提前角失准。\n  4. 增压中冷器（如有）漏气。\n  5. 缸压不足。\n- 处理：清洁或更换空滤；校喷油器与喷油泵；核对供油提前角。"
+    "text": "- 现象：加速无力、排气管冒黑烟、油耗上升。\n- 可能原因：\n  1. 空滤芯堵塞，进气不足。\n  2. 喷油泵/喷油器故障，雾化不良或供油过多。\n  3. 喷油提前角失准。\n  4. 增压中冷器（如有）漏气。\n  5. 缸压不足。\n- 处理：清洁或更换空滤；校喷油器与喷油泵；核对供油提前角。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Low power / black smoke",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "4",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "四、液压系统故障",
-    "text": "- 现象：提升无力、农具沉降、系统噪音/过热。\n- 可能原因：液压油不足或牌号不对、滤芯堵塞、齿轮泵磨损、分配阀泄漏、油缸内泄。\n- 处理：检查油位与油温（正常 40–80℃）；换液压油与滤芯；测系统压力（按机型铭牌，常见 16–20 MPa）。"
+    "text": "- 现象：提升无力、农具沉降、系统噪音/过热。\n- 可能原因：液压油不足或牌号不对、滤芯堵塞、齿轮泵磨损、分配阀泄漏、油缸内泄。\n- 处理：检查油位与油温（正常 40–80℃）；换液压油与滤芯；测系统压力（按机型铭牌，常见 16–20 MPa）。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Hydraulic system faults",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "5",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "五、电气系统故障",
-    "text": "- 现象：充电指示灯常亮、喇叭弱、灯光暗。\n- 可能原因：发电机皮带打滑、调节器损坏、发电机碳刷磨损、接线松动。\n- 处理：检查皮带与接线；测发电机输出（怠速 13.5V 以上为正常）。"
+    "text": "- 现象：充电指示灯常亮、喇叭弱、灯光暗。\n- 可能原因：发电机皮带打滑、调节器损坏、发电机碳刷磨损、接线松动。\n- 处理：检查皮带与接线；测发电机输出（怠速 13.5V 以上为正常）。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Electrical system faults",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "6",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "六、制动与转向",
-    "text": "- 制动跑偏：两侧制动片磨损不均、轮胎气压不一致。\n- 转向沉重：液压转向油不足、油泵磨损、前束失准。"
+    "text": "- 制动跑偏：两侧制动片磨损不均、轮胎气压不一致。\n- 转向沉重：液压转向油不足、油泵磨损、前束失准。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Braking and steering",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "7",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "七、保养周期（以 100 小时为基础单位，具体以机型手册为准）",
-    "text": "- 每 50 小时：检查机油油位、冷却液、轮胎气压。\n- 每 100 小时：更换机油及机油滤芯；检查空滤。\n- 每 200 小时：更换柴油滤芯；清理散热器与空滤内芯。\n- 每 500 小时：更换液压油（或按油质判断）；检查气门间隙。\n- 每 1000 小时：检查喷油器、气缸压力；更换防冻液。"
+    "text": "- 每 50 小时：检查机油油位、冷却液、轮胎气压。\n- 每 100 小时：更换机油及机油滤芯；检查空滤。\n- 每 200 小时：更换柴油滤芯；清理散热器与空滤内芯。\n- 每 500 小时：更换液压油（或按油质判断）；检查气门间隙。\n- 每 1000 小时：检查喷油器、气缸压力；更换防冻液。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Maintenance intervals",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
     "id": "8",
     "source": "01_通用原理/通用故障诊断.md",
     "heading": "八、安全规范",
-    "text": "- 维修前熄火、拉手刹、取下钥匙，液压农具落地。\n- 高温高压部件（水箱、排气管、液压油管）冷却后再接触。\n- 严禁在发动机运转时清理散热器或加注燃油。"
+    "text": "- 维修前熄火、拉手刹、取下钥匙，液压农具落地。\n- 高温高压部件（水箱、排气管、液压油管）冷却后再接触。\n- 严禁在发动机运转时清理散热器或加注燃油。",
+    "kind": "general",
+    "brand": "",
+    "brandEn": "",
+    "aliases": [],
+    "models": [],
+    "titleEn": "Safe maintenance",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "PROJECT-SAMPLE",
+    "scope": "项目通用示例，不作为具体机型的维修标准。",
+    "scopeEn": "Project examples, not service specifications for a particular model.",
+    "context": "项目通用示例，不作为具体机型的维修标准。"
   },
   {
-    "id": "9",
+    "id": "manual-SRC-ZL-PL-202011-0",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "概述",
-    "text": "# 中联农机 PL 系列：安全、保养与常见故障"
+    "text": "# 中联农机 PL 系列：安全、保养与常见故障",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Overview",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "10",
+    "id": "manual-SRC-ZL-PL-202011-1",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "来源与适用范围",
-    "text": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
+    "text": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "11",
+    "id": "ZL-PL-001",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-001｜启动、离车与检修安全",
-    "text": "- 手册要点：坐在驾驶座上启动，禁止短接启动电机；不在封闭空间运行发动机。\n- 离车前降低悬挂及机具，控制装置置空挡，施加驻车制动，关闭发动机，拔钥匙并关闭电源总开关。\n- 保养需等发动机冷却，使用驻车制动并塞住车轮；热机时不打开散热器盖，冷却后按原文释放压力。\n- 电气检修先拔钥匙并断开蓄电池搭铁线；不要用导线短接电池两极测试。\n- 证据：SRC-ZL-PL-202011，安全注意事项／日常保养；PDF 第 5、68 页；印刷第 5、68 页。"
+    "text": "- 手册要点：坐在驾驶座上启动，禁止短接启动电机；不在封闭空间运行发动机。\n- 离车前降低悬挂及机具，控制装置置空挡，施加驻车制动，关闭发动机，拔钥匙并关闭电源总开关。\n- 保养需等发动机冷却，使用驻车制动并塞住车轮；热机时不打开散热器盖，冷却后按原文释放压力。\n- 电气检修先拔钥匙并断开蓄电池搭铁线；不要用导线短接电池两极测试。\n- 证据：SRC-ZL-PL-202011，安全注意事项／日常保养；PDF 第 5、68 页；印刷第 5、68 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Starting, leaving and servicing safely",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "12",
+    "id": "ZL-PL-002",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-002｜日常检查与蓄电池周期",
-    "text": "| 时机 | 手册明确的项目 | 限制 |\n| --- | --- | --- |\n| 开始工作前 | 检查油液渗漏，清除泥、秸秆和树叶等附着物 | 发现损坏或漏液联系维修服务 |\n| 每 50 小时 | 清洁蓄电池并检查状态 | 不将可维护电池的补液要求套用于免维护电池 |\n\n- 已核实的是上述项目，不足以推导整机换油周期。\n- 待核实：本车电池类型、油品牌号与容量，以及各配置空滤的清洁方式。第 68 页机油段出现疑似编辑用词问题，本条不摘录其检查等待时间。\n- 证据：SRC-ZL-PL-202011，日常保养／电池保养；PDF 第 68、73 页；印刷第 68、73 页。"
+    "text": "| 时机 | 手册明确的项目 | 限制 |\n| --- | --- | --- |\n| 开始工作前 | 检查油液渗漏，清除泥、秸秆和树叶等附着物 | 发现损坏或漏液联系维修服务 |\n| 每 50 小时 | 清洁蓄电池并检查状态 | 不将可维护电池的补液要求套用于免维护电池 |\n\n- 已核实的是上述项目，不足以推导整机换油周期。\n- 待核实：本车电池类型、油品牌号与容量，以及各配置空滤的清洁方式。第 68 页机油段出现疑似编辑用词问题，本条不摘录其检查等待时间。\n- 证据：SRC-ZL-PL-202011，日常保养／电池保养；PDF 第 68、73 页；印刷第 68、73 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Daily checks and battery maintenance",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "13",
+    "id": "ZL-PL-003",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-003｜发动机无法启动或启动困难",
-    "text": "- 现象：发动机不能启动或难启动；本表未把所有原因按「电机不转／转得慢／正常带转」完全拆分。\n- 可能原因选摘：启动步骤不正确、燃油不足、燃油系统进气或污染、滤清器堵塞、低温、油品黏度不适合、电池切断装置状态或启动转速不足。\n- 初步核对：按本车启动流程核对控制状态，查看燃油量、环境温度与维护记录；转速偏低时检查蓄电池和启动系统。\n- 维修边界：排气、燃油系统清洗及泵／喷油器检查按对应配置原手册由具备能力人员处理；不得短接启动或绕过安全联锁。\n- 待核实：具体冷启动装置、燃油牌号和启动系统配置。以上可能原因并不等于已经发现故障。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 105 页；印刷第 105 页；安全限制见第 5 页。"
+    "text": "- 现象：发动机不能启动或难启动；本表未把所有原因按「电机不转／转得慢／正常带转」完全拆分。\n- 可能原因选摘：启动步骤不正确、燃油不足、燃油系统进气或污染、滤清器堵塞、低温、油品黏度不适合、电池切断装置状态或启动转速不足。\n- 初步核对：按本车启动流程核对控制状态，查看燃油量、环境温度与维护记录；转速偏低时检查蓄电池和启动系统。\n- 维修边界：排气、燃油系统清洗及泵／喷油器检查按对应配置原手册由具备能力人员处理；不得短接启动或绕过安全联锁。\n- 待核实：具体冷启动装置、燃油牌号和启动系统配置。以上可能原因并不等于已经发现故障。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 105 页；印刷第 105 页；安全限制见第 5 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Hard starting / no start",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "14",
+    "id": "ZL-PL-004",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-004｜发动机功率不足",
-    "text": "- 可能原因选摘：负荷过大、空气滤清器堵塞、燃油滤清器堵塞、燃油不适合；也可能涉及气门间隙、喷油器、喷油泵、进排气泄漏或涡轮增压器。\n- 手册处理方向：过载时降低挡位、减小牵引负荷；滤清器问题按对应结构维护或更换，燃油按机型要求核对。\n- 维修边界：气门间隙、喷油系统、增压器及怠速设定交授权经销商确认；不能仅凭「没劲」认定喷油泵损坏。\n- 待核实：本车空滤形式及动力系统配置，不能混用干式和油浴式的保养办法。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 106 页；印刷第 106 页。"
+    "text": "- 可能原因选摘：负荷过大、空气滤清器堵塞、燃油滤清器堵塞、燃油不适合；也可能涉及气门间隙、喷油器、喷油泵、进排气泄漏或涡轮增压器。\n- 手册处理方向：过载时降低挡位、减小牵引负荷；滤清器问题按对应结构维护或更换，燃油按机型要求核对。\n- 维修边界：气门间隙、喷油系统、增压器及怠速设定交授权经销商确认；不能仅凭「没劲」认定喷油泵损坏。\n- 待核实：本车空滤形式及动力系统配置，不能混用干式和油浴式的保养办法。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 106 页；印刷第 106 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Engine power loss",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "15",
+    "id": "ZL-PL-005",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-005｜发动机过热",
-    "text": "- 可能原因选摘：冷却液不足、散热器或格栅堵塞、负荷过大、风扇皮带松弛／磨损；也可能为节温器、冷却回路或温度检测故障。\n- 原文处理方向：检查冷却系统泄漏、清理散热器外表和格栅、核查皮带状态；负荷问题采取降挡减载。节温器或冷却系统内部问题联系授权经销商。\n- 安全前提：实际清理、皮带检查和开盖检查必须遵守 ZL-PL-001；热态不得开散热器盖。\n- 待核实：本车过热停机流程、温度报警阈值、皮带张力规格；本条不从其他品牌借用怠速冷却时间。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 106～107 页；印刷第 106～107 页；开盖安全见第 5 页。"
+    "text": "- 可能原因选摘：冷却液不足、散热器或格栅堵塞、负荷过大、风扇皮带松弛／磨损；也可能为节温器、冷却回路或温度检测故障。\n- 原文处理方向：检查冷却系统泄漏、清理散热器外表和格栅、核查皮带状态；负荷问题采取降挡减载。节温器或冷却系统内部问题联系授权经销商。\n- 安全前提：实际清理、皮带检查和开盖检查必须遵守 ZL-PL-001；热态不得开散热器盖。\n- 待核实：本车过热停机流程、温度报警阈值、皮带张力规格；本条不从其他品牌借用怠速冷却时间。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 106～107 页；印刷第 106～107 页；开盖安全见第 5 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "16",
+    "id": "ZL-PL-006",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-006｜机油压力低",
-    "text": "- 可能原因：机油液位不足、等级或黏度不适合、机油泵或压力传感器故障。\n- 原文处理方向：核对液位与用油；泵或传感器问题咨询授权经销商。\n- 整理安全边界：出现低油压异常不要带负荷继续作业或反复试机，应安全停机并安排检查；不把「可能是传感器」当作继续运行的依据。\n- 待核实：该配置正常油压和报警阈值、指定油品。本文不提供猜测数值，也不把低油压等同于单纯缺油。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 107 页；印刷第 107 页。停机建议属于本条明确标注的整理安全边界。"
+    "text": "- 可能原因：机油液位不足、等级或黏度不适合、机油泵或压力传感器故障。\n- 原文处理方向：核对液位与用油；泵或传感器问题咨询授权经销商。\n- 整理安全边界：出现低油压异常不要带负荷继续作业或反复试机，应安全停机并安排检查；不把「可能是传感器」当作继续运行的依据。\n- 待核实：该配置正常油压和报警阈值、指定油品。本文不提供猜测数值，也不把低油压等同于单纯缺油。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—发动机；PDF 第 107 页；印刷第 107 页。停机建议属于本条明确标注的整理安全边界。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Low engine oil pressure",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "17",
+    "id": "ZL-PL-007",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-007｜液压系统不工作或油温偏高",
-    "text": "| 现象 | 原文可能原因选摘 | 核对方向 |\n| --- | --- | --- |\n| 系统不工作 | 油位很低、滤油器堵塞、内部泄漏、故障代码提示 | 核对油位、滤器维护记录；记录代码，内部泄漏或代码由经销商判断 |\n| 液压油过热 | 油位不正确、冷却器堵塞、辅助方向阀未回中位、负载不匹配、高压内漏 | 核对液位、冷却器及控制手柄状态；负载匹配和内漏由经销商检查 |\n\n- 整理安全边界：降低并可靠支撑机具；不在带压状态拆接管路，不用手摸寻找高压泄漏，不擅自调整溢流压力。\n- 待核实：液压油规格、滤芯件号、油位检查工况及控制器代码定义；手册此页没有提供可通用的代码数值表。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—液压；PDF 第 113 页；印刷第 113 页。上述检修限制为整理安全边界。"
+    "text": "| 现象 | 原文可能原因选摘 | 核对方向 |\n| --- | --- | --- |\n| 系统不工作 | 油位很低、滤油器堵塞、内部泄漏、故障代码提示 | 核对油位、滤器维护记录；记录代码，内部泄漏或代码由经销商判断 |\n| 液压油过热 | 油位不正确、冷却器堵塞、辅助方向阀未回中位、负载不匹配、高压内漏 | 核对液位、冷却器及控制手柄状态；负载匹配和内漏由经销商检查 |\n\n- 整理安全边界：降低并可靠支撑机具；不在带压状态拆接管路，不用手摸寻找高压泄漏，不擅自调整溢流压力。\n- 待核实：液压油规格、滤芯件号、油位检查工况及控制器代码定义；手册此页没有提供可通用的代码数值表。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—液压；PDF 第 113 页；印刷第 113 页。上述检修限制为整理安全边界。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Hydraulic failure or overheating",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "18",
+    "id": "ZL-PL-008",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "ZL-PL-008｜提升装置升降异常",
-    "text": "| 现象 | 原文可能原因／方向 |\n| --- | --- |\n| 无法完全提升或提升缓慢 | 提升限位控制位置不正确，或悬挂负载过大；核对控制位置及负载 |\n| 下降缓慢 | 下降速度控制位置不正确；按本车控制说明核对 |\n| 停车熄火后下降过快 | 回路内部泄漏的可能性；咨询授权经销商 |\n\n- 配置限制：电子提升的传感器／外部控制开关诊断不能直接套用机械提升配置。\n- 整理安全边界：禁止在只靠液压悬空的机具下检查；这里不提供无人监护的带载测试或内部阀件调节步骤。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—提升装置；PDF 第 112 页；印刷第 112 页。"
+    "text": "| 现象 | 原文可能原因／方向 |\n| --- | --- |\n| 无法完全提升或提升缓慢 | 提升限位控制位置不正确，或悬挂负载过大；核对控制位置及负载 |\n| 下降缓慢 | 下降速度控制位置不正确；按本车控制说明核对 |\n| 停车熄火后下降过快 | 回路内部泄漏的可能性；咨询授权经销商 |\n\n- 配置限制：电子提升的传感器／外部控制开关诊断不能直接套用机械提升配置。\n- 整理安全边界：禁止在只靠液压悬空的机具下检查；这里不提供无人监护的带载测试或内部阀件调节步骤。\n- 证据：SRC-ZL-PL-202011，常见故障的排除方法—提升装置；PDF 第 112 页；印刷第 112 页。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Lift operation problems",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "19",
+    "id": "manual-SRC-ZL-PL-202011-10",
     "source": "02_机型手册/中联/PL系列.md",
     "heading": "尚未整理",
-    "text": "全套操作流程、完整保养周期、扭矩／油液容量、各电控系统代码及附录中的通用经验案例。本资料不证明 2020 版内容仍适合后续升级机型；取得精确机型新版本手册后应复核替换适用结论，而非覆盖原件。"
+    "text": "全套操作流程、完整保养周期、扭矩／油液容量、各电控系统代码及附录中的通用经验案例。本资料不证明 2020 版内容仍适合后续升级机型；取得精确机型新版本手册后应复核替换适用结论，而非覆盖原件。",
+    "kind": "manual",
+    "brand": "中联",
+    "brandEn": "Zoomlion",
+    "aliases": [
+      "中联",
+      "zoomlion"
+    ],
+    "models": [
+      "PL系列",
+      "PL series"
+    ],
+    "titleEn": "Zoomlion PL series manual excerpts",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-ZL-PL-202011",
+    "scope": "仅为 2020 年 PL 系列维保汇编选摘；具体子型号、排放版本与提升配置待核实，不直接适用于 PL2304(G4)。",
+    "scopeEn": "Excerpts from the 2020 PL series compilation. Submodel, emissions version and lift configuration remain unverified; not directly applicable to PL2304(G4).",
+    "context": "- 来源编号：`SRC-ZL-PL-202011`。\n- 原始文件：`知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf)。Git blob SHA：`7134bca8dc029e3e618f2ba855aafebb3525fa71`。\n- 来源网站：[中联农机官网维保资料页](https://www.zoomlion-ag.com/whby_1.html)；中文，132 页，2020 年 11 月版本；独立手册编号待核实。\n- 适用：手册所述 PL 系列。具体子型号、出厂序列号、排放版本与机械／电子提升配置待核实，不可直接套用 PL2304(G4) 或所有国四拖拉机。\n- 资料性质：维保操作汇编。用户须知说明其结合说明书、零部件资料、公开文献和服务经验，不覆盖全部细节，且可能修订。证据：PDF 第 1～2 页；印刷第 2 页及封面。\n- 整理日期：2026-10-01；状态：以下选摘已对照原文，未获厂家复核／实车验证。本文 8 个条目，不是完整保养计划；每条均继承上述来源与适用限制。"
   },
   {
-    "id": "20",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "概述",
-    "text": "# Kubota LX2620 / LX2620SU：安全、保养与常见故障"
-  },
-  {
-    "id": "21",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "来源与适用范围",
-    "text": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
-  },
-  {
-    "id": "22",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-001｜维护作业安全",
-    "text": "- 不在仅靠液压支撑的设备下作业；需要下方维修时，先用合适支架／垫块可靠支撑。\n- 发动机运转时不打开机罩或侧盖；不接触高温排气部件。\n- 冷却液仍热时不可开启散热器盖；冷却后按原手册缓慢卸压再开盖。\n- 换发动机机油前停机并充分冷却，防止热油烫伤。\n- 证据：SRC-KB-LX2620-6C82063118，Periodic service／Daily check／Changing engine oil；PDF 第 101、104、112 页；印刷第 99、102、110 页。"
-  },
-  {
-    "id": "23",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-002｜保养周期选摘",
-    "text": "| 时机 | 本批整理项目 | 配置／条件 |\n| --- | --- | --- |\n| 首次 50 小时后 | 更换发动机机油、发动机机油滤、变速箱油滤及液压油滤 | 来自总表的 ◎ 标记；不把这四项滤油项目混成一个滤芯 |\n| 每 50 小时 | 加脂润滑、检查启动系统和车轮螺栓扭矩 | 具体测试和扭矩参见原手册，本条不展开 |\n| 每 100 小时 | 检查蓄电池，清洁空气滤清器主滤芯、燃油滤芯；调整风扇皮带和制动踏板 | 多尘时空滤需更频繁清洁；制动调整由合格人员完成 |\n| 每 200 小时或 1 年，以先到者为准 | 更换发动机机油 | 不只按运行小时计算 |\n| 每 200 小时 | 更换发动机机油滤与变速箱油滤 | 与机油的日历条件分开，不能擅自给滤芯追加「1 年」结论 |\n| 每 400 小时 | 更换变速箱油、液压油滤、燃油滤芯、前桥壳体油 | 容量和具体方法需按配置核对 |\n| 每 1000 小时或 1 年，以先到者为准 | 更换空气滤清器主、副滤芯 | 不把副滤芯当作可按主滤芯方式反复清洁的部件 |\n| 每 2000 小时或 2 年，以先到者为准 | 冲洗冷却系统、更换冷却液 | 冷却液类型、比例及容量另查原手册 |\n\n- 使用生物柴油会改变部分项目的维护要求，本表不能直接替代对应燃料附加要求。多尘工况也不能仅按普通周期等待保养。\n- 本表不穷尽年度软管、CAB 空调、气门及喷油系统等项目；不提供跨配置容量或扭矩。\n- 证据：SRC-KB-LX2620-6C82063118，Service intervals 及脚注；PDF 第 95～96 页；印刷第 93～94 页。机油先到者说明另见 PDF 第 112 页／印刷第 110 页。"
-  },
-  {
-    "id": "24",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-003｜发动机启动困难或不能启动",
-    "text": "- 可能原因选摘：供油不畅，燃油系统有空气或水，低温导致油黏度增大／带转慢，电池电量不足。\n- 原文方向：检查油箱和燃油滤清器、燃油软管及夹箍；核对适合温度的用油、电池接线和电池状态。排气按原手册对应程序进行。\n- 整理安全边界：不能把所有不启动都归结为缺油；不盲目拆开喷油管路排气或跨接启动，不用明火加热。\n- 待核实：本车环境温度对应的油品、启动系统状态和选装预热装置；不从其他型号补参数。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。"
-  },
-  {
-    "id": "25",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-004｜发动机动力不足",
-    "text": "- 此页列出：燃油不足或污染、空气滤清器堵塞。\n- 原文方向：检查燃油系统，按手册清洁或更换空气滤清器滤芯。\n- 范围限制：这只是操作手册提供的候选原因，不是所有可能故障；若供油和空滤正常但仍无力，应进一步由维修人员确认，不能根据本条排除内部机械故障。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。"
-  },
-  {
-    "id": "26",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-005｜发动机过热",
-    "text": "- 适用现象：冷却温度接近／达到沸腾或温度指示到达 H 红区；应读取本型号的过热处置章节。\n- 该手册的特定流程：在安全地点停车，保持发动机无负荷怠速约 5 分钟后停机；随后远离机器至少按原文要求等待 10 分钟，仍有蒸汽喷出时保持远离。确认无烫伤等危险并排除过热原因后，才按手册重新启动。\n- 上述流程不能跨品牌套用；也不是对同时发生火灾、失油压等其他紧急故障的处理说明。多重危险不适用单一过热排查条目，应停止操作并联系专业救援／维修。\n- 故障表可能原因：超负荷、冷却液不足、风扇皮带松弛／损坏、散热器或格栅脏堵、冷却通路腐蚀。\n- 待冷却且停机后再检查；禁止热态开盖，不将「先怠速」解释成可以继续带负荷作业。\n- 证据：SRC-KB-LX2620-6C82063118，Overheating countermeasures／Engine troubleshooting；PDF 第 60、130 页；印刷第 58、128 页；开盖安全见 PDF 第 104 页／印刷第 102 页。多重危险限制为整理安全边界。"
-  },
-  {
-    "id": "27",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-006｜发动机突然停机",
-    "text": "- 此页列出的候选原因是燃油不足，处理方向为补充燃油并在必要时按手册排气。\n- 不得推论「所有突然停机都是缺油」。需记录停机前负载、油量、报警、异响和泄漏；这些是整理建议，不是原表新增的确定故障原因。\n- 整理安全边界：存在油压／温度异常、异响、泄漏或无法确认原因时，不反复启动，应先联系维修人员。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。"
-  },
-  {
-    "id": "28",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-007｜未过热但发动机警告灯点亮",
-    "text": "- 前提：原表明确限定发动机没有过热，且亮的是发动机警告指示灯；不是任意警灯或低油压报警。\n- 原文方向：停止发动机后重新启动；若无法重新启动或灯仍亮，立即联系当地 Kubota 经销商。\n- 整理安全边界：该处不是「清码后继续干活」授权，不反复重启掩盖故障；若无法确认警灯类型或伴随其他危险，不按此单独条目尝试。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting 页面底部 Operator's action 表；PDF 第 130 页；印刷第 128 页。"
-  },
-  {
-    "id": "29",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "KB-LX2620-008｜主警告灯闪烁及 Err1／Err2／Err3",
-    "text": "| 屏显代码 | 该手册的故障描述 | 操作者方向 |\n| --- | --- | --- |\n| Err1 | 水温传感器故障 | 联系 Kubota 经销商检查维修 |\n| Err2 | 燃油传感器故障 | 联系 Kubota 经销商检查维修 |\n| Err3 | 仪表面板存储器读取故障 | 联系 Kubota 经销商检查维修 |\n\n- 保留完整代码与当时警灯照片。代码指向手册所列故障类别，不证明传感器本体必坏；本文没有原文支持的线束脚位、阻值、替换或清码步骤。\n- 严格限制为本版 LX2620／LX2620SU，不能当作久保田全系列代码表；Err1 也不能直接等同于「发动机实际过热」。\n- 证据：SRC-KB-LX2620-6C82063118，Powertrain trouble shooting；PDF 第 131 页；印刷第 129 页。该表已核对原页代码拼写及行列。"
-  },
-  {
-    "id": "30",
-    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
-    "heading": "尚未整理",
-    "text": "完整操作、全部日检和维修程序、CAB／ROPS／SU 容量差异、油品规格、紧固扭矩、生物柴油专用周期及其他安全条款。尤其不能用本表替代原手册对特定燃油和配置的附加限制。"
-  },
-  {
-    "id": "31",
+    "id": "manual-SRC-NH-WM25-92157408-0",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "概述",
-    "text": "# New Holland WORKMASTER 25：安全、保养与常见故障"
+    "text": "# New Holland WORKMASTER 25：安全、保养与常见故障",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Overview",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "32",
+    "id": "manual-SRC-NH-WM25-92157408-1",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "来源与适用范围",
-    "text": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
+    "text": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "33",
+    "id": "NH-WM25-001",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-001｜启动与维护安全",
-    "text": "- 启动时坐在驾驶座上、施加驻车制动；不得短接启动端子或绕过安全启动装置。\n- 离车前在坚实平地停妥，控制装置置空挡／停车位、驻车制动、降下机具、熄火并取下钥匙。\n- 清理、润滑、排除堵塞或调整前停止发动机和运动部件；升起设备必须可靠支撑。\n- 拆接液压管路前停机、取钥匙并释放压力；不以手检查高压泄漏。冷却系统冷却后才可按原手册卸压开盖。\n- 证据：SRC-NH-WM25-92157408，Safety rules；PDF 第 20～21 页；印刷第 2-2～2-3 页。"
+    "text": "- 启动时坐在驾驶座上、施加驻车制动；不得短接启动端子或绕过安全启动装置。\n- 离车前在坚实平地停妥，控制装置置空挡／停车位、驻车制动、降下机具、熄火并取下钥匙。\n- 清理、润滑、排除堵塞或调整前停止发动机和运动部件；升起设备必须可靠支撑。\n- 拆接液压管路前停机、取钥匙并释放压力；不以手检查高压泄漏。冷却系统冷却后才可按原手册卸压开盖。\n- 证据：SRC-NH-WM25-92157408，Safety rules；PDF 第 20～21 页；印刷第 2-2～2-3 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Starting and servicing safely",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "34",
+    "id": "NH-WM25-002",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-002｜保养周期选摘",
-    "text": "| 周期 | 本批整理项目 |\n| --- | --- |\n| 每 8 小时或每日 | 检查发动机润滑、冷却和变速箱油液；清洁散热器防护网 |\n| 首次 50 小时 | 更换发动机机油、燃油滤清器、液压吸油滤清器；HST 型另换 HST 油滤；检查 ROPS 与车轮紧固件 |\n| 每 50 小时 | 润滑加脂；核对变速箱油液、轮胎气压、皮带、前桥油位、外空气滤芯；制动、机械离合或 HST 空挡项目按配置与原页检查／调整 |\n| 每 250 小时 | 更换发动机机油、燃油滤清器、液压吸油滤清器、外空气滤芯；HST 型更换 HST 油滤；检查 ROPS 和车轮紧固件 |\n| 每 500 小时 | 更换前桥及差速器油、变速箱油、内空气滤芯；气门检查由具备资质人员执行 |\n| 每 2 年 | 表中列冷却系统排液项目；冷却液类别与详细要求仍须核对原文，不自行延长或混用 |\n\n- 证据：SRC-NH-WM25-92157408，Maintenance chart；PDF 第 124 页；印刷第 7-8 页。这里是周期摘要，不能替代各分项操作页。\n- 车轮紧固件另有首次 **5 小时** 检查要求，不能只读总表遗漏磨合项目。证据：Wheel hardware；PDF 第 135 页；印刷第 7-19 页。本文未整理扭矩值。\n- 常规与 OAT 冷却液不可混用；本条不推定 OAT 延长期限。证据：PDF 第 123、161 页；印刷第 7-7、7-45 页。\n- 维护记录应写明小时表读数、日期、配置及已做项目；这属于整理建议，不是新的厂家周期。"
+    "text": "| 周期 | 本批整理项目 |\n| --- | --- |\n| 每 8 小时或每日 | 检查发动机润滑、冷却和变速箱油液；清洁散热器防护网 |\n| 首次 50 小时 | 更换发动机机油、燃油滤清器、液压吸油滤清器；HST 型另换 HST 油滤；检查 ROPS 与车轮紧固件 |\n| 每 50 小时 | 润滑加脂；核对变速箱油液、轮胎气压、皮带、前桥油位、外空气滤芯；制动、机械离合或 HST 空挡项目按配置与原页检查／调整 |\n| 每 250 小时 | 更换发动机机油、燃油滤清器、液压吸油滤清器、外空气滤芯；HST 型更换 HST 油滤；检查 ROPS 和车轮紧固件 |\n| 每 500 小时 | 更换前桥及差速器油、变速箱油、内空气滤芯；气门检查由具备资质人员执行 |\n| 每 2 年 | 表中列冷却系统排液项目；冷却液类别与详细要求仍须核对原文，不自行延长或混用 |\n\n- 证据：SRC-NH-WM25-92157408，Maintenance chart；PDF 第 124 页；印刷第 7-8 页。这里是周期摘要，不能替代各分项操作页。\n- 车轮紧固件另有首次 **5 小时** 检查要求，不能只读总表遗漏磨合项目。证据：Wheel hardware；PDF 第 135 页；印刷第 7-19 页。本文未整理扭矩值。\n- 常规与 OAT 冷却液不可混用；本条不推定 OAT 延长期限。证据：PDF 第 123、161 页；印刷第 7-7、7-45 页。\n- 维护记录应写明小时表读数、日期、配置及已做项目；这属于整理建议，不是新的厂家周期。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Selected service intervals",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "35",
+    "id": "NH-WM25-003",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-003｜钥匙在 START，启动电机不转",
-    "text": "- 可能原因：电池电量低、接线端松动、启动联锁条件未满足、钥匙开关或启动电机故障。\n- 必须先区分变速配置：机械变速型核对换向杆空挡、踩下离合、PTO 关闭及中置 PTO 关闭（如有）；HST 型核对前进／后退踏板空挡、PTO 关闭及中置 PTO 关闭（如有）。不得向 HST 用户统一要求「踩离合」。\n- 联锁条件和电池接线仍不能解释故障时，安排开关、线路与启动机检查，不旁路联锁。\n- 证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页／印刷第 8-1 页；配置校核见 Starting the engine，PDF 第 85～86 页／印刷第 4-11～4-12 页。安全见 NH-WM25-001。"
+    "text": "- 可能原因：电池电量低、接线端松动、启动联锁条件未满足、钥匙开关或启动电机故障。\n- 必须先区分变速配置：机械变速型核对换向杆空挡、踩下离合、PTO 关闭及中置 PTO 关闭（如有）；HST 型核对前进／后退踏板空挡、PTO 关闭及中置 PTO 关闭（如有）。不得向 HST 用户统一要求「踩离合」。\n- 联锁条件和电池接线仍不能解释故障时，安排开关、线路与启动机检查，不旁路联锁。\n- 证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页／印刷第 8-1 页；配置校核见 Starting the engine，PDF 第 85～86 页／印刷第 4-11～4-12 页。安全见 NH-WM25-001。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Starter does not turn",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "36",
+    "id": "NH-WM25-004",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-004｜启动电机能转，但发动机不着火",
-    "text": "- 可能原因选摘：电池电量不足、燃油系统进气、燃油滤清器堵塞、滤清器上的燃油关闭阀处于关闭位、喷油泵燃油切断电磁阀不能正常动作。\n- 初步核对：确认带转是否有力、燃油阀状态和滤清器维护情况；排气必须按对应手册步骤，由具备能力人员实施。\n- 整理安全边界：不直接给电磁阀跨接电源来试车；涉及泵、控制线路或不能确认原因时交维修人员。\n- 连续操作启动电机不得超过 10 秒；这不是保证可以无限次重复启动。证据：PDF 第 85～86 页；印刷第 4-11～4-12 页。\n- 故障证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页；印刷第 8-1 页。"
+    "text": "- 可能原因选摘：电池电量不足、燃油系统进气、燃油滤清器堵塞、滤清器上的燃油关闭阀处于关闭位、喷油泵燃油切断电磁阀不能正常动作。\n- 初步核对：确认带转是否有力、燃油阀状态和滤清器维护情况；排气必须按对应手册步骤，由具备能力人员实施。\n- 整理安全边界：不直接给电磁阀跨接电源来试车；涉及泵、控制线路或不能确认原因时交维修人员。\n- 连续操作启动电机不得超过 10 秒；这不是保证可以无限次重复启动。证据：PDF 第 85～86 页；印刷第 4-11～4-12 页。\n- 故障证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页；印刷第 8-1 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Engine turns but does not start",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "37",
+    "id": "NH-WM25-005",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-005｜发动机功率不足",
-    "text": "- 可能原因选摘：燃油供给受限、空气滤清器堵塞；也可能涉及喷油器压力／堵塞、气门积炭或间隙、喷油正时。\n- 初步方向：核对供油受限与空滤维护情况；未检验前不认定为喷油泵损坏，也不擅调供油量。\n- 整理维修边界：气门、喷油正时和喷油器检验／修理交合格维修人员；本条不提供拆调参数。\n- 证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页；印刷第 8-1 页。"
+    "text": "- 可能原因选摘：燃油供给受限、空气滤清器堵塞；也可能涉及喷油器压力／堵塞、气门积炭或间隙、喷油正时。\n- 初步方向：核对供油受限与空滤维护情况；未检验前不认定为喷油泵损坏，也不擅调供油量。\n- 整理维修边界：气门、喷油正时和喷油器检验／修理交合格维修人员；本条不提供拆调参数。\n- 证据：SRC-NH-WM25-92157408，Engine troubleshooting；PDF 第 175 页；印刷第 8-1 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Engine power loss",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "38",
+    "id": "NH-WM25-006",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-006｜发动机过热",
-    "text": "- 手册规定：温度表进入红区表示过热，应立即停止发动机并调查原因；不要套用其他机型的冷却运行流程。\n- 故障表列出的可能原因：冷却液不足，风扇皮带打滑／断裂，散热器或防护网积污。\n- 冷却后核对液位、皮带与清洁情况；任何开盖、清理、调整均遵守 NH-WM25-001。不可热机时加冷水来代替正确检查。\n- 待核实：具体车辆使用的冷却液品种、皮带调整量；本条不提供跨机型参数。\n- 证据：SRC-NH-WM25-92157408，Instrument cluster／Engine troubleshooting／Cooling system；PDF 第 52、176、161 页；印刷第 3-6、8-2、7-45 页。"
+    "text": "- 手册规定：温度表进入红区表示过热，应立即停止发动机并调查原因；不要套用其他机型的冷却运行流程。\n- 故障表列出的可能原因：冷却液不足，风扇皮带打滑／断裂，散热器或防护网积污。\n- 冷却后核对液位、皮带与清洁情况；任何开盖、清理、调整均遵守 NH-WM25-001。不可热机时加冷水来代替正确检查。\n- 待核实：具体车辆使用的冷却液品种、皮带调整量；本条不提供跨机型参数。\n- 证据：SRC-NH-WM25-92157408，Instrument cluster／Engine troubleshooting／Cooling system；PDF 第 52、176、161 页；印刷第 3-6、8-2、7-45 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "39",
+    "id": "NH-WM25-007",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-007｜发动机运行时机油压力灯亮",
-    "text": "- 必须区别：通电及启动初期亮灯不等于运行中持续低油压；手册要求发动机正常启动后相应警灯应熄灭，运行时油压灯亮应立即停机检查。\n- 可能原因：机油不足、黏度过低、压力开关故障、机油泵故障或滤清器堵塞。\n- 核对方向：安全停机后按手册检查油位和保养用油；无法解释的报警交维修人员测量确认，不能假定只是压力开关坏了。\n- 待核实：正常油压、报警压力、指定黏度及当前车辆油品；本条不编造阈值。\n- 证据：SRC-NH-WM25-92157408，Instrument cluster／Starting the engine／Engine troubleshooting；PDF 第 51、85～86、176 页；印刷第 3-5、4-11～4-12、8-2 页。"
+    "text": "- 必须区别：通电及启动初期亮灯不等于运行中持续低油压；手册要求发动机正常启动后相应警灯应熄灭，运行时油压灯亮应立即停机检查。\n- 可能原因：机油不足、黏度过低、压力开关故障、机油泵故障或滤清器堵塞。\n- 核对方向：安全停机后按手册检查油位和保养用油；无法解释的报警交维修人员测量确认，不能假定只是压力开关坏了。\n- 待核实：正常油压、报警压力、指定黏度及当前车辆油品；本条不编造阈值。\n- 证据：SRC-NH-WM25-92157408，Instrument cluster／Starting the engine／Engine troubleshooting；PDF 第 51、85～86、176 页；印刷第 3-5、4-11～4-12、8-2 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Oil pressure warning while running",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "40",
+    "id": "NH-WM25-008",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "NH-WM25-008｜三点悬挂不提升",
-    "text": "- 可能原因选摘：变速箱／液压油不足、吸油管路进气、液压滤清器堵塞。\n- 原文核对方向：油位、吸油侧连接及滤清器状态。核对后再决定维护项目，不能只凭不提升认定液压泵损坏。\n- 安全：先降下或可靠支撑机具，停机卸压后才处理接头；不在悬空机具下作业。吸油接头密封和滤器检修交具备能力人员。\n- 待核实：当前车辆油品、滤芯件号和油位检查工况；本文不包含全部悬挂故障。\n- 证据：SRC-NH-WM25-92157408，Regulated/Low pressure system troubleshooting；PDF 第 176 页；印刷第 8-2 页；安全见 PDF 第 20～21 页／印刷第 2-2～2-3 页。"
+    "text": "- 可能原因选摘：变速箱／液压油不足、吸油管路进气、液压滤清器堵塞。\n- 原文核对方向：油位、吸油侧连接及滤清器状态。核对后再决定维护项目，不能只凭不提升认定液压泵损坏。\n- 安全：先降下或可靠支撑机具，停机卸压后才处理接头；不在悬空机具下作业。吸油接头密封和滤器检修交具备能力人员。\n- 待核实：当前车辆油品、滤芯件号和油位检查工况；本文不包含全部悬挂故障。\n- 证据：SRC-NH-WM25-92157408，Regulated/Low pressure system troubleshooting；PDF 第 176 页；印刷第 8-2 页；安全见 PDF 第 20～21 页／印刷第 2-2～2-3 页。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "Three-point hitch does not lift",
+    "category": "hydraulic",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
   },
   {
-    "id": "41",
+    "id": "manual-SRC-NH-WM25-92157408-10",
     "source": "02_机型手册/纽荷兰/WORKMASTER25.md",
     "heading": "尚未整理",
-    "text": "全套日检细则、所有保养操作步骤、油液容量与牌号、扭矩、其余传动／电气故障及选装机具。不得将本首版视为厂家维修手册或中国市场同名机型的适用证明。"
+    "text": "全套日检细则、所有保养操作步骤、油液容量与牌号、扭矩、其余传动／电气故障及选装机具。不得将本首版视为厂家维修手册或中国市场同名机型的适用证明。",
+    "kind": "manual",
+    "brand": "纽荷兰",
+    "brandEn": "New Holland",
+    "aliases": [
+      "纽荷兰",
+      "new holland",
+      "newholland"
+    ],
+    "models": [
+      "WORKMASTER 25"
+    ],
+    "titleEn": "New Holland WORKMASTER 25 manual excerpts",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-NH-WM25-92157408",
+    "scope": "仅适用 2023 年北美版 WORKMASTER 25；不适用 25S、35/40。机械变速、HST、中置 PTO 和序列号须逐车核对。",
+    "scopeEn": "2023 North American WORKMASTER 25 only; excludes 25S and 35/40. Verify transmission, HST, mid-PTO and serial-number applicability.",
+    "context": "- 来源编号：`SRC-NH-WM25-92157408`。\n- 原始文件：`知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf)。Git blob SHA：`e75e75cd3e25b077098741987c033b70860c56f6`。\n- 来源：[纽荷兰官网紧凑型拖拉机资料页](https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources)。英文北美版，198 页；2023 年 11 月第一版，编号 92157408（PDF 第 1 页封面）。\n- 仅适用于此版 WORKMASTER 25 手册覆盖的配置；不适用于 WORKMASTER 25S、35/40 或未经确认的其他市场机型。机械变速、HST 和中置 PTO 选装项需逐车确认；精确序列号范围待核实。\n- 整理日期：2026-10-01；状态：选摘已对照原文和关键表格图像，未经厂家复核／实车验证。共 8 条；英文内容为中文事实摘要，不是授权译本或完整维修步骤。各条继承上述来源与配置限制。"
+  },
+  {
+    "id": "manual-SRC-KB-LX2620-6C82063118-0",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "概述",
+    "text": "# Kubota LX2620 / LX2620SU：安全、保养与常见故障",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Overview",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "manual-SRC-KB-LX2620-6C82063118-1",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "来源与适用范围",
+    "text": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-001",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-001｜维护作业安全",
+    "text": "- 不在仅靠液压支撑的设备下作业；需要下方维修时，先用合适支架／垫块可靠支撑。\n- 发动机运转时不打开机罩或侧盖；不接触高温排气部件。\n- 冷却液仍热时不可开启散热器盖；冷却后按原手册缓慢卸压再开盖。\n- 换发动机机油前停机并充分冷却，防止热油烫伤。\n- 证据：SRC-KB-LX2620-6C82063118，Periodic service／Daily check／Changing engine oil；PDF 第 101、104、112 页；印刷第 99、102、110 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Safe servicing",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-002",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-002｜保养周期选摘",
+    "text": "| 时机 | 本批整理项目 | 配置／条件 |\n| --- | --- | --- |\n| 首次 50 小时后 | 更换发动机机油、发动机机油滤、变速箱油滤及液压油滤 | 来自总表的 ◎ 标记；不把这四项滤油项目混成一个滤芯 |\n| 每 50 小时 | 加脂润滑、检查启动系统和车轮螺栓扭矩 | 具体测试和扭矩参见原手册，本条不展开 |\n| 每 100 小时 | 检查蓄电池，清洁空气滤清器主滤芯、燃油滤芯；调整风扇皮带和制动踏板 | 多尘时空滤需更频繁清洁；制动调整由合格人员完成 |\n| 每 200 小时或 1 年，以先到者为准 | 更换发动机机油 | 不只按运行小时计算 |\n| 每 200 小时 | 更换发动机机油滤与变速箱油滤 | 与机油的日历条件分开，不能擅自给滤芯追加「1 年」结论 |\n| 每 400 小时 | 更换变速箱油、液压油滤、燃油滤芯、前桥壳体油 | 容量和具体方法需按配置核对 |\n| 每 1000 小时或 1 年，以先到者为准 | 更换空气滤清器主、副滤芯 | 不把副滤芯当作可按主滤芯方式反复清洁的部件 |\n| 每 2000 小时或 2 年，以先到者为准 | 冲洗冷却系统、更换冷却液 | 冷却液类型、比例及容量另查原手册 |\n\n- 使用生物柴油会改变部分项目的维护要求，本表不能直接替代对应燃料附加要求。多尘工况也不能仅按普通周期等待保养。\n- 本表不穷尽年度软管、CAB 空调、气门及喷油系统等项目；不提供跨配置容量或扭矩。\n- 证据：SRC-KB-LX2620-6C82063118，Service intervals 及脚注；PDF 第 95～96 页；印刷第 93～94 页。机油先到者说明另见 PDF 第 112 页／印刷第 110 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Selected service intervals",
+    "category": "maintenance",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-003",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-003｜发动机启动困难或不能启动",
+    "text": "- 可能原因选摘：供油不畅，燃油系统有空气或水，低温导致油黏度增大／带转慢，电池电量不足。\n- 原文方向：检查油箱和燃油滤清器、燃油软管及夹箍；核对适合温度的用油、电池接线和电池状态。排气按原手册对应程序进行。\n- 整理安全边界：不能把所有不启动都归结为缺油；不盲目拆开喷油管路排气或跨接启动，不用明火加热。\n- 待核实：本车环境温度对应的油品、启动系统状态和选装预热装置；不从其他型号补参数。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Hard starting / no start",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-004",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-004｜发动机动力不足",
+    "text": "- 此页列出：燃油不足或污染、空气滤清器堵塞。\n- 原文方向：检查燃油系统，按手册清洁或更换空气滤清器滤芯。\n- 范围限制：这只是操作手册提供的候选原因，不是所有可能故障；若供油和空滤正常但仍无力，应进一步由维修人员确认，不能根据本条排除内部机械故障。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Engine power loss",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-005",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-005｜发动机过热",
+    "text": "- 适用现象：冷却温度接近／达到沸腾或温度指示到达 H 红区；应读取本型号的过热处置章节。\n- 该手册的特定流程：在安全地点停车，保持发动机无负荷怠速约 5 分钟后停机；随后远离机器至少按原文要求等待 10 分钟，仍有蒸汽喷出时保持远离。确认无烫伤等危险并排除过热原因后，才按手册重新启动。\n- 上述流程不能跨品牌套用；也不是对同时发生火灾、失油压等其他紧急故障的处理说明。多重危险不适用单一过热排查条目，应停止操作并联系专业救援／维修。\n- 故障表可能原因：超负荷、冷却液不足、风扇皮带松弛／损坏、散热器或格栅脏堵、冷却通路腐蚀。\n- 待冷却且停机后再检查；禁止热态开盖，不将「先怠速」解释成可以继续带负荷作业。\n- 证据：SRC-KB-LX2620-6C82063118，Overheating countermeasures／Engine troubleshooting；PDF 第 60、130 页；印刷第 58、128 页；开盖安全见 PDF 第 104 页／印刷第 102 页。多重危险限制为整理安全边界。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Engine overheating",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-006",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-006｜发动机突然停机",
+    "text": "- 此页列出的候选原因是燃油不足，处理方向为补充燃油并在必要时按手册排气。\n- 不得推论「所有突然停机都是缺油」。需记录停机前负载、油量、报警、异响和泄漏；这些是整理建议，不是原表新增的确定故障原因。\n- 整理安全边界：存在油压／温度异常、异响、泄漏或无法确认原因时，不反复启动，应先联系维修人员。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting；PDF 第 130 页；印刷第 128 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Engine stops suddenly",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-007",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-007｜未过热但发动机警告灯点亮",
+    "text": "- 前提：原表明确限定发动机没有过热，且亮的是发动机警告指示灯；不是任意警灯或低油压报警。\n- 原文方向：停止发动机后重新启动；若无法重新启动或灯仍亮，立即联系当地 Kubota 经销商。\n- 整理安全边界：该处不是「清码后继续干活」授权，不反复重启掩盖故障；若无法确认警灯类型或伴随其他危险，不按此单独条目尝试。\n- 证据：SRC-KB-LX2620-6C82063118，Engine troubleshooting 页面底部 Operator's action 表；PDF 第 130 页；印刷第 128 页。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Engine warning without overheating",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "KB-LX2620-008",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "KB-LX2620-008｜主警告灯闪烁及 Err1／Err2／Err3",
+    "text": "| 屏显代码 | 该手册的故障描述 | 操作者方向 |\n| --- | --- | --- |\n| Err1 | 水温传感器故障 | 联系 Kubota 经销商检查维修 |\n| Err2 | 燃油传感器故障 | 联系 Kubota 经销商检查维修 |\n| Err3 | 仪表面板存储器读取故障 | 联系 Kubota 经销商检查维修 |\n\n- 保留完整代码与当时警灯照片。代码指向手册所列故障类别，不证明传感器本体必坏；本文没有原文支持的线束脚位、阻值、替换或清码步骤。\n- 严格限制为本版 LX2620／LX2620SU，不能当作久保田全系列代码表；Err1 也不能直接等同于「发动机实际过热」。\n- 证据：SRC-KB-LX2620-6C82063118，Powertrain trouble shooting；PDF 第 131 页；印刷第 129 页。该表已核对原页代码拼写及行列。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Master warning and Err1 / Err2 / Err3",
+    "category": "engine",
+    "visible": true,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
+  },
+  {
+    "id": "manual-SRC-KB-LX2620-6C82063118-10",
+    "source": "02_机型手册/久保田/LX2620-LX2620SU.md",
+    "heading": "尚未整理",
+    "text": "完整操作、全部日检和维修程序、CAB／ROPS／SU 容量差异、油品规格、紧固扭矩、生物柴油专用周期及其他安全条款。尤其不能用本表替代原手册对特定燃油和配置的附加限制。",
+    "kind": "manual",
+    "brand": "久保田",
+    "brandEn": "Kubota",
+    "aliases": [
+      "久保田",
+      "kubota"
+    ],
+    "models": [
+      "LX2620",
+      "LX2620SU"
+    ],
+    "titleEn": "Kubota LX2620 / LX2620SU manual excerpts",
+    "category": "engine",
+    "visible": false,
+    "language": "zh-CN",
+    "sourceId": "SRC-KB-LX2620-6C82063118",
+    "scope": "仅限美国版 LX2620 / LX2620SU；CAB、ROPS、SU 配置与序列号待逐车核对，不适用中国市场其他型号。",
+    "scopeEn": "US LX2620 / LX2620SU only. Verify CAB, ROPS, SU and serial-number applicability; excludes other Chinese-market models.",
+    "context": "- 来源编号：`SRC-KB-LX2620-6C82063118`。\n- 原始文件：`知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf`。\n- [查看固定版本原始 PDF](https://github.com/Changjie29/AgriDx-v2/blob/af817fff2025b5679d1e6b7fa57b605ab5ab6859/知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf)。Git blob SHA：`67746b07b550db424904ee05926e742f2b463678`。\n- 来源：[Garton Tractor 手册页](https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual)，经销商公开提供的厂家操作手册；英文美国版，138 页，封面版权年份 2023、编号 6C820-6311-8。版权年份不等同于已确认出版月份。\n- 型号：LX2620、LX2620SU；CAB 驾驶室、ROPS 防翻架及 SU 配置需要分别核对。具体序列号范围待核实；不用于中国市场其他久保田型号。\n- 整理日期：2026-10-01；状态：选摘已对照原文及关键表格图像，未经厂家复核／实车验证。以下 8 条是事实摘要，非完整译本；每条继承上述来源与适用限制。"
   }
 ]

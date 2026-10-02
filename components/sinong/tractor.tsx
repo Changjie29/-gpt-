@@ -24,7 +24,7 @@ export function Tractor({large=false}:{large?:boolean}){
    const host=mount.current;let renderer:InstanceType<typeof T.WebGLRenderer>;
    try{renderer=new T.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}catch{setState('unsupported');return;}
    renderer.setPixelRatio(Math.min(window.devicePixelRatio,window.matchMedia('(max-width: 768px)').matches?1.25:1.5));renderer.setClearColor(0x000000,0);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.3;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;
-   host.appendChild(renderer.domElement);renderer.domElement.setAttribute('aria-label','可拖拽旋转和缩放的 David Brown 25D 拖拉机三维模型');renderer.domElement.setAttribute('role','img');
+   host.appendChild(renderer.domElement);renderer.domElement.setAttribute('aria-label','David Brown 25D 3D model');renderer.domElement.setAttribute('role','img');
    const scene=new T.Scene();const camera=new T.PerspectiveCamera(35,1,0.01,150);const control=new OrbitControls(camera,renderer.domElement);control.enableDamping=true;control.dampingFactor=0.07;control.minDistance=2.4;control.maxDistance=12;control.maxPolarAngle=Math.PI/2.03;control.enablePan=true;control.autoRotateSpeed=0.65;
    const pmrem=new T.PMREMGenerator(renderer);const room=new RoomEnvironment();const envMap=pmrem.fromScene(room,0.04);scene.environment=envMap.texture;room.dispose();pmrem.dispose();
    scene.add(new T.HemisphereLight(0xffffff,0x858e9a,2.3));const light=new T.DirectionalLight(0xffffff,3);light.position.set(4,8,5);light.castShadow=true;light.shadow.mapSize.set(1024,1024);light.shadow.camera.left=-5;light.shadow.camera.right=5;light.shadow.camera.top=5;light.shadow.camera.bottom=-5;light.shadow.normalBias=0.04;scene.add(light);
@@ -57,8 +57,8 @@ export function Tractor({large=false}:{large?:boolean}){
   return()=>{disposed=true;cleanup();};
  },[retry]);
  return <div ref={card} className={`tractor-stage ${large?'stage-large':''} ${(state==='error'||state==='unsupported')?'preview-static':''}`}>
-  {state!=='ready'&&<img className="model-poster" src="/models/tractor-preview-v1.webp" alt="David Brown 25D 拖拉机原模型预览"/>}<div ref={mount} className="tractor-canvas"/>
-  <div className="stage-heading"><span className="eyebrow">MACHINE EXPLORER</span><span className="stage-tag">{state==='ready'?t('三维模型','3D MODEL'):t('模型预览','MODEL PREVIEW')}</span></div>
+  {state!=='ready'&&<img className="model-poster" src="/models/tractor-preview-v1.webp" alt={t('David Brown 25D 拖拉机原模型预览','David Brown 25D tractor preview')}/>}<div ref={mount} className="tractor-canvas"/>
+  <div className="stage-heading"><span className="eyebrow">{t('农机结构展示','MACHINE EXPLORER')}</span><span className="stage-tag">{state==='ready'?t('三维模型','3D MODEL'):t('模型预览','MODEL PREVIEW')}</span></div>
   <div className="stage-machine"><span className="machine-index">01 / 01</span><h2>David Brown <span>25D</span></h2><p>{t('经典轮式拖拉机','Classic wheeled tractor')}</p></div>
   {state==='loading'&&<div className="model-loading"><LoaderCircle className="spinning" size={15}/>{t('正在开启三维交互…','Loading interactive model…')}</div>}
   {(state==='error'||state==='unsupported')&&<div className="model-notice"><Info size={14}/><span>{t('三维交互不可用，已显示原模型预览','3D unavailable. Showing a preview of the original model.')}</span><button onClick={()=>setRetry(x=>x+1)}>{t('重试','Retry')}</button></div>}

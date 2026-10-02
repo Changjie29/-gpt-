@@ -1,21 +1,20 @@
-import { env } from 'cloudflare:workers';
-import { diagnose, type Message } from '@/lib/diagnosis';
+import {env} from 'cloudflare:workers';
+import {diagnose} from '@/lib/diagnosis';
+import {ChatRequestError,chatError,parseChatRequest} from '@/lib/chat-request';
 const buckets=new Map<string,{n:number;end:number}>();
 export async function POST(req:Request){
- const origin=req.headers.get('origin');
- // Next's internal request URL can use localhost behind a reverse proxy.
- // The deployment proxy must overwrite Host and X-Forwarded-Proto.
- const requestUrl=new URL(req.url);
+ let english=req.headers.get('accept-language')?.startsWith('en')||false;
+ const error=(code:string,status:number)=>Response.json({error:chatError(code,english),code},{status,headers:{'Cache-Control':'no-store'}});
+ const origin=req.headers.get('origin');const requestUrl=new URL(req.url);
+ // Next may use localhost internally; the trusted proxy overwrites Host and X-Forwarded-Proto.
  const protocol=req.headers.get('x-forwarded-proto')?.split(',')[0].trim()||requestUrl.protocol.slice(0,-1);
- const requestOrigin=`${protocol}://${req.headers.get('host')||requestUrl.host}`;
- if(origin&&origin!==requestOrigin)return Response.json({error:'请求来源不受支持。'},{status:403});
+ if(origin&&origin!==protocol+'://'+(req.headers.get('host')||requestUrl.host))return error('unsupported_origin',403);
  const ip=req.headers.get('cf-connecting-ip')||'local';const now=Date.now();
  for(const [key,value] of buckets)if(value.end<now)buckets.delete(key);
  const b=buckets.get(ip)||{n:0,end:now+60000};b.n++;buckets.set(ip,b);
- if(b.n>30)return Response.json({error:'提问太频繁，请稍后再试。'},{status:429});
- let body:any;
- try{const raw=await req.text();if(raw.length>65000)return Response.json({error:'对话内容过长，请开启新对话。'},{status:413});body=JSON.parse(raw);}catch{return Response.json({error:'请求格式不正确。'},{status:400});}
- if(!body||!Array.isArray(body.messages)||!body.messages.length||body.messages.length>40||body.messages.some((m:any)=>!m||!['user','assistant'].includes(m.role)||typeof m.content!=='string'||!m.content.trim()||m.content.length>12000)||body.messages.at(-1).role!=='user')return Response.json({error:'请填写有效的故障描述。'},{status:400});
- const info={machineType:typeof body.machineType==='string'?body.machineType.slice(0,80):'',brand:typeof body.brand==='string'?body.brand.slice(0,80):'',model:typeof body.model==='string'?body.model.slice(0,80):''};
- try{return Response.json(await diagnose(body.messages as Message[],info,env as unknown as Record<string,string>),{headers:{'Cache-Control':'no-store'}});}catch{return Response.json({error:'智能诊断服务暂时无法连接，请稍后重试。你仍可在知识库中查阅相关资料。',code:'llm_unavailable'},{status:502});}
+ if(b.n>30)return error('rate_limit',429);
+ try{
+  const {messages,info}=parseChatRequest(await req.text());english=info.language==='en';
+  return Response.json(await diagnose(messages,info,env as unknown as Record<string,string>),{headers:{'Cache-Control':'no-store'}});
+ }catch(e){return e instanceof ChatRequestError?error(e.code,e.status):error('llm_unavailable',502);}
 }

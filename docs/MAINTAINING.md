@@ -2,10 +2,10 @@
 
 ## 维护目标
 
-用户于 2026-09-26 指定：新版网站源码保存在 `https://github.com/Changjie29/-gpt-`，以后每次更新同步到这里。
+用户于 2026-09-26 指定：新版网站源码保存在 `https://github.com/Changjie29/AgriDx-v2`，以后每次更新同步到这里。
 
-- 分支：`main`。
-- 网站：`https://srt27-sinong.z3464715478.chatgpt.site`。
+- 分支：`sites/model-performance-20260929`。
+- 网站：`https://agridx.xyz`。
 - 参考项目：`Changjie29/SRT27`。本站更新不默认推送到参考项目。
 - 不把密钥、依赖目录、构建结果或开发缓存加入提交。
 
@@ -15,7 +15,7 @@
 2. 如果 GitHub 和网站源码各自存在新提交，先查看差异并合并；保留双方历史，不强制覆盖。
 3. 修改所需文件。知识资料修改后生成索引；业务代码修改后完成类型检查、构建和必要的功能验证。
 4. 检查提交内容并创建有明确说明的提交。
-5. 推送到 GitHub 的 `main`，核对远端提交和本地提交一致。
+5. 推送到 GitHub 的 `sites/model-performance-20260929`，核对远端提交和本地提交一致。
 6. 网站行为或资料发生变化时，继续完成 Sites 发布并确认成功。仅整理说明文档时按实际需要发布。
 7. 分别说明 GitHub 同步和网站发布结果。任一步骤失败时，保留本地提交并明确说明未完成部分。
 
@@ -26,10 +26,10 @@
 ```bash
 git status
 git fetch origin
-git log --oneline --left-right HEAD...origin/main
+git log --oneline --left-right HEAD...origin/sites/model-performance-20260929
 ```
 
-如果本地只落后于远端且工作区干净，可使用 `git merge --ff-only origin/main`。若双方都有提交，应检查后正常合并，不直接覆盖文件。
+如果本地只落后于远端且工作区干净，可使用 `git merge --ff-only origin/sites/model-performance-20260929`。若双方都有提交，应检查后正常合并，不直接覆盖文件。
 
 完成修改后：
 
@@ -42,9 +42,9 @@ git diff --stat
 git add -A
 git diff --cached --stat
 git commit -m "说明本次更新内容"
-git push origin HEAD:main
+git push origin HEAD:sites/model-performance-20260929
 git rev-parse HEAD
-git ls-remote origin refs/heads/main
+git ls-remote origin refs/heads/sites/model-performance-20260929
 ```
 
 最后两条命令显示的提交编号应一致。若只有文档调整，不需要重复运行业务构建。
@@ -52,7 +52,7 @@ git ls-remote origin refs/heads/main
 在 Sites 的维护工作区中，本次新增的 GitHub 远端名为 `github`，上述 Git 命令将 `origin` 替换为 `github`。新的 Sites 工作区若没有此远端，可添加：
 
 ```bash
-git remote add github https://github.com/Changjie29/-gpt-.git
+git remote add github https://github.com/Changjie29/AgriDx-v2.git
 ```
 
 不要覆盖指向其他服务的既有远端。`git push --force`、`git push --mirror` 不属于本项目的日常同步流程。

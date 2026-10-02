@@ -2,8 +2,8 @@
 
 农机故障排查工作台，包含三维农机漫游、知识库检索和诊断对话。
 
-- 源码维护仓库：[Changjie29/-gpt-](https://github.com/Changjie29/-gpt-)，维护分支 `main`。
-- 网站：[耕知·耘诊 · SRT27](https://srt27-sinong.z3464715478.chatgpt.site)，访问范围由网站的分享设置决定。
+- 源码维护仓库：[Changjie29/AgriDx-v2](https://github.com/Changjie29/AgriDx-v2)，维护分支 `sites/model-performance-20260929`。
+- 网站：[耕知·耘诊 · SRT27](https://agridx.xyz)，访问范围由网站的分享设置决定。
 - 架构说明：[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 - 更新与同步：[docs/MAINTAINING.md](docs/MAINTAINING.md)。
 
@@ -45,7 +45,7 @@
 需要 Node.js `>=22.13.0`、Git 和项目指定的 pnpm `11.25.0`。安装依赖使用现有 `pnpm-lock.yaml`。
 
 ```bash
-git clone https://github.com/Changjie29/-gpt-.git sinong-srt27
+git clone --branch sites/model-performance-20260929 https://github.com/Changjie29/AgriDx-v2.git sinong-srt27
 cd sinong-srt27
 corepack pnpm install --frozen-lockfile
 corepack pnpm dev
@@ -87,7 +87,7 @@ pnpm build            # 同步知识索引并构建网站
 
 ## 后续同步约定
 
-每次更新本站后，提交源码并同步到 `Changjie29/-gpt-` 的 `main` 分支，核对 GitHub 上的提交，再报告完成。同步步骤与冲突处理见 [维护说明](docs/MAINTAINING.md)，开发协作约定保存在 [AGENTS.md](AGENTS.md)。
+每次更新本站后，提交源码并同步到 `Changjie29/AgriDx-v2` 的 `sites/model-performance-20260929` 分支，核对 GitHub 上的提交，再报告完成。同步步骤与冲突处理见 [维护说明](docs/MAINTAINING.md)，开发协作约定保存在 [AGENTS.md](AGENTS.md)。
 
 此约定是每次维护时执行的工作流程。GitHub 推送和网站发布是两个操作；单独向 GitHub 提交代码不会自动发布网站。
 
