@@ -6,6 +6,7 @@
 - 网站：[耕知·耘诊 · SRT27](https://agridx.xyz)，访问范围由网站的分享设置决定。
 - 架构说明：[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 - 更新与同步：[docs/MAINTAINING.md](docs/MAINTAINING.md)。
+- 当前版本：**v2.20**；[版本变化与简要改动](版本更新记录.md)。
 
 本网站参考原项目 [Changjie29/SRT27](https://github.com/Changjie29/SRT27) 的提交 `ecfe85810971924bc75a9cb5b514650d5f5e6094` 重建。新版网站源码以本仓库为维护入口；原仓库保留为参考项目。
 

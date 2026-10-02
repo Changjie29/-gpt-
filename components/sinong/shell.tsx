@@ -1,6 +1,7 @@
 'use client';
 import {createContext,useContext,useEffect,useState} from 'react';
 import Link from './link';
+import {version} from '@/package.json';
 import {usePathname} from 'next/navigation';
 import {Sprout,LayoutDashboard,MessageSquare,Box,BookOpen,Layers,ArrowUpRight,Sun,Moon,PanelLeftClose,PanelLeftOpen} from 'lucide-react';
 import {Sidebar,SidebarProvider,SidebarContent,SidebarHeader,SidebarFooter,SidebarMenu,SidebarMenuItem,SidebarMenuButton,useSidebar} from '@/components/ui/sidebar';
@@ -27,6 +28,6 @@ export function AppShell({children}:{children:React.ReactNode}){
    <SidebarFooter className="side-footer"><a href="https://github.com/Changjie29/AgriDx-v2" target="_blank" rel="noreferrer"><span className="repo-icon"><Layers size={17}/></span><span><strong>SRT27</strong><small>{t('查看项目仓库','View source project')}</small></span><ArrowUpRight size={16}/></a><div className="university">{t('南京农业大学 · 创新实践项目','Nanjing Agricultural University')}</div></SidebarFooter>
   </Sidebar>
   <div className="app-main"><header className="topbar"><div className="breadcrumbs"><SidebarToggle/><span>SRT27</span><span className="slash">/</span><strong>{active?t(active.zh,active.en):t('工作台','Workspace')}</strong></div><div className="top-actions"><span className="top-status"><span className="status-dot"/>{t('知识库已就绪','Knowledge ready')}</span><button className="language-button" onClick={()=>{setEn(!en);try{localStorage.setItem('sinong-lang',!en?'en':'zh')}catch{}}} aria-label={t('切换中英文','Switch language')}>{en?'中文':'EN'}</button><button className="icon-button" onClick={()=>{setDark(!dark);try{localStorage.setItem('sinong-theme',!dark?'dark':'light')}catch{}}} aria-label={t('切换明暗主题','Toggle theme')}>{dark?<Sun size={18}/>:<Moon size={18}/>}</button><span className="project-avatar">{t('耕','A')}</span></div></header>
-  <main className="page-content" id="main-content">{children}</main><footer className="page-footer"><span>© 2026 {t('耕知·耘诊','AgriDx')} · SRT27</span><span>{t('扎根农业 · 智启未来','Rooted in agriculture. Built for discovery.')}</span></footer></div>
+  <main className="page-content" id="main-content">{children}</main><footer className="page-footer"><span>© 2026 {t('耕知·耘诊','AgriDx')} · SRT27 · v{version.replace(/\.0$/, '')}</span><span>{t('扎根农业 · 智启未来','Rooted in agriculture. Built for discovery.')}</span></footer></div>
  </SidebarProvider></SiteContext.Provider>
 }
