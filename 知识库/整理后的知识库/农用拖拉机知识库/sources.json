@@ -1,0 +1,93 @@
+[
+  {
+    "source_id": "SRC-LV-TG-WEB",
+    "brand": "雷沃",
+    "model": "欧豹TG系列",
+    "path": "知识库/原始农机说明书/雷沃/TG系列/常见故障及排除方法.html",
+    "url": "https://www.nongjitong.com/company/lovol/oubaotg/fault_and_elimination.html",
+    "document_type": "企业店铺维保网页",
+    "version": "待核实；图片路径含2018，不作版本依据",
+    "scope_boundary": "仅页面所述TG系列，子型号/发动机/国三国四/序列号待核实。正文已保存，2张图片未取得。",
+    "status": "已取得正文",
+    "collected_at": "2026-10-02",
+    "sha256": "99a338d30b783dc161a7b8cb2c1c4501240f0c202f2503ecab0771a94620085c"
+  },
+  {
+    "source_id": "SRC-LV-NR3-WEB",
+    "brand": "雷沃",
+    "model": "国三拖拉机",
+    "path": "知识库/原始农机说明书/雷沃/国三/发动机日常维护与保养.html",
+    "url": "https://www.nongjitong.com/company/lovol/tractor_motor_maintain.html",
+    "document_type": "企业店铺维护指导网页",
+    "version": "待核实；图片路径含2016，不作版本依据",
+    "scope_boundary": "明确国三；不可用于国四。文字维护注意事项已保存，原页10张图片及视频未取得。",
+    "status": "已取得正文",
+    "collected_at": "2026-10-02",
+    "sha256": "01587338307dd3470c3b14fbade2ef0762db8c81104f609765c783935d3a9875"
+  },
+  {
+    "source_id": "SRC-DF-WINTER-20201225",
+    "brand": "东风",
+    "model": "具体系列待核实",
+    "path": "知识库/原始农机说明书/东风/系列待核实/拖拉机冬季保养注意事项.html",
+    "url": "https://www.dfamgc.com/390.html",
+    "document_type": "厂家维护文章",
+    "version": "2020-12-25",
+    "scope_boundary": "冬季/长期存放指导，不是整机说明书；充电参数、停放制动和放水条件须以本机手册为准。",
+    "status": "已取得正文",
+    "collected_at": "2026-10-02",
+    "sha256": "3a9b1c448a54dab1a741dc532528482853816beb7a3b7a8c01eef4e2701b54af"
+  },
+  {
+    "source_id": "SRC-HH-T70-20250414",
+    "brand": "鸿鹄",
+    "model": "T70",
+    "path": "知识库/原始农机说明书/鸿鹄/T70/湖北农业农村厅_20250414.html",
+    "url": "https://nyt.hubei.gov.cn/bmdt/yw/szdt/202504/t20250414_5614333_slh.shtml",
+    "document_type": "政府网站报道",
+    "version": "2025-04-14",
+    "scope_boundary": "仅用于机型识别及应用背景，不用于操作/维修参数。尚未取得正式说明书。",
+    "status": "已取得正文",
+    "collected_at": "2026-10-02",
+    "sha256": "238710aff58d4f824241224f1e8625e492326c5f9ddd351ff072af9316b234ae"
+  },
+  {
+    "source_id": "SRC-ZL-PL-202011",
+    "brand": "中联",
+    "model": "PL系列",
+    "path": "知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf",
+    "url": "https://www.zoomlion-ag.com/whby_1.html",
+    "document_type": "既有完整PDF",
+    "version": "2020-11",
+    "scope_boundary": "子型号/国四适用性待核实",
+    "status": "既有PDF及知识卡；本批未重复上传",
+    "collected_at": "2026-10-02",
+    "sha256": "6fb3dd6abe70b6d535aca2b37d6525094839881a765153fbd4eede2ec7f23806"
+  },
+  {
+    "source_id": "SRC-NH-WM25-92157408",
+    "brand": "纽荷兰",
+    "model": "WORKMASTER25",
+    "path": "知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf",
+    "url": "https://agriculture.newholland.com/en-us/nar/services-and-solutions/compact-tractor-resources",
+    "document_type": "既有完整PDF",
+    "version": "2023-11，92157408",
+    "scope_boundary": "北美版，不适用于25S；既有补充资料",
+    "status": "既有PDF及知识卡；本批未重复上传",
+    "collected_at": "2026-10-02",
+    "sha256": "841012144434c04688838b3ee6ff098e53acc1b6e4508dae23d1f466795abbe8"
+  },
+  {
+    "source_id": "SRC-KB-LX2620-6C82063118",
+    "brand": "久保田",
+    "model": "LX2620/LX2620SU",
+    "path": "知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf",
+    "url": "https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual",
+    "document_type": "既有完整PDF",
+    "version": "版权2023，6C820-6311-8",
+    "scope_boundary": "美国版，不能替代中国市场型号；既有补充资料",
+    "status": "既有PDF及知识卡；本批未重复上传",
+    "collected_at": "2026-10-02",
+    "sha256": "b3d794d746812f52a352933836f5ed7780efae87f0cab2441d869868660c6904"
+  }
+]
