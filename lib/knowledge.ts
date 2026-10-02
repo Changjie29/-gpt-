@@ -14,6 +14,8 @@ function applicable(c:Chunk,query:string,info:MachineInfo){
  if(info.model?.trim()&&inferred&&normalize(inferred)!==model)return false;
  if(c.kind==='general')return !model;
  if(!model||!c.models.some(m=>normalize(m)===model))return false;
+ const mentioned=new Set(topics.filter(t=>t.kind==='manual'&&t.aliases.some(a=>normalize(query).includes(normalize(a)))).map(t=>t.brand));
+ if(mentioned.size>1||(mentioned.size===1&&!mentioned.has(c.brand)))return false;
  const brand=normalize(info.brand||'');
  return !brand||c.aliases.some(a=>normalize(a)===brand);
 }

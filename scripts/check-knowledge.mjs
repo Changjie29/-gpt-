@@ -15,6 +15,7 @@ assert(k.retrieve(query,6,{model:'WORKMASTER25S'}).length===0);
 assert(k.retrieve(query,6,{model:'PL2304(G4)'}).length===0);
 assert(k.retrieve(query,6,{model:'LX2620',brand:'New Holland'}).length===0);
 assert(k.retrieve('LX2620 overheating',6,{model:'WORKMASTER25'}).length===0);
+assert(k.retrieve('New Holland LX2620 overheating',6,{}).length===0);
 assert(k.retrieve(query,6,{}).every(c=>c.kind==='general'));
 assert(k.retrieve(query,6,{model:'LX2620SU'}).every(c=>c.sourceId==='SRC-KB-LX2620-6C82063118'));
 const p=await import(moduleUrl('lib/prompt.ts'));
