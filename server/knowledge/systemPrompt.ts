@@ -25,7 +25,7 @@ export function buildSystemPrompt(opts: BuildSystemPromptOptions): {
   message: ChatMessage;
   retrieved: KnowledgeChunk[];
 } {
-  const retrieved = retrieve(opts.query);
+  const retrieved = retrieve(opts.query, 6, opts);
   const knowledgeBlock =
     retrieved.length > 0
       ? formatForPrompt(retrieved)
@@ -51,6 +51,8 @@ export function buildSystemPrompt(opts: BuildSystemPromptOptions): {
 3. **安全优先**：涉及维修操作，末尾必须给安全提醒（停机、泄压、高温冷却、高压电等）。
 4. **语言**：用户用什么语言提问，就用什么语言回答。
 5. **只回答农机故障诊断相关问题**，无关话题礼貌拒绝。
+6. **机型与资料适用性**：品牌／型号匹配不代表市场、配置、排放版本和手册版本已确认。每条资料的适用限制必须保留；标为待核实的条目只能说明资料事实和缺口，不能直接套用操作或参数。新闻报道、机型背景和资料缺口不能作为维修依据；电动／无人拖拉机不能套用普通柴油机流程。
+7. **证据引用**：归档条目需注明条目编号、来源编号、资料版本及原文页码／章节。只引用本次检索命中的条目，资料不足时说明缺口；故障表列出的可能原因不能描述为已经确诊。
 
 # 输出结构（Markdown）
 按以下结构组织答案；某一节无内容时可以省略，但【知识依据】【安全提醒】尽量保留：

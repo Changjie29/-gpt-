@@ -3,21 +3,37 @@
  *
  * 设计原则：
  * - 不引入向量库 / ES / Redis / LangChain。
- * - 启动时扫描 server/knowledge/ 下所有 .md 文件，按二级标题切块。
+ * - 启动时扫描 server/knowledge/ 下的 .md，并加载拖拉机归档索引中的独立条目。
  * - 查询时用关键词重叠打分（中文 bigram + 英文 token），取 top-K 片段。
  * - 知识库很小，全量塞 prompt 也可；这里做"按需选片"，为未来扩充留接口。
  * - 未来接入 PDF/Word 时，只需在 loadAll() 里加新解析器，返回 {path, heading, text}。
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { loadArchive } from './archive';
+import { archiveApplicability, queryWithoutIdentity, resolveScope, type RetrievalContext } from './scope';
 
 export interface KnowledgeChunk {
-  /** 文件相对 server/knowledge 的路径 */
+  /** 通用文档相对 server/knowledge；归档文档相对仓库根目录 */
   source: string;
   /** 该块所属章节标题（## 级） */
   heading: string;
   /** 块正文 */
   text: string;
+  entryId?: string;
+  sourceId?: string;
+  brand?: string;
+  model?: string;
+  models?: string[];
+  emissionStage?: '国三' | '国四';
+  sourceUrl?: string;
+  originalPath?: string;
+  locator?: string;
+  version?: string;
+  scopeBoundary?: string;
+  status?: string;
+  entryType?: string;
+  applicability?: 'matched' | 'pending';
 }
 
 interface ScoredChunk extends KnowledgeChunk {
@@ -92,7 +108,11 @@ export function loadKnowledgeBase(): { fileCount: number; chunkCount: number } {
   } catch (e) {
     console.warn('[kb] load failed:', (e as Error).message);
   }
-  console.log(`[kb] loaded ${fileCount} files, ${chunks.length} chunks from ${KB_ROOT}`);
+  // Invalid archive references must fail startup rather than silently hide missing entries.
+  const archive = loadArchive();
+  chunks.push(...archive.chunks);
+  fileCount += archive.fileCount;
+  console.log(`[kb] loaded ${fileCount} files, ${chunks.length} chunks (${archive.chunks.length} archived entries)`);
   return { fileCount, chunkCount: chunks.length };
 }
 
@@ -112,12 +132,17 @@ function tokenize(text: string): string[] {
 }
 
 function scoreChunk(chunk: KnowledgeChunk, queryTokens: Set<string>): number {
-  const haystack = (chunk.heading + '\n' + chunk.text).toLowerCase();
+  const heading = (chunk.entryId ? chunk.heading.split('｜').slice(1).join('｜') : chunk.heading).toLowerCase();
+  // Brand/model names repeated in citations are not evidence that a symptom is relevant.
+  const body = chunk.entryId ? chunk.text.split('\n')
+    .filter((line) => !/^- (证据|故障证据|来源|原始|定位|适用|状态)[：:]/.test(line))
+    .join('\n').replace(/\b(?:SRC|KB|NH|ZL|LV|DF|HH)-[A-Z0-9-]+\b/g, '') : chunk.text;
+  const haystack = (heading + '\n' + body).toLowerCase();
   let score = 0;
   for (const t of queryTokens) {
     if (haystack.includes(t)) {
       // 标题命中权重更高
-      score += chunk.heading.toLowerCase().includes(t) ? 3 : 1;
+      score += heading.includes(t) ? 3 : 1;
     }
   }
   return score;
@@ -127,23 +152,44 @@ function scoreChunk(chunk: KnowledgeChunk, queryTokens: Set<string>): number {
  * 根据用户问题检索最相关的知识片段。
  * 无命中时返回空数组，调用方决定 fallback。
  */
-export function retrieve(query: string, k = MAX_CHUNKS_IN_PROMPT): KnowledgeChunk[] {
+export function retrieve(query: string, k = MAX_CHUNKS_IN_PROMPT, context: RetrievalContext = {}): KnowledgeChunk[] {
   if (chunks.length === 0) return [];
-  const qTokens = new Set(tokenize(query));
+  const qTokens = new Set(tokenize(queryWithoutIdentity(query)));
   if (qTokens.size === 0) return [];
+  const scope = resolveScope(query, context);
 
   const scored: ScoredChunk[] = [];
   for (const c of chunks) {
+    const applicability = c.entryId ? archiveApplicability(c, scope) : undefined;
+    if (c.entryId ? !applicability : !scope.genericKnowledge) continue;
     const s = scoreChunk(c, qTokens);
-    if (s > 0) scored.push({ ...c, score: s });
+    if (s > 0) scored.push({ ...c, applicability, score: s });
   }
-  scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, k).map(({ source, heading, text }) => ({ source, heading, text }));
+  // Manual-specific hits take precedence; sample parameters must not contradict their instructions.
+  const archived = scored.filter((chunk) => chunk.entryId);
+  const selected = archived.length ? archived : scored;
+  selected.sort((a, b) => b.score - a.score);
+  return selected.slice(0, k).map(({ score: _score, ...chunk }) => chunk);
 }
 
 /** 当前知识条目数（供 /api/health 或前端展示） */
 export function stats() {
-  return { chunks: chunks.length };
+  return { chunks: chunks.length, archivedEntries: chunks.filter((chunk) => chunk.entryId).length };
+}
+
+/** Source facts remain outside body truncation so applicability limits cannot be lost. */
+export function describeSource(chunk: KnowledgeChunk): string {
+  if (!chunk.entryId) return `来源：${chunk.source}｜章节：${chunk.heading}`;
+  return [
+    `条目：${chunk.entryId}｜来源编号：${chunk.sourceId}｜章节：${chunk.heading}`,
+    `知识文档：${chunk.source}`,
+    `品牌／型号：${chunk.brand}／${chunk.model}｜资料版本：${chunk.version}`,
+    `原始资料：${chunk.originalPath}｜来源网址：${chunk.sourceUrl}`,
+    `原文定位：${chunk.locator}`,
+    `核验状态：${chunk.status}｜资料类别：${chunk.entryType}`,
+    `适用性：${chunk.applicability === 'matched' ? '品牌／型号匹配，市场、配置及手册版本仍需核对' : '具体机型适用性待核实，不直接套用操作或参数'}`,
+    `适用限制：${chunk.scopeBoundary}`,
+  ].join('\n');
 }
 
 /** 把命中的片段格式化为注入 system prompt 的文本块 */
@@ -152,7 +198,7 @@ export function formatForPrompt(found: KnowledgeChunk[]): string {
   return found
     .map((c, i) => {
       const body = c.text.length > MAX_CHARS_PER_CHUNK ? c.text.slice(0, MAX_CHARS_PER_CHUNK) + '…' : c.text;
-      return `【片段 ${i + 1}｜来源：${c.source}｜章节：${c.heading}】\n${body}`;
+      return `【片段 ${i + 1}】\n${describeSource(c)}\n\n${body}`;
     })
     .join('\n\n---\n\n');
 }

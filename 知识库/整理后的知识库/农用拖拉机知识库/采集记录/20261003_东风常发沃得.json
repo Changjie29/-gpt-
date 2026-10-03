@@ -1,0 +1,148 @@
+[
+  {
+    "brand": "东风",
+    "maker": "常州东风农机集团有限公司",
+    "official_site": "https://www.dfamgc.com/",
+    "official_site_proof": "官方首页公司名称、底部联系方式、English导航指向df-tractor.com",
+    "manual_search_status": "官方中英文资料下载入口都可读，但暂无公开手册链接",
+    "target_models": "DF904/DF1204等国四机型（型号仅为待搜方向，未确认手册适用范围）",
+    "evidence": [
+      {
+        "url": "https://www.dfamgc.com/service-and-support/downloads",
+        "kind": "official_downloads_page",
+        "http_status": 200,
+        "bytes": 39425,
+        "sha256": "20ece5ceab56a493eed9f689c7cdef2d7b2ebc429ad42da31f1e151d51b377b7",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.df-tractor.com/service-and-support/downloads",
+        "kind": "official_downloads_page",
+        "http_status": 200,
+        "bytes": 38791,
+        "sha256": "36adc96e294e3eb44194636c4f667ee46024c906c85689608e4c7c5316aa0f8e",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      }
+    ],
+    "observed_text": [
+      "资料整理中，敬请期待~~~",
+      "Coming soon..."
+    ],
+    "next_step": "向厂家/授权经销商获取整机使用维护说明书，要求文档编号、版次、发动机配置及国四适用证据。",
+    "scope_boundary": "现有冬季保养文章不是国四整机说明书；未新增无来源诊断参数。",
+    "full_site_search_status": "已访问农机通全文搜索so.nongjitong.com，查询HTML仅含AJAX空结果容器；所需/js/so.js与/js/index.js返回HTTP401，无法读取结果，不记作无结果。",
+    "checked_at": "2026-10-03",
+    "new_full_manual_count": 0
+  },
+  {
+    "brand": "常发",
+    "maker": "常发农装（官网显示名称）",
+    "official_site": "https://www.changfanz.com/",
+    "official_site_proof": "常发集团官网http://www.changfa.com/“旗下业务/常发农装”直接链接www.changfanz.com",
+    "manual_search_status": "中英文官网可读。中文官网产品、APP、服务网点、知识小课堂及英文首页均未发现完整说明书PDF入口。",
+    "target_models": "CFJ2204-6M、CFK2404-7M及轮拖H系列（实际网页型号；未获手册）",
+    "evidence": [
+      {
+        "url": "https://www.changfanz.com/",
+        "kind": "manufacturer_site",
+        "http_status": 200,
+        "bytes": 74175,
+        "sha256": "c6e4346966965f04f111e511605dd3ed19bdee0a0ac006adb5b8134ec7aedca9",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.changfanz.com/APP.html",
+        "kind": "official_app_landing",
+        "http_status": 200,
+        "bytes": 35035,
+        "sha256": "6ca6b5a73c82411f48ef6a2ba89f3042aed9854bebc962fdf264ca451a38f198",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.changfanz.com/zhishixiaoketang.html",
+        "kind": "official_training_video_directory",
+        "http_status": 200,
+        "bytes": 107767,
+        "sha256": "f190b689d462c47093fd567ff25f4caf8bf6b30a3b36682289983c9eaf6e62f3",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.changfanz.com/archives/tuolaji/1280.html",
+        "kind": "official_model_landing",
+        "http_status": 200,
+        "bytes": 98189,
+        "sha256": "d257d97c8e7f07cb40b00337dec75aae7187fad59543e709ae3015baf94b91f8",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://en.changfanz.com/",
+        "kind": "official_english_site",
+        "http_status": 200,
+        "bytes": 72519,
+        "sha256": "18fa114bf8fbc4bcb4d84df5d0f5238db4335727ee1b2498012635b63a391e92",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      }
+    ],
+    "observed_text": [
+      "下载常发农装APP",
+      "车辆控制 / 农机管理"
+    ],
+    "next_step": "待取得相应机型完整整机手册；官方知识小课堂可作为后续视频来源核验方向，不将视频标题改写为具体维修参数。",
+    "scope_boundary": "APP下载二维码和机型营销页不计入完整说明书数量。",
+    "full_site_search_status": "已访问农机通全文搜索so.nongjitong.com，查询HTML仅含AJAX空结果容器；所需/js/so.js与/js/index.js返回HTTP401，无法读取结果，不记作无结果。",
+    "checked_at": "2026-10-03",
+    "new_full_manual_count": 0
+  },
+  {
+    "brand": "沃得",
+    "maker": "江苏沃得农业机械股份有限公司（集团官方农业机械板块明确名称）",
+    "manufacturer_store": "https://www.nongjitong.com/company/30.html",
+    "verified_store_details": "金牌店铺18年；售后电话0511-86342622；页面标题明确沃得农业机械股份有限公司",
+    "candidate_official_site": "https://www.worldgroup.com.cn/",
+    "official_site_status": "集团主站与农业机械板块HTTP200，已核验。实际农机产品站www.worldnyjx.com仍CONNECT403；world-am.com实际移动APP营销站，已剔除。",
+    "manual_search_status": "企业店铺和悍沃1004(C)轮式拖拉机机型页可读；店铺“说明书”检索无结果",
+    "target_models": "悍沃1004(C)（网页实际型号；说明书范围未知）",
+    "evidence": [
+      {
+        "url": "https://www.nongjitong.com/company/30.html",
+        "kind": "manufacturer_branded_store",
+        "http_status": 200,
+        "bytes": 25979,
+        "sha256": "f1b2169ccbe2dea6695983f8fb1fa13a9d04a5d46245847ae0a9560f2e05d62d",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.nongjitong.com/company/30_2.html",
+        "kind": "manufacturer_branded_intro",
+        "http_status": 200,
+        "bytes": 8910,
+        "sha256": "e2a9352a0a8b2f0923fef6f16203f5591d84431749919b48a4aabb4c85b53d34",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.nongjitong.com/product/world_1004c_tractor.html",
+        "kind": "model_landing",
+        "http_status": 200,
+        "bytes": 30643,
+        "sha256": "b631e8fddd582009ccda43a2ed6ba1a214d70eb3d09d8e56b03bb16de15a9c70",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      },
+      {
+        "url": "https://www.worldgroup.com.cn/index.php?m=content&c=index&a=lists&catid=84",
+        "kind": "official_agricultural_business_identity",
+        "http_status": 200,
+        "bytes": 25362,
+        "sha256": "bd4ce3d5aa1aa0019cd28cdd262c2985cc5b18ca53e032df397156ff63499377",
+        "retention": "仅临时核验网页，未归档全文；哈希对应读取时响应"
+      }
+    ],
+    "next_step": "核验沃得独立官网实际域名及下载入口，或取得厂家/授权经销商的整机操作维护手册。",
+    "scope_boundary": "沃德另一公司/company/wode/与沃得农机无关；产品页不作操作维修来源。",
+    "official_site": "https://www.worldgroup.com.cn/",
+    "official_site_proof": "集团官方农业机械页面标题“农业机械_沃得集团_沃得官网”，正文公司名明确，集团页农业产品导航直接链接www.worldnyjx.com。",
+    "agricultural_site": "http://www.worldnyjx.com/",
+    "full_site_search_status": "已访问农机通全文搜索so.nongjitong.com，查询HTML仅含AJAX空结果容器；所需/js/so.js与/js/index.js返回HTTP401，无法读取结果，不记作无结果。",
+    "checked_at": "2026-10-03",
+    "new_full_manual_count": 0
+  }
+]

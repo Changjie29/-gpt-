@@ -104,8 +104,21 @@ const USER_FRIENDLY_ERROR =
     : '智能诊断服务暂时无法连接，请稍后重试。';
 
 app.post('/api/chat', async (req: Request, res: Response) => {
+  if (!req.body || typeof req.body !== 'object' || Array.isArray(req.body)) {
+    res.status(400).json({ error: '请求体必须为 JSON 对象', code: 'bad_request' });
+    return;
+  }
   const body = req.body as ChatRequestBody;
-  const { messages, machineType, brand, model } = body;
+  if ([body.machineType, body.brand, body.model].some((value) =>
+    value !== undefined && (typeof value !== 'string' || value.length > 100),
+  )) {
+    res.status(400).json({ error: '农机类型、品牌和型号必须为字符串（各上限 100 字符）', code: 'bad_request' });
+    return;
+  }
+  const { messages } = body;
+  const machineType = body.machineType?.trim();
+  const brand = body.brand?.trim();
+  const model = body.model?.trim();
 
   // 输入校验
   if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -122,8 +135,9 @@ app.post('/api/chat', async (req: Request, res: Response) => {
       res.status(400).json({ error: '消息格式错误', code: 'bad_request' });
       return;
     }
-    if (m.content.length > 2000) {
-      res.status(400).json({ error: '单条消息过长（上限 2000 字符）', code: 'too_long' });
+    const maxMessageLength = m.role === 'assistant' ? 16_000 : 2000;
+    if (m.content.length > maxMessageLength) {
+      res.status(400).json({ error: `单条消息过长（上限 ${maxMessageLength} 字符）`, code: 'too_long' });
       return;
     }
   }
@@ -150,7 +164,7 @@ app.post('/api/chat', async (req: Request, res: Response) => {
 
   try {
     if (!llm.hasAnyConfigured()) {
-      // 未配置外部 API key 时，基于本地农机知识库检索结果直接给出结构化排查建议
+      // 未配置外部 API key 时，返回带来源的知识摘录
       const localReply = generateLocalKnowledgeReply(query, retrieved, { machineType, brand, model });
       res.json({
         choices: [{ message: { role: 'assistant', content: localReply } }],
@@ -174,7 +188,7 @@ app.post('/api/chat', async (req: Request, res: Response) => {
   } catch (err) {
     if (err instanceof ProviderError) {
       console.warn(`[chat] provider error: ${err.provider}/${err.kind}`, err.detail);
-      // 服务提供商错误时，自动兜底为本地知识库排查
+      // 服务提供商错误时，返回带来源的本地知识摘录
       const localReply = generateLocalKnowledgeReply(query, retrieved, { machineType, brand, model });
       res.json({
         choices: [{ message: { role: 'assistant', content: localReply } }],
@@ -200,6 +214,10 @@ app.get('/api/model/tractor', (_req: Request, res: Response) => {
 
 // ---- 全局错误兜底 ----
 app.use((err: Error, _req: Request, res: Response, _next: express.NextFunction) => {
+  if ((err as Error & { type?: string }).type === 'entity.parse.failed') {
+    res.status(400).json({ error: '请求体必须为有效的 JSON 对象', code: 'bad_request' });
+    return;
+  }
   console.error('[server] unhandled:', err.message);
   res.status(500).json({ error: '服务器内部错误' });
 });

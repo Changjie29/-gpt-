@@ -1,0 +1,124 @@
+{
+  "collected_at": "2026-10-03",
+  "purpose": "增加国内常见拖拉机品牌的中文手册覆盖；优先存量机型而非宣称全国排名",
+  "brands": [
+    {
+      "brand": "黄海金马",
+      "manufacturer": "江苏悦达智能农业装备有限公司",
+      "manufacturer_verification": "农机通企业店铺名称及产品品牌对应；未取得可独立验证的厂家官网外链",
+      "verified_listing_url": "https://www.nongjitong.com/company/25.html",
+      "verified_product_directory": "https://www.nongjitong.com/company/25_4.html",
+      "target_models": [
+        "YB400/404（旧款）",
+        "YBX504（G4）",
+        "YE704/YE704-1（G4）",
+        "YE804-N（G4）",
+        "YG904（G4）",
+        "YG1204（G4）"
+      ],
+      "verified_product_links": [
+        "https://www.nongjitong.com/product/huanghaijinma_yb404_tractor.html",
+        "https://www.nongjitong.com/product/huanghaijinma_ybx504_tractor.html",
+        "https://www.nongjitong.com/product/mm_704a_tractor.html",
+        "https://www.nongjitong.com/product/huanghaijinma_yg904_tractor.html"
+      ],
+      "result": "本次已读企业首页、公司介绍、联系页和产品目录；页面未显示中文整机说明书PDF或HTML入口。",
+      "document_status": "待补整机使用说明书，不把产品参数页或新品报道计为手册",
+      "new_manuals": 0,
+      "follow_up": "继续向厂家服务入口查找对应年款和发动机版本手册，优先存量400/404/504/704/804/904系列；新国四单独归档"
+    },
+    {
+      "brand": "时风",
+      "manufacturer": "山东时风（集团）有限责任公司",
+      "manufacturer_verification": "农机通企业店铺名称及产品品牌对应；未取得可独立验证的厂家官网外链",
+      "verified_listing_url": "https://www.nongjitong.com/company/11.html",
+      "verified_product_directory": "https://www.nongjitong.com/company/11_4.html",
+      "target_models": [
+        "SF200A（G4）",
+        "SF250A（G4）",
+        "SF504（G4）",
+        "SF704-B（G4）",
+        "SF704-G（排放待核）",
+        "SF1204（G4）",
+        "SF1404-B1（G4）"
+      ],
+      "verified_product_links": [
+        "https://www.nongjitong.com/product/2582.html",
+        "https://www.nongjitong.com/product/41227.html",
+        "https://www.nongjitong.com/product/shifeng_sf704-g_tractor.html",
+        "https://www.nongjitong.com/product/shifeng_sf1204_tractor.html"
+      ],
+      "result": "本次已读企业首页、公司介绍、联系页和产品目录；页面未显示中文整机说明书PDF或HTML入口。",
+      "document_status": "待补整机使用说明书；不能依据企业宣传文字推断全国保有量名次",
+      "new_manuals": 0,
+      "follow_up": "优先补老款SF200/240/250/504/704/904等存量机使用维护手册，按年款、排放和配置区分"
+    },
+    {
+      "brand": "中联",
+      "manufacturer": "中联农业机械股份有限公司（官网服务页）；中联重科股份有限公司（农机通店铺）",
+      "manufacturer_verification": "已实际读取中联农机官网维保下载页，标题与既有PL汇编名称一致；农机通企业店铺作辅助产品线核验",
+      "verified_listing_url": "https://www.nongjitong.com/company/chery.html",
+      "official_service_url": "https://www.zoomlion-ag.com/whby_1.html",
+      "official_manual_detail_url": "https://www.zoomlion-ag.com/companyfile/5.html",
+      "official_pdf_download_url": "https://v4.cecdn.yun300.cn/100001_2107025179/%E4%B8%AD%E8%81%94PL%E7%B3%BB%E5%88%97%E6%8B%96%E6%8B%89%E6%9C%BA%E7%BB%B4%E4%BF%9D%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C.pdf",
+      "official_pdf_display_size": "10.6MB",
+      "target_models": [
+        "PL系列（2020-11汇编既有）",
+        "RD504（G4）",
+        "RN1404-1（G4）",
+        "RG2204（G4）",
+        "PL2304（G4）"
+      ],
+      "result": "2026-10-03官方维保页实际HTTP200，共列7份文件；唯一拖拉机文件为已有PL系列，其他6份为非拖拉机农机。未发现新的轮式拖拉机整机手册。",
+      "document_status": "现有PL汇编补充8条证据页；不计新增手册；2020版本不得直接套用国四RD/RN/RG/PL子型号",
+      "new_manuals": 0,
+      "new_entries": 8,
+      "entry_ids": [
+        "ZL-PL-009",
+        "ZL-PL-010",
+        "ZL-PL-011",
+        "ZL-PL-012",
+        "ZL-PL-013",
+        "ZL-PL-014",
+        "ZL-PL-015",
+        "ZL-PL-016"
+      ],
+      "follow_up": "继续查RD/RN/RG及PL国四对应机型手册；官方产品参数页不作为操作/故障说明书"
+    }
+  ],
+  "search_transport_observations": [
+    {
+      "url": "https://so.nongjitong.com/Default.aspx",
+      "status": "部分关键词页面HTTP200，但仅包含动态页面壳；所需/js/index.js及/js/so.js返回HTTP401 Access Denied，未取得可判断结果的检索列表",
+      "interpretation": "搜索功能未完成读取，不代表关键词无结果"
+    },
+    {
+      "url": "https://www.bing.com/search",
+      "status": "实际GET经过继承代理返回CONNECT403",
+      "interpretation": "当前运行访问未放通，未读取搜索结果"
+    },
+    {
+      "url": "https://www.baidu.com/s",
+      "status": "实际GET经过继承代理返回CONNECT403",
+      "interpretation": "当前运行访问未放通，未读取搜索结果"
+    }
+  ],
+  "new_manual_count": 0,
+  "new_existing_manual_entry_count": 8,
+  "scope_boundary": "仅将已读取的手册证据转成问答知识条目；未获取或未核验资料只保留检索线索，不转成维修建议。",
+  "archived_evidence": {
+    "knowledge_path": "知识库/整理后的知识库/拖拉机/中联/PL系列.md",
+    "entry_ids": [
+      "KB-ZL-PL-009",
+      "KB-ZL-PL-010",
+      "KB-ZL-PL-011",
+      "KB-ZL-PL-012",
+      "KB-ZL-PL-013",
+      "KB-ZL-PL-014",
+      "KB-ZL-PL-015",
+      "KB-ZL-PL-016"
+    ],
+    "source_id": "SRC-ZL-PL-202011",
+    "official_attachment_list": "本文件的中联核验记录"
+  }
+}

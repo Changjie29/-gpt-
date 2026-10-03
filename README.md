@@ -9,7 +9,7 @@
 - **前端**：React 19 + Vite + TypeScript + Tailwind CSS + React Router + React Three Fiber
 - **后端**：Node.js + Express + tsx（ESM）
 - **LLM**：Gemini（`gemini-3.6-flash`）/ DeepSeek（`deepseek-v4-flash`），OpenAI 兼容协议
-- **知识库**：本地 Markdown，按 `## ` 切块 + 关键词重叠打分，零向量库
+- **知识库**：通用 Markdown + 122 条索引化拖拉机知识，按章节提取 + 关键词重叠打分，零向量库
 - **3D**：Three.js / React Three Fiber，程序化 RoomEnvironment 光照，零 HDR 网络请求
 
 ## 快速开始
@@ -36,8 +36,8 @@ GEMINI_API_KEY=your_gemini_api_key
 # DeepSeek（无代理环境优先使用；sk- 开头）
 DEEPSEEK_API_KEY=your_deepseek_api_key
 
-# v2 服务端口（默认 8788，与 v1 分开）
-PORT=8788
+# 服务端口（默认 3000，前后端共用）
+PORT=3000
 
 # 可选：代理（写在这里也能被识别；服务启动时先加载本文件再读代理变量）
 # HTTPS_PROXY=http://127.0.0.1:7890
@@ -45,6 +45,7 @@ PORT=8788
 ```
 
 > 两个 key 都配最稳：后端按网络环境自动选主选，失败自动回退。只配一个也能跑。
+> 不配置 key 也可运行本地知识检索；外部模型未配置或调用失败时使用本地知识库回复。
 > 服务启动顺序：先加载 `server/.env`，再读取 `HTTPS_PROXY/https_proxy/HTTP_PROXY/http_proxy` 决定走 Gemini 还是 DeepSeek。
 
 ### 3. 启动开发服务
@@ -53,16 +54,18 @@ PORT=8788
 npm run dev
 ```
 
-- 前端（v2）：http://localhost:8081
-- 后端（v2）：http://localhost:8788
-- 健康检查：http://localhost:8788/api/health
+- 网站及 API：http://localhost:3000
+- 对话页：http://localhost:3000/chat
+- 健康检查：http://localhost:3000/api/health
 
-### 4. 类型检查 / Lint / 构建
+### 4. 检索测试 / 类型检查 / Lint / 构建
 
 ```bash
+npm test            # 知识索引、适用范围过滤、检索与回复回归测试
 npm run typecheck   # 前端 tsc
 npm run lint        # eslint
-npm run build       # 先 build:client 再 build:server
+npm run build       # 前端类型检查与构建
+npm run build:server # 后端编译检查
 ```
 
 ## LLM 选择策略
@@ -77,13 +80,13 @@ npm run build       # 先 build:client 再 build:server
 - 主选未配置时自动交换。
 - 主选抛网络/超时/服务端错误时自动回退次选。
 - 鉴权错误（401/403）也会尝试另一个，方便排查 key 问题。
-- 所有 LLM 失败时，前端统一显示「智能诊断服务暂时无法连接，请稍后重试。」，不暴露 ECONNRESET/ETIMEDOUT 等技术细节。
+- 未配置外部模型或模型调用失败时，返回本地知识库回复，前端显示「本地知识库」；资料不足时明确说明，不编造机型参数。
 - 20 秒超时。
 
 ## RAG 工作流
 
-1. 启动时扫描 `server/knowledge/` 下所有 `.md` 文件（跳过 `00_说明/`），按 `## ` 二级标题切块。
-2. 用户提问时，对用户问题做中文 2-gram + 英文 token 化，与每块做关键词重叠打分，标题命中权重 ×3。
+1. 启动时扫描 `server/knowledge/` 下的通用 `.md` 文件（跳过 `00_说明/`），按 `## ` 二级标题切块；同时读取 `知识库/整理后的知识库/农用拖拉机知识库/entries.jsonl`，按条目编号提取对应 Markdown 章节。目前为 9 个通用片段 + 122 条拖拉机条目，共 131 个片段。
+2. 检索结合 `machineType`、`brand`、`model`，也识别问题中可辨认的品牌与型号，过滤不相关品牌／型号及非拖拉机的归档条目；再对问题做中文 2-gram + 英文 token 化，按关键词重叠打分，标题命中权重 ×3。品牌或型号匹配不代表市场、排放、配置及版本已经确认。
 3. 取 top-6 片段（单块超 1200 字符截断），拼入后端独占的 system prompt。
 4. system prompt 硬性要求：
    - 禁止编造压力/温度/电压/扭矩/故障码/零件号/油液型号等参数；
@@ -91,6 +94,9 @@ npm run build       # 先 build:client 再 build:server
    - 结构化输出：【故障现象】【初步判断】【可能原因】【建议排查】【知识依据】【安全提醒】；
    - 用户用什么语言问，就用什么语言答。
 5. 前端只发 user/assistant 历史（截最近 20 轮），不发 system message——system prompt 由后端独占。
+6. 归档条目保留来源编号、原文定位、来源链接、文档适用范围及核对状态，供外部模型和本地回复引用。仅索引中的编号条目参与检索；归档 README、待补资料、原始 HTML/PDF 不作为诊断知识自动加载。
+
+例如：填写「拖拉机／久保田／LX2620」，询问「发动机启动困难」，可检索 `KB-LX2620-003`。命中归档条目时优先使用对应资料，避免与通用示例中的参数或操作混用；已指定品牌／型号但无合适资料时返回资料不足。填写 `WORKMASTER25S` 时，不会套用仅适用于 `WORKMASTER25` 的条目。未确认市场或配置时仍需依据条目的适用限制核实。
 
 ## 知识库目录
 
@@ -107,12 +113,12 @@ server/knowledge/
 └── 99_待整理/            # 未分类资料
 ```
 
-未来接入 PDF/Word/Excel/TXT 时，在 `server/knowledge/retriever.ts` 之上增加解析层即可，接口保持 `chunks: { text, source, heading }[]`。
+归档知识通过 `知识库/整理后的知识库/农用拖拉机知识库/entries.jsonl` 指向对应编号章节，无需复制到上述目录。修改索引或知识文档后需重启服务重新加载；新增条目需保留原文定位、来源编号及适用限制。人读入口见[知识库总览](知识库/README.md)，后续新增遵守[整理规范](知识库/条目整理规范.md)，使用[模板](知识库/模板/新资料模板.md)并运行`python3 知识库/工具/校验索引.py`。明确排放阶段与用户问题冲突时不套用旧手册，未取得正文的候选只保留采集记录。未来自动解析 PDF/Word/Excel/TXT 时，再在 `server/knowledge/retriever.ts` 之上增加解析层。
 
 ## 项目结构
 
 ```
-SRT27/
+AgriDx-v2/
 ├── public/                          # 静态公共资源（构建时原样拷贝到 dist/）
 │   └── models/
 │       └── tractor.glb              # 拖拉机 3D 模型（前端经 /models/tractor.glb 加载；后端 /api/model/tractor 为同一文件接口）
@@ -165,7 +171,7 @@ SRT27/
 │   │   └── router.ts                # 单例：有代理→Gemini，无代理→DeepSeek，失败 fallback
 │   │
 │   └── knowledge/                   # 本地知识库 + 轻量 RAG
-│       ├── retriever.ts             # 启动扫描 .md、按 ## 切块、关键词打分、top-K
+│       ├── retriever.ts             # 通用 .md + 归档编号条目、适用范围过滤、关键词打分、top-K
 │       ├── systemPrompt.ts          # buildSystemPrompt（后端独占 system prompt）
 │       ├── 00_说明/                 # 目录约定（不参与检索）
 │       ├── 01_通用原理/             # 发动机/冷却/润滑/液压/电气/传动...
@@ -188,7 +194,7 @@ SRT27/
 │
 ├── index.html                        # Vite HTML 入口
 ├── package.json                     # 依赖与 scripts（dev/typecheck/lint/build）
-├── vite.config.ts                   # Vite 配置（v2 前端 8081，代理 /api → 8788）
+├── vite.config.ts                   # Vite 配置（开发服务默认 3000，由 Express 加载前端中间件）
 ├── tsconfig.app.json                # 前端 TS 配置
 ├── tsconfig.server.json             # 后端 TS 配置
 ├── tsconfig.node.json               # Vite/Node 侧 TS 配置
@@ -207,7 +213,7 @@ SRT27/
 ### `GET /api/health`
 
 ```json
-{ "ok": true, "timestamp": "...", "knowledge": { "chunks": 9 } }
+{ "ok": true, "timestamp": "...", "knowledge": { "chunks": 131, "archivedEntries": 122 } }
 ```
 
 ### `POST /api/chat`
@@ -237,7 +243,9 @@ SRT27/
 }
 ```
 
-失败时统一返回 HTTP 502：
+本地知识库回复沿用相同的 `choices` 结构，`provider` 为 `knowledge-base`、`model` 为 `kb-rag-engine (本地知识引擎)`、`fellBack` 为 `true`；`knowledgeChunks` 为本次命中的片段数。
+
+服务无法生成回复时返回 HTTP 502：
 
 ```json
 { "error": "智能诊断服务暂时无法连接，请稍后重试。", "code": "llm_unavailable" }
@@ -256,7 +264,7 @@ SRT27/
 
 **已实现**
 
-- 本地 Markdown 知识库 + 关键词检索 RAG
+- 本地 Markdown 知识库 + 122 条拖拉机归档条目 + 品牌／型号过滤与关键词检索 RAG
 - Gemini / DeepSeek 双 Provider，按代理自动选择 + 失败回退
 - 后端独占 system prompt，强制结构化输出与禁止编造参数
 - 可交互 3D 拖拉机模型（拖拽/缩放/自转/恢复视角）
@@ -275,9 +283,9 @@ SRT27/
 
 ## 同步部署
 
-- GitHub：https://github.com/Changjie29/-gpt-
+- GitHub：https://github.com/Changjie29/AgriDx-v2
 - 本地工作区：clone 仓库后在根目录执行 `npm install` 即可开发，无需额外配置路径
-- 同步方式：本地改完后 commit 并 push 到 `main`，云环境通过 git pull 自动同步
+- 同步方式：代码和知识库提交到 `main`；运行环境需按实际更新/部署流程重新加载，GitHub推送本身不代表网站已经部署
 
 ---
 

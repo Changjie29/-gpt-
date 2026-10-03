@@ -20,12 +20,18 @@ import { LiquidGlass } from '@sohumsuthar/liquid-glass';
 import content, { pick } from '@/data/content';
 import { useLang } from '@/hooks/useLang';
 
+type ChatProvider = 'gemini' | 'deepseek' | 'knowledge-base';
+
 interface ChatMessage {
   id: string;
   role: 'user' | 'assistant' | 'error' | 'loading';
   content: string;
   model?: string;
-  provider?: 'gemini' | 'deepseek';
+  provider?: ChatProvider;
+}
+
+function isChatProvider(value: unknown): value is ChatProvider {
+  return value === 'gemini' || value === 'deepseek' || value === 'knowledge-base';
 }
 
 const STORAGE_KEY = '__app_srt27_chat_history';
@@ -52,7 +58,7 @@ function loadHistory(): ChatMessage[] {
         ).slice(-100).map((m) => ({
           id: m.id, role: m.role, content: m.content,
           model: typeof m.model === 'string' ? m.model : undefined,
-          provider: m.provider === 'gemini' || m.provider === 'deepseek' ? m.provider : undefined,
+          provider: isChatProvider(m.provider) ? m.provider : undefined,
         }))
       : [];
   } catch {
@@ -78,11 +84,14 @@ function loadMeta(): { machineType: string; brand: string; model: string } {
 export default function ChatPage() {
   const lang = useLang();
   const t = useCallback((zh: string, en: string) => (lang === 'zh' ? zh : en), [lang]);
+  const providerLabel = (provider?: ChatProvider) =>
+    provider === 'knowledge-base' ? t('本地知识库', 'Local knowledge base') :
+    provider === 'gemini' ? 'Gemini' : provider === 'deepseek' ? 'DeepSeek' : '';
   const [messages, setMessages] = useState<ChatMessage[]>(loadHistory);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [currentModel, setCurrentModel] = useState<string>('');
-  const [currentProvider, setCurrentProvider] = useState<'gemini' | 'deepseek' | ''>('');
+  const [currentProvider, setCurrentProvider] = useState<ChatProvider | ''>('');
   const [machineType, setMachineType] = useState<string>(() => loadMeta().machineType);
   const [brand, setBrand] = useState<string>(() => loadMeta().brand);
   const [model, setModel] = useState<string>(() => loadMeta().model);
@@ -156,14 +165,14 @@ export default function ChatPage() {
 
         let reply = '';
         let modelName = '';
-        let provider: 'gemini' | 'deepseek' | '' = '';
+        let provider: ChatProvider | '' = '';
         if (response.ok) {
           const data = await response.json();
           const result = data?.choices?.[0]?.message?.content;
           if (typeof result !== 'string' || !result.trim()) throw new Error('Empty response');
           reply = result;
           modelName = typeof data?.model === 'string' ? data.model : '';
-          provider = data?.provider === 'gemini' || data?.provider === 'deepseek' ? data.provider : '';
+          provider = isChatProvider(data?.provider) ? data.provider : '';
         } else {
           // 后端已脱敏，统一友好文案
           const errData = await response.json().catch(() => null);
@@ -171,8 +180,8 @@ export default function ChatPage() {
         }
 
         if (requestRef.current !== controller) return;
-        if (modelName) setCurrentModel(modelName);
-        if (provider) setCurrentProvider(provider);
+        setCurrentModel(modelName);
+        setCurrentProvider(provider);
 
         setMessages((prev) =>
           prev.map((m) =>
@@ -189,6 +198,8 @@ export default function ChatPage() {
         );
       } catch {
         if (requestRef.current !== controller) return;
+        setCurrentModel('');
+        setCurrentProvider('');
         setMessages((prev) =>
           prev.map((m) =>
             m.id === loadingMsg.id
@@ -278,7 +289,7 @@ export default function ChatPage() {
               {currentProvider && (
                 <span className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-accent/60 px-1.5 py-0.5 text-[11px] text-foreground">
                   <Cpu className="h-3 w-3 text-primary" />
-                  {currentProvider === 'gemini' ? 'Gemini' : 'DeepSeek'}
+                  {providerLabel(currentProvider)}
                 </span>
               )}
               {currentModel && (
@@ -409,9 +420,9 @@ export default function ChatPage() {
                 ) : (
                   <div className="prose prose-sm max-w-none overflow-x-auto dark:prose-invert">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
-                    {msg.role === 'assistant' && msg.model && (
+                    {msg.role === 'assistant' && (msg.model || msg.provider) && (
                       <div className="mt-1.5 text-right text-[11px] text-muted-foreground/70">
-                        {msg.provider === 'gemini' ? 'Gemini' : msg.provider === 'deepseek' ? 'DeepSeek' : ''} · {msg.model}
+                        {[providerLabel(msg.provider), msg.model].filter(Boolean).join(' · ')}
                       </div>
                     )}
                   </div>

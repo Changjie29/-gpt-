@@ -1,0 +1,407 @@
+{
+  "checked_at": "2026-10-03",
+  "brand": "东方红",
+  "selection": "农机通厂家企业店LY系列与动力换挡/无级变速系列产品链接",
+  "checked_unique_product_pages": 53,
+  "new_verified_complete_manuals": 1,
+  "discovered_download_candidates": [
+    {
+      "model_label_on_page": "LF1504",
+      "landing_url": "https://www.nongjitong.com/product/yto_lf1504_tractor.html",
+      "fileview_url": "https://f.danongchang.cn/fileview.aspx?id=e81f2a10-880f-4e9a-be10-72d6026ce62a",
+      "fileview_status": "2026-10-03实际HTTP200",
+      "download_url": "https://0.att.s105.cn/f/202108/16162742_2627.pdf",
+      "download_status": "初次CONNECT403；最终HTTP200，取得113页PDF并核验指定证据页，版本及冲突详见来源记录",
+      "status": "2026-10-03已实际取得113页PDF，Content-Length与字节数一致，正文指定证据页已核验",
+      "source_id": "SRC-YTO-LF1504-SMLF150449010",
+      "manual_sha256": "39f55e63e7f50b6e3e51df1502221efdda56dede6ad637ed6ed212c52896d2d9"
+    }
+  ],
+  "product_pages": [
+    {
+      "url": "https://www.nongjitong.com/product/yto_lx1104_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "b64d04e5832fca394cefce845c707f3319b46041f4ca149bbea74db50af149a8",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "9faa60f4537acf644cff39eda0771210c1a26aa412863d94f3570f8bf94ec5e3",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/ytdongfanghong_ly1404_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "e74ea905a029fa9f9cf1e3ea0d474f40483ffcb83e5af8f33d49b04c7ee64b2e",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1200_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "333c2e8b582bc19895c1a12ef510269d302aa11ba62b6fb33f65153eab4c17f2",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204d_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "c178389c23c6fe4464171ce3b1b834adf2c0f0621f14555c8c3b5237554a3cc3",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/ytdongfanghong_ly1304_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "bd4b7fc447045a9109e6b56246ff14cd954abb97cad57559d3537465294439ae",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1300_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "439e3a2ca9f73893d22da9149db8965ab6b899c9de82e1a11c5a3b5eb4e4947c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/ytdongfanghong_ly1400_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "6e24d93a9169c06ae90626a8690ca3819ac1fc75d4dc039d18b83a25a880a43c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1304d_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "2426239f67acee902d6bd290adfcde4ef9ebe03d80633a8eeb58a85ac87d07c4",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1004-n-g4_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "d4eba00d7381b2423df15560a169fd4d536787c91024b4a6bf4c79a4befe73a8",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1004-g4_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "f14fbb28880428cb14d10b2c85b2f36e9020e4395083b15c78234912a10fce93",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1404-2-g4_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "a7e41064ecc487e8f0245380b409f4fc99b82e26c8a52ed8b5473e5ee6e46c0c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1104-s-g4_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "38055de062e97388f6e8854cc143a039d212ba4c7a89cdf3bf68bc1f26d23746",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204-m_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "19da0b152668b2396177cc7f8615923818202de49b55d36bc8d1d0aad9772293",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1004-m_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "4b00569bf2d861f716d3991e296ec9ee5681957c1b1742238faa8e99d7c7e80c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204_2_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "7746b05d45311a29840510d1913bc9dd9055846bb575638753a4e929962dac26",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204-c1-_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "d4bbc279a5f27bd6f2fffb089af19fd4b4f5b7aabe9389c52f87d4ea2b3c08d3",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1004-c-_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "bf15d0229b751c1dc62ae4646a8fbb3a3950732538d5818af40db0f2534aef73",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1304-1-g4_tractro.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "443caf20b5fba26afe0f2a8f5194c32e0bd8444836360132ba06cc8737c83612",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1300_l_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "6ceb3d11d227d0ee8384786a23dcaeac4b425878e99683d04b8a849211e1de73",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1400_l_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "1c0dc53e60dbb999da2a3220523485cb56db3f42f90c232b9b57eab996010825",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1104-m_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "30c412d939f30c60ebf2928fc0520db2106391e31a1984b511d29c34384eac64",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204-cl1_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "bcf4a56cd2f51dff4f09dd53065517ffd0b62cb52af768174d56b993ee6f9e6d",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1404-cl1_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "03da61c436a1174840319b00d52f44489de455f1466e61fab7956dd4950314ec",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1104-c-_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "788a516be745c4931bb9666833180ec7ea88bebd7f617b2f848073fbd12c6131",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1404-c1-_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "4450cdb11898fab2b6309b3aedfd1c1d8d0b85ea664a5f2deefbb4d686c0c0d9",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1200_l_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "82579cca472b3598628d4e59d810f5fd4b5b615a2de7204b4c39043db1f1188d",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_ly1204-n_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "990d06494757b9b9212dc4d940791bef02db2786894d4af00ac4e0e140dead3a",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf2204_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "bea960ebae5bc5a733fa8f6bbaed6b7b32bca3ee621255b4803ea2e7302ceb55",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf1504_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [
+        [
+          "https://f.danongchang.cn/fileview.aspx?id=e81f2a10-880f-4e9a-be10-72d6026ce62a",
+          "点击下载东方红LF1504使用保养说明书&nbsp;"
+        ]
+      ],
+      "html_sha256": "1d23c8aea1daf3cc39d9c740b9207caa579d7f03f562c25f35e66fe45bb4cb51",
+      "interpretation": "有说明书链接，附件需实际取得后核验"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf1004_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "2ddfae36bdef5ffc5bc23c5915018c80432b13c57b64bd0f69461f91d3196d6d",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf904_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "ea87d4544aa021b2448c42d95cb882e883e1e5526aecd17520a95497d1feffe5",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf1104_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "f824328694cff2670d67336ff9387b66d4d3c02cb4bcee2db1630d3666c594a0",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf954_tedder.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "007ff9dc6eda0aa9ffd3d5038a80ffde13eaace15a0956d6d733310454dc7c09",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lf804_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "7eb43223f0ad4afc31328548a02fa7694495d061d344dd6e792b5d1d73610961",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_rzlf1204_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "a1fee66d539c86fea91098525ff5e0b9dc6337f15f5107f715f28df0fa87a0fd",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_zrlf1304_tractors.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "acd68faa28348501477a7b63c85b4d67f71f0baac1456fc7875d682840cd2ab8",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/ytdongfanghong_lf954-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "e7b81cf068f5e30cf6b774ddac71cc6df9fefb6ec05206d578a71ca9e8bba4fc",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lx904-c-_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "d316dc660cc2f8eab249c778aabe9fd8cf5b7cd5c3d0a70c1b8f2610e2c80bf6",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lz2604_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "4fe2eb8322875f10cea3b9efe750b6ca4f4128eec36cfdd0f33b854d65db2e85",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/ytdongfanghong_lf804-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "b419c5d3ecc1380d1a1b849f6b7a24a5e8965eb237bfe81247cc8f7f38fc254c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lxm1604-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "cff24bd668af71b96011593f8f33d2032a879804826d2fc9b78e4d3cb8072a68",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lma2004-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "7522d3bef7badcb964c75d9ad3dc800d7a1b6986321b1a527283b1b7470fdca4",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lnm2004-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "22c35d89c3eb711182b5a744300a00a1f52337e2d0ce76b15b3391f5fb9b4dfa",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lxm1504-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "56c421d22511edd54513293e3259eff57d308883ae430a93a1e08231fd62f488",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lxm1404-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "2bdf8f0ef94b7c91b1f2ea3a1d310620f7c8470fe2ff8e7f5181edd3293ec1fc",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lma1804-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "20b1262c2b37e084eb84a2eaa3855efa4e1a2e037aa675eb4ebf3940a91479d8",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lnm1804-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "6a9edb1c48b6441eb9a2a1a36ef84a515925ef62f76552372dc4dd52a625c8ac",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lxm1304-c_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "ed5a40a16e06598519d86ef8afc21826b8621ebf06b4e0a5197beeeebe6af799",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lw3204_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "0867fc14b7c746c59edcc69e4cd0ddd8e656dd6baaf7b859a70113e5328d528a",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_hb2204_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "4c802729b71fb65a0d318f9c3c7063fb2abc394a9081196aa12b4fe3b14c0e19",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/yto_lw2404_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "2fc8886ba13fcad927bf618bfb52efb9d78ccd78780e7274049a9bb32cdb000c",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    },
+    {
+      "url": "https://www.nongjitong.com/product/lq2104_tractor.html",
+      "status": "HTTP 200，已核对公开产品页附件链接",
+      "manual_pdf_links": [],
+      "html_sha256": "a7313bde91007a7321ac5e4b74f715d98b0729c57588c7ae581c00c2534f8b75",
+      "interpretation": "本页未发现说明书/PDF公开下载链接；不代表厂商没有手册"
+    }
+  ],
+  "search_service_note": "so.nongjitong.com检索页面仅返回AJAX壳，so.js返回HTTP401；未把壳页面当作无结果。",
+  "lf1504_result": {
+    "source_id": "SRC-YTO-LF1504-SMLF150449010",
+    "pdf_pages": 113,
+    "bytes": 6457084,
+    "stored_as": "来源记录和10条自行概述；不上传完整PDF",
+    "version": "SM-LF1504.49.010，封面2016-3-5／前言2017-01关系待核实",
+    "emission": "前言明确国三，发动机引用冲突保留"
+  }
+}

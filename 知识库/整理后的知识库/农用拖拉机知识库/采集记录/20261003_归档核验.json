@@ -1,0 +1,169 @@
+{
+  "generated_at_utc": "2026-10-03T15:18:11.208095+00:00",
+  "scope": "文件/来源/编号/标题/证据范围校验；不等于全文事实审校、厂家确认或实车验证",
+  "summary": {
+    "sources": 18,
+    "entries": 122,
+    "knowledge_documents": 13,
+    "retained_pdf_files": 13,
+    "link_only_pdf_sources": 1,
+    "entry_types": {
+      "安全操作": 14,
+      "操作/维护知识": 33,
+      "维护/故障知识": 54,
+      "机型资料": 2,
+      "资料缺口": 1,
+      "资料索引": 8,
+      "系统适用边界": 1,
+      "资料核验": 5,
+      "系统安装/调试": 4
+    },
+    "errors": 0
+  },
+  "sources": [
+    {
+      "source_id": "SRC-LV-TG-WEB",
+      "path": "知识库/原始农机说明书/雷沃/TG系列/常见故障及排除方法.html",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 11558
+    },
+    {
+      "source_id": "SRC-LV-NR3-WEB",
+      "path": "知识库/原始农机说明书/雷沃/国三/发动机日常维护与保养.html",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 10735
+    },
+    {
+      "source_id": "SRC-DF-WINTER-20201225",
+      "path": "知识库/原始农机说明书/东风/系列待核实/拖拉机冬季保养注意事项.html",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 45110
+    },
+    {
+      "source_id": "SRC-HH-T70-20250414",
+      "path": "知识库/原始农机说明书/鸿鹄/T70/湖北农业农村厅_20250414.html",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 26210
+    },
+    {
+      "source_id": "SRC-ZL-PL-202011",
+      "path": "知识库/原始农机说明书/中联/PL系列/中联PL系列拖拉机维保操作手册.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 11091875,
+      "pdf_pages": 132
+    },
+    {
+      "source_id": "SRC-NH-WM25-92157408",
+      "path": "知识库/原始农机说明书/纽荷兰/WORKMASTER25/NewHolland_WORKMASTER25_2023_92157408.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 19710347,
+      "pdf_pages": 198
+    },
+    {
+      "source_id": "SRC-KB-LX2620-6C82063118",
+      "path": "知识库/原始农机说明书/久保田/LX2620-LX2620SU/kubota-lx2620-operator-manual.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 13966673,
+      "pdf_pages": 138
+    },
+    {
+      "source_id": "SRC-LV-TX-TRAINING",
+      "path": "知识库/原始农机说明书/雷沃/TX系列/19162429_6519.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 3563517,
+      "pdf_pages": 39
+    },
+    {
+      "source_id": "SRC-LV-TD-TRAINING",
+      "path": "知识库/原始农机说明书/雷沃/TD系列/19162322_3238.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 4387153,
+      "pdf_pages": 36
+    },
+    {
+      "source_id": "SRC-LV-TB-TRAINING",
+      "path": "知识库/原始农机说明书/雷沃/TB系列/19162218_4956.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 3143619,
+      "pdf_pages": 34
+    },
+    {
+      "source_id": "SRC-LV-P5000-TRAINING",
+      "path": "知识库/原始农机说明书/雷沃/P5000/19161645_3081.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 3645108,
+      "pdf_pages": 40
+    },
+    {
+      "source_id": "SRC-YTO-LX-MANUAL",
+      "path": "知识库/原始农机说明书/东方红/LX系列/18151903_7577.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 8705650,
+      "pdf_pages": 83
+    },
+    {
+      "source_id": "SRC-YTO-LF-MANUAL",
+      "path": "知识库/原始农机说明书/东方红/LF系列/18143819_4481.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 5798504,
+      "pdf_pages": 78
+    },
+    {
+      "source_id": "SRC-WT-TRACTOR-MANUAL",
+      "path": "知识库/原始农机说明书/潍泰/TT系列/潍泰拖拉机使用说明书.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 18415359,
+      "pdf_pages": 107
+    },
+    {
+      "source_id": "SRC-JD-6E-G4-OMTR115296",
+      "path": "知识库/原始农机说明书/约翰迪尔/6E国四/OMTR115296.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 14053883,
+      "pdf_pages": 228
+    },
+    {
+      "source_id": "SRC-QX-QY210PRO-V01",
+      "path": "知识库/原始农机说明书/智能化配套系统/千寻/QY210Pro/165468154663987807.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 2864682,
+      "pdf_pages": 38
+    },
+    {
+      "source_id": "SRC-BARB-HYDROTRAC-4HWD-REPO",
+      "path": "知识库/原始农机说明书/Barbieri HydroTRAC 4HWD Mini Tractor Operator's Manual PDF.pdf",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 6043966,
+      "pdf_pages": 42
+    },
+    {
+      "source_id": "SRC-YTO-LF1504-SMLF150449010",
+      "path": "知识库/原始农机说明书/东方红/LF1504/来源记录.md",
+      "sha256_matches": true,
+      "bytes_matches": true,
+      "actual_bytes": 1853,
+      "referenced_pdf_pages": 113,
+      "manual_sha256": "39f55e63e7f50b6e3e51df1502221efdda56dede6ad637ed6ed212c52896d2d9",
+      "external_pdf_verified": true
+    }
+  ],
+  "errors": [],
+  "notes": []
+}

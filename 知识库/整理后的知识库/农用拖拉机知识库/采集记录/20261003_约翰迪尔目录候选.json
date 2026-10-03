@@ -1,0 +1,65 @@
+[
+  {
+    "publication": "OMSJ34997",
+    "document_type": "厂家官方中文操作手册目录（正文待取得）",
+    "downloadId": 476062,
+    "landing_url": "https://techpubs.deere.com/zh-CHS/Search/Equipment?st=model&kw=5E-1004",
+    "download_url": "https://techpubs.deere.com/api/download/free",
+    "html_manual_url": "https://techinfo-omview.apps-prod-vpn.us.e06.c01.johndeerecloud.com/omview/omsj34997",
+    "catalog_sha256": "5f8d4ab36e5c681ec4768a7dd28052519ae20c7d4eb51ecde48f51c176d4e643",
+    "download_status": "HTTP500，包括标准Cookie会话、AJAX头及en-US会话仍失败",
+    "html_status": "官方HTML查看器及应用脚本已HTTP200；只是应用壳，正文CDN仍CONNECT403，未取得手册正文",
+    "knowledge_entry_status": "未读取正文，不生成操作或排故条目",
+    "redistribution_status": "未取得PDF或授权条款，不能把目录公开免费图标视作转授权",
+    "status": "仅核验厂家目录，不计完整取得或诊断条目",
+    "checked_at": "2026-10-03",
+    "required_content_host": "d2at55i8vn7oz8.cloudfront.net",
+    "scope_notes": "未根据目录生成操作或故障知识；版本/市场/序列号需与正文和本机进一步匹配。",
+    "models": [
+      "5E-850",
+      "5E-854",
+      "5E-904",
+      "5E-954",
+      "5E-1000",
+      "5E-1004",
+      "5E-1100",
+      "5E-1104",
+      "5E-1200",
+      "5E-1204"
+    ],
+    "catalog_version": "D0，China，MY2018-；标题另含欧洲版本，字段冲突待核实"
+  },
+  {
+    "publication": "OMSU54855",
+    "document_type": "厂家官方中文操作手册目录（正文待取得）",
+    "downloadId": 452686,
+    "landing_url": "https://techpubs.deere.com/zh-CHS/Search/Equipment?st=model&kw=6B-1404",
+    "download_url": "https://techpubs.deere.com/api/download/free",
+    "html_manual_url": "https://techinfo-omview.apps-prod-vpn.us.e06.c01.johndeerecloud.com/omview/omsu54855",
+    "catalog_sha256": "020c0b74b6e8ff27fc3bdcc2ebc400f7fe639ac58e6d3ddda10801bac974dcda",
+    "download_status": "HTTP500，包括标准Cookie会话、AJAX头及en-US会话仍失败",
+    "html_status": "官方HTML查看器及应用脚本已HTTP200；只是应用壳，正文CDN仍CONNECT403，未取得手册正文",
+    "knowledge_entry_status": "未读取正文，不生成操作或排故条目",
+    "redistribution_status": "未取得PDF或授权条款，不能把目录公开免费图标视作转授权",
+    "status": "仅核验厂家目录，不计完整取得或诊断条目",
+    "checked_at": "2026-10-03",
+    "required_content_host": "d2at55i8vn7oz8.cloudfront.net",
+    "scope_notes": "未根据目录生成操作或故障知识；版本/市场/序列号需与正文和本机进一步匹配。",
+    "models": [
+      "JD954",
+      "JD1104",
+      "JD1204-A",
+      "JD1354-A",
+      "JD1404-A"
+    ],
+    "catalog_version": "L1，Asia；标题标中国版本",
+    "catalog_serial_ranges": {
+      "JD954": "512125-",
+      "JD1104": "510023-",
+      "JD1204-A": "511589-",
+      "JD1354-A": "510201-",
+      "JD1404-A 4045发动机": "512891-",
+      "JD1404-A 6068发动机": "512911-"
+    }
+  }
+]
