@@ -1,0 +1,201 @@
+{
+  "checked_date_shanghai": "2026-10-03",
+  "new_complete_manuals": 0,
+  "new_sources": 0,
+  "new_entries_from_search": 0,
+  "search_quality": "中文Bing及RSS响应结果与请求主题完全错配；英文Bing仅给汽车或品牌泛结果，无可核验手册，不转作事实",
+  "requests": [
+    {
+      "key": "bing-df",
+      "url": "https://www.bing.com/search?q=%E4%B8%9C%E9%A3%8E%20%E6%8B%96%E6%8B%89%E6%9C%BA%20DF404%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20pdf",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=%E4%B8%9C%E9%A3%8E%20%E6%8B%96%E6%8B%89%E6%9C%BA%20DF404%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20pdf",
+      "bytes": 121579,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4d8c8c3a5aab97ac30a2de26d3946eb0d387145cddd21a22158b2a5c4a39523e"
+    },
+    {
+      "key": "bing-jinma",
+      "url": "https://www.bing.com/search?q=%E9%87%91%E9%A9%AC%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20pdf",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=%E9%87%91%E9%A9%AC%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20pdf",
+      "bytes": 122132,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "088dbb6dc698abfb4abb18031372b013a3a7d4c9ec4e7b9137ab4bfdaa9ddd26"
+    },
+    {
+      "key": "bing-yto",
+      "url": "https://www.bing.com/search?q=%E4%B8%9C%E6%96%B9%E7%BA%A2%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20PDF%20LF%20LX",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=%E4%B8%9C%E6%96%B9%E7%BA%A2%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20PDF%20LF%20LX",
+      "bytes": 122062,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f8402adc92f74a7c4bd1b9eb86cead8ace18750cbc821240539001623e3a706f"
+    },
+    {
+      "key": "bing-lovol",
+      "url": "https://www.bing.com/search?q=%E9%9B%B7%E6%B2%83%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20PDF",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=%E9%9B%B7%E6%B2%83%20%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20PDF",
+      "bytes": 129021,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "db632e5279481a4a2653a29bf5257c243ff1388e3f3768edcfb00deaf5205ee3"
+    },
+    {
+      "key": "world-home",
+      "url": "https://www.worldnyjx.com/",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "key": "df-service",
+      "url": "https://www.dfamgc.com/service-and-support/downloads",
+      "http": 200,
+      "final_url": "https://www.dfamgc.com/service-and-support/downloads",
+      "bytes": 39425,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "626a637a3eb8b3edc134197ecb86e8ba33c352913784da15f57c9a3f3d8da5ea"
+    },
+    {
+      "key": "bing-manual-en",
+      "url": "https://www.bing.com/search?q=Dongfeng%20DF404%20tractor%20operator%20manual%20pdf",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=Dongfeng%20DF404%20tractor%20operator%20manual%20pdf",
+      "bytes": 117068,
+      "sha256": "fe998b00965d484164df8dd5ed2befbdaceebeceeee88efce273cbb2faf22ff8"
+    },
+    {
+      "key": "bing-kubota",
+      "url": "https://www.bing.com/search?q=Kubota%20tractor%20operator%20manual%20pdf%20official",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?q=Kubota%20tractor%20operator%20manual%20pdf%20official",
+      "bytes": 118881,
+      "sha256": "23b1e3a86ffea8e95fb5859ed64806a2c2ed920f808e17978b7e0cfc4160603a"
+    },
+    {
+      "key": "baidu-manual",
+      "url": "https://www.baidu.com/s?wd=%E6%8B%96%E6%8B%89%E6%9C%BA%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6%20pdf",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "key": "yto-file",
+      "url": "https://www.nongjitong.com/company/yto/videofile.html",
+      "http": 200,
+      "final_url": "https://www.nongjitong.com/company/yto/videofile.html",
+      "bytes": 91428,
+      "sha256": "93098c43ae7d6ffe0dda303b7b429932f32482ecb128bfb61380dce543efbae5"
+    },
+    {
+      "key": "yto-company",
+      "url": "https://www.nongjitong.com/company/yto.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "jd-company",
+      "url": "https://www.nongjitong.com/company/deere.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "kubota-company",
+      "url": "https://www.nongjitong.com/company/kubota.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.kubotausa.com/owners",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.nongjitong.com/company/yto/",
+      "http": 200,
+      "final_url": "https://www.nongjitong.com/company/yto/",
+      "bytes": 11109,
+      "sha256": "0eb8f3ed4c8a83a42fa7f63ab7ac114deed1b2a86696ff5efbceacd976eb2c3a"
+    },
+    {
+      "url": "https://www.nongjitong.com/company/deere/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.nongjitong.com/company/kubota/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.nongjitong.com/dealer/2013/288653.html",
+      "http": 200,
+      "final_url": "https://www.nongjitong.com/dealer/2013/288653.html",
+      "bytes": 17468,
+      "sha256": "5cb5ec3c89d4d3b836694887081585c22066c15046ffdcb4cb5847ca93825354"
+    },
+    {
+      "key": "manufacturers",
+      "url": "https://www.nongjitong.com/company/",
+      "http": 200,
+      "final_url": "https://www.nongjitong.com/company/",
+      "bytes": 15532,
+      "sha256": "a956633e3b077f7b20341f663105f0341dd8be544054628fbae5c2ca3c65e901"
+    },
+    {
+      "key": "yto-products",
+      "url": "https://www.nongjitong.com/company/1_3.html",
+      "http": 200,
+      "final_url": "https://www.nongjitong.com/company/1_3.html",
+      "bytes": 30979,
+      "sha256": "f49231ca6ce91d6dcc8a8b1ec0a0e0ce10e0204986e8279c725202c76d6ecfd0"
+    },
+    {
+      "key": "bing-rss",
+      "url": "https://www.bing.com/search?format=rss&q=Jinma+tractor+operator+manual+pdf",
+      "http": 200,
+      "final_url": "https://www.bing.com/search?format=rss&q=Jinma+tractor+operator+manual+pdf",
+      "bytes": 4947,
+      "sha256": "413907d542ef68e77a54b6b6ac56297baf3ccd5dfd8bab61e3d65b7edc03e93c"
+    },
+    {
+      "key": "kubota-retry",
+      "url": "https://www.kubotausa.com/owners",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "key": "garton-retry",
+      "url": "https://www.gartontractor.com/resources/manuals/kubota-lx2620-operator-manual",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "key": "nongji-robots",
+      "url": "https://www.nongjitong.com/robots.txt",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "publication": "OMSJ34997",
+      "url": "https://techpubs.deere.com/api/download/free",
+      "body": {
+        "downloadId": 476062,
+        "publicationType": "Operator's Manual",
+        "productName": "OMSJ34997",
+        "marketingCode": ""
+      },
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "publication": "OMSU54855",
+      "url": "https://techpubs.deere.com/api/download/free",
+      "body": {
+        "downloadId": 452686,
+        "publicationType": "Operator's Manual",
+        "productName": "OMSU54855",
+        "marketingCode": ""
+      },
+      "error": "HTTP Error 500: Internal Server Error"
+    }
+  ],
+  "desired_new_hosts": [
+    "www.gartontractor.com",
+    "gartontractor.com",
+    "www.kubotausa.com"
+  ],
+  "network_note": "所需域名已保存配置草稿；实际请求仍代理403，不绕过。草稿保存不是已应用证明。",
+  "evidence_note": "sha256/bytes对应网页响应，不是手册；完整临时网页不归入事实索引；本轮原件扩充来自已留存PDF选页核对"
+}

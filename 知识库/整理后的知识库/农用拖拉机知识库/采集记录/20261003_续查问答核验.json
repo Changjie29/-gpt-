@@ -1,0 +1,71 @@
+{
+  "checked_date_shanghai": "2026-10-03",
+  "scope": "本地服务，不代表线上部署",
+  "version": "2.1.1",
+  "health": {
+    "ok": true,
+    "version": "2.1.1",
+    "timestamp": "2026-10-03T15:49:24.599Z",
+    "knowledge": {
+      "chunks": 149,
+      "archivedEntries": 140
+    }
+  },
+  "cases": [
+    {
+      "brand": "东方红",
+      "model": "LX1204",
+      "query": "每次连续启动能持续多长时间？",
+      "expected_entry": "KB-YTO-LX-MANUAL-004",
+      "term_preserved": "−5℃",
+      "passed": true,
+      "provider": "knowledge-base"
+    },
+    {
+      "brand": "雷沃",
+      "model": "TB平台",
+      "query": "油浴式和干式空气滤清器应该怎么区分保养？",
+      "expected_entry": "KB-LV-TB-TRAINING-007",
+      "term_preserved": "不能清洁",
+      "passed": true,
+      "provider": "knowledge-base"
+    },
+    {
+      "brand": "雷沃阿波斯",
+      "model": "P5000",
+      "query": "膨胀箱冷却液液位怎么检查？",
+      "expected_entry": "KB-LV-P5000-TRAINING-007",
+      "term_preserved": "MIN",
+      "passed": true,
+      "provider": "knowledge-base"
+    },
+    {
+      "brand": "东方红",
+      "model": "LX1204",
+      "query": "国四启动时间限制是多少？",
+      "expected_chunks": 0,
+      "passed": true
+    },
+    {
+      "brand": "雷沃",
+      "model": "TB平台",
+      "query": "国四空滤保养",
+      "expected_chunks": 0,
+      "passed": true
+    },
+    {
+      "brand": "东方红",
+      "model": "LX1404",
+      "query": "启动时间限制",
+      "expected_chunks": 0,
+      "passed": true
+    },
+    {
+      "brand": "常发",
+      "model": "CFJ2204-6M",
+      "query": "发动机不能启动",
+      "expected_chunks": 0,
+      "passed": true
+    }
+  ]
+}

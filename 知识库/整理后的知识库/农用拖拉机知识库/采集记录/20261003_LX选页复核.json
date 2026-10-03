@@ -1,0 +1,43 @@
+{
+  "source_id": "SRC-YTO-LX-MANUAL",
+  "artifact": "知识库/原始农机说明书/东方红/LX系列/18151903_7577.pdf",
+  "bytes": 8705650,
+  "sha256": "0a004ecb3f603b5148f877f45a69e72a6990b94074a15f4dae472e1c94cc9410",
+  "pdf_pages": 83,
+  "new_entry_ids": [
+    "KB-YTO-LX-MANUAL-002",
+    "KB-YTO-LX-MANUAL-003",
+    "KB-YTO-LX-MANUAL-004",
+    "KB-YTO-LX-MANUAL-005",
+    "KB-YTO-LX-MANUAL-006",
+    "KB-YTO-LX-MANUAL-007"
+  ],
+  "new_evidence_pdf_pages": [
+    7,
+    25,
+    45,
+    67,
+    68
+  ],
+  "additional_visually_inspected_pages": [
+    1,
+    3,
+    5,
+    6,
+    8,
+    26,
+    46,
+    47
+  ],
+  "blank_rendered_page": 4,
+  "method": "PyMuPDF渲染至1.8倍并逐页view_image目视核对；未运行全册OCR或修复文字映射",
+  "metadata_confirmed": "封面五机型；前言2016年2月，注明配套东方红LR-R/A/B/M/N系列柴油机使用说明书；核对页不足以确定每一机型发动机或整册排放阶段",
+  "not_claimed": [
+    "全书审校",
+    "文字层修复",
+    "全部机型发动机和排放一致",
+    "故障确诊",
+    "厂家或实车复核"
+  ],
+  "knowledge_path": "知识库/整理后的知识库/农用拖拉机知识库/机型知识卡/东方红_说明书索引.md"
+}

@@ -1,0 +1,105 @@
+{
+  "audit_date_shanghai": "2026-10-03",
+  "activity": "existing_repository_pdf_selected_page_review",
+  "new_documents": 0,
+  "new_entries": 12,
+  "whole_document_review": false,
+  "sources": {
+    "SRC-LV-TB-TRAINING": {
+      "reviewed_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        22
+      ],
+      "entry_evidence_physical_pages": [
+        4,
+        5,
+        11,
+        20,
+        22
+      ],
+      "actual_entry_printed_pages": {
+        "4": 4,
+        "5": 5,
+        "11": 12,
+        "20": 21,
+        "22": 23
+      },
+      "new_entry_ids": [
+        "KB-LV-TB-TRAINING-002",
+        "KB-LV-TB-TRAINING-003",
+        "KB-LV-TB-TRAINING-004",
+        "KB-LV-TB-TRAINING-005",
+        "KB-LV-TB-TRAINING-006",
+        "KB-LV-TB-TRAINING-007"
+      ]
+    },
+    "SRC-LV-P5000-TRAINING": {
+      "reviewed_physical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        13,
+        14,
+        15,
+        16,
+        17,
+        25,
+        26,
+        27,
+        28
+      ],
+      "entry_evidence_physical_pages": [
+        4,
+        5,
+        17,
+        26,
+        28
+      ],
+      "actual_entry_printed_pages": {
+        "4": 4,
+        "5": 5,
+        "17": 17,
+        "26": 26,
+        "28": 28
+      },
+      "new_entry_ids": [
+        "KB-LV-P5000-TRAINING-002",
+        "KB-LV-P5000-TRAINING-003",
+        "KB-LV-P5000-TRAINING-004",
+        "KB-LV-P5000-TRAINING-005",
+        "KB-LV-P5000-TRAINING-006",
+        "KB-LV-P5000-TRAINING-007"
+      ]
+    }
+  },
+  "checks": {
+    "retained_pdf_hash_bytes_pages_match": true,
+    "new_ids_unique_against_existing_122": true,
+    "markdown_id_title_source_match": true,
+    "scanned_evidence_viewed": true
+  },
+  "limitations": [
+    "仅审核上述选页，不声称全书审校",
+    "交机培训不替代随车整机说明书",
+    "无精确子型号与国四推断",
+    "TB目录页码冲突保留；采用实际正文页脚",
+    "P5000封面阿波斯身份保留",
+    "配置冲突周期、油品和高压排气等内容未转为操作指导"
+  ],
+  "knowledge_path": "知识库/整理后的知识库/农用拖拉机知识库/机型知识卡/雷沃_交机培训手册索引.md"
+}

@@ -1,6 +1,6 @@
 # 耕知·耘诊 · 农业机械智能诊断平台
 
-当前项目版本：**2.1.0**。每次更新的版本、改动和验证结果见[版本日志](CHANGELOG.md)。网站页脚展示构建版本，`/api/health`返回运行服务版本；线上是否更新以实际部署为准。
+当前项目版本：**2.1.1**。每次更新的版本、改动和验证结果见[版本日志](CHANGELOG.md)。网站页脚展示构建版本，`/api/health`返回运行服务版本；线上是否更新以实际部署为准。
 
 面向农业机械装备的智能故障诊断 Agent。基于本地 Markdown 知识库 + 大语言模型，为拖拉机、联合收割机等农机提供结构化的故障原因分析、排查步骤与安全维修建议。
 
@@ -11,7 +11,7 @@
 - **前端**：React 19 + Vite + TypeScript + Tailwind CSS + React Router + React Three Fiber
 - **后端**：Node.js + Express + tsx（ESM）
 - **LLM**：Gemini（`gemini-3.6-flash`）/ DeepSeek（`deepseek-v4-flash`），OpenAI 兼容协议
-- **知识库**：通用 Markdown + 122 条索引化拖拉机知识，按章节提取 + 关键词重叠打分，零向量库
+- **知识库**：通用 Markdown + 140 条索引化拖拉机知识，按章节提取 + 关键词重叠打分，零向量库
 - **3D**：Three.js / React Three Fiber，程序化 RoomEnvironment 光照，零 HDR 网络请求
 
 ## 快速开始
@@ -87,7 +87,7 @@ npm run build:server # 后端编译检查
 
 ## RAG 工作流
 
-1. 启动时扫描 `server/knowledge/` 下的通用 `.md` 文件（跳过 `00_说明/`），按 `## ` 二级标题切块；同时读取 `知识库/整理后的知识库/农用拖拉机知识库/entries.jsonl`，按条目编号提取对应 Markdown 章节。目前为 9 个通用片段 + 122 条拖拉机条目，共 131 个片段。
+1. 启动时扫描 `server/knowledge/` 下的通用 `.md` 文件（跳过 `00_说明/`），按 `## ` 二级标题切块；同时读取 `知识库/整理后的知识库/农用拖拉机知识库/entries.jsonl`，按条目编号提取对应 Markdown 章节。目前为 9 个通用片段 + 140 条拖拉机条目，共 149 个片段。
 2. 检索结合 `machineType`、`brand`、`model`，也识别问题中可辨认的品牌与型号，过滤不相关品牌／型号及非拖拉机的归档条目；再对问题做中文 2-gram + 英文 token 化，按关键词重叠打分，标题命中权重 ×3。品牌或型号匹配不代表市场、排放、配置及版本已经确认。
 3. 取 top-6 片段（单块超 1200 字符截断），拼入后端独占的 system prompt。
 4. system prompt 硬性要求：
@@ -215,7 +215,7 @@ AgriDx-v2/
 ### `GET /api/health`
 
 ```json
-{ "ok": true, "version": "2.1.0", "timestamp": "...", "knowledge": { "chunks": 131, "archivedEntries": 122 } }
+{ "ok": true, "version": "2.1.1", "timestamp": "...", "knowledge": { "chunks": 149, "archivedEntries": 140 } }
 ```
 
 ### `POST /api/chat`
@@ -266,7 +266,7 @@ AgriDx-v2/
 
 **已实现**
 
-- 本地 Markdown 知识库 + 122 条拖拉机归档条目 + 品牌／型号过滤与关键词检索 RAG
+- 本地 Markdown 知识库 + 140 条拖拉机归档条目 + 品牌／型号过滤与关键词检索 RAG
 - Gemini / DeepSeek 双 Provider，按代理自动选择 + 失败回退
 - 后端独占 system prompt，强制结构化输出与禁止编造参数
 - 可交互 3D 拖拉机模型（拖拽/缩放/自转/恢复视角）
