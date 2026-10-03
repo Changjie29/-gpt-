@@ -15,6 +15,7 @@ import express, { type Request, type Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'node:path';
+import fs from 'node:fs';
 
 // 1) 必须先加载 server/.env，再读取任何代理/Key 环境变量。
 //    这样即使 HTTPS_PROXY 等代理配置写在 .env 里，也能被后续 detectProxy() 正确识别。
@@ -47,6 +48,7 @@ const llm = getLlmRouter();
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
+const APP_VERSION: string = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf8')).version;
 
 // ---- 基础安全 ----
 app.set('trust proxy', 1);
@@ -85,6 +87,7 @@ app.use('/api/chat', (req, res, next) => {
 app.get('/api/health', (_req: Request, res: Response) => {
   res.json({
     ok: true,
+    version: APP_VERSION,
     timestamp: new Date().toISOString(),
     knowledge: kbStats(),
   });

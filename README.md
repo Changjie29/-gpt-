@@ -1,5 +1,7 @@
 # 耕知·耘诊 · 农业机械智能诊断平台
 
+当前项目版本：**2.1.0**。每次更新的版本、改动和验证结果见[版本日志](CHANGELOG.md)。网站页脚展示构建版本，`/api/health`返回运行服务版本；线上是否更新以实际部署为准。
+
 面向农业机械装备的智能故障诊断 Agent。基于本地 Markdown 知识库 + 大语言模型，为拖拉机、联合收割机等农机提供结构化的故障原因分析、排查步骤与安全维修建议。
 
 > 当前版本为**本地知识库 + LLM 对话**的轻量方案，未接入传感器/麦克风/视觉/CAN 总线。多模态感知、结构仿真、数字孪生等能力均为规划方向。
@@ -213,7 +215,7 @@ AgriDx-v2/
 ### `GET /api/health`
 
 ```json
-{ "ok": true, "timestamp": "...", "knowledge": { "chunks": 131, "archivedEntries": 122 } }
+{ "ok": true, "version": "2.1.0", "timestamp": "...", "knowledge": { "chunks": 131, "archivedEntries": 122 } }
 ```
 
 ### `POST /api/chat`

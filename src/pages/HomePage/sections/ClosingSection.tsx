@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import content, { pick } from '@/data/content';
 import { useLang } from '@/hooks/useLang';
+import { version } from '../../../../package.json';
 
 export default function ClosingSection() {
   const navigate = useNavigate();
@@ -88,7 +89,7 @@ export default function ClosingSection() {
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-border/50 pt-6 text-xs text-muted-foreground/70 md:flex-row">
-            <div>{t('© 2026 耕知·耘诊 · 农业机械智能诊断平台', '© 2026 Gengzhi · Yunzhen · Agricultural Machinery Diagnosis')}</div>
+            <div>{t('© 2026 耕知·耘诊 · 农业机械智能诊断平台', '© 2026 Gengzhi · Yunzhen · Agricultural Machinery Diagnosis')} · v{version}</div>
             <div>{t('所有数据仅供演示参考 · 实际诊断请结合专业技术人员判断', 'Data for demo only · consult qualified technicians for real diagnosis')}</div>
           </div>
         </div>
